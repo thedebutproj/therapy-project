@@ -1,11 +1,11 @@
-import './App.css';
-import {Footer} from './components/common'
+import "./App.css";
+import { Navbar, Footer } from "./components/common";
 
 function App() {
   return (
     <div className="App">
       <div className="App-content">
-        <header>AAAA</header>
+        <Navbar />
         <h1>Hi</h1>
       </div>
       <Footer />

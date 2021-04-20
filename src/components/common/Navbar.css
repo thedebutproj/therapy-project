@@ -1,0 +1,11 @@
+.navbar-logo img {
+  height: 10vh;
+  width: 100%;
+  display: block; /*without this extra space would come below image*/
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: green;
+}

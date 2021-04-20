@@ -70,4 +70,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ### Some Reference Article
-* Sticky Footer - https://dev.to/letsbsocial1/flexbox-sticky-footer-and-react-e1h
+
+- Sticky Footer - https://dev.to/letsbsocial1/flexbox-sticky-footer-and-react-e1h
+- Folder Structure - https://dev.to/pcofilada/simple-react-folder-structure-31lj
