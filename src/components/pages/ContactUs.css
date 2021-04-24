@@ -1,0 +1,8 @@
+.contactus-container {
+  padding: 16px;
+}
+
+.contactus-form-container {
+  display: flex;
+  justify-content: space-between;
+}
