@@ -18,12 +18,12 @@ function ContactUs() {
 
   return (
     <div className="contactus-container">
-      <h1>Contact Us</h1>
-      <h3>
+      <h1 className="h-primary">Contact Us</h1>
+      <p>
         Do you have an idea or social enterprise you think we need to know
         about? Got any questions regarding our work or process? Are you
         interested in working or interning with us? Get in touch.
-      </h3>
+      </p>
 
       <div className="contactus-form-container">
         <div className="contactus-left">
@@ -59,15 +59,17 @@ function ContactUs() {
               onChange={handleChange}
             ></textarea>
 
-            <button>Submit</button>
+            <button>Send Message</button>
           </form>
         </div>
         <div className="contactus-right">
-          <h3>
-            Address: Block A, 4th Floor, Phoenix Primea (Red Brick Building),
-            Plot No - 40 & 41, Financial District, Beside IRDA, Gachibowli,
-            Hyderabad – 500032, Telangana, India.
-          </h3>
+            <h2>Please contact us for more information</h2>
+            <ul>
+              <li>Email: <a href="#">thedebut@gmail.com</a> </li>
+              <li>Phone: <a href="#">+91 98 7654 3210</a> </li>
+              <li>Fax: <a href="#"> +91 98 7654 3210</a></li>
+              <li>Address: Block A, 4th Floor, Phoenix Primea (Red Brick Building), Plot No - 40 & 41, Financial District, Beside IRDA, Gachibowli, Hyderabad – 500032, Telangana, India.</li>
+            </ul>
         </div>
       </div>
     </div>
