@@ -62,6 +62,7 @@
     border: none;
     background-color: rgb(97, 93, 93);
     color: white;
+    cursor: pointer;
 }
 
 .contactus-right {
@@ -87,5 +88,6 @@
 
 .contactus-right li a {
     text-decoration: none;
+    cursor: unset;
     color: black;
 }
