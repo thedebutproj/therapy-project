@@ -1,11 +1,32 @@
 .navbar-logo img {
-  height: 10vh;
-  width: 100%;
-  display: block; /*without this extra space would come below image*/
+    height: 10vh;
+    width: 100%;
+    display: block;
+    /*without this extra space would come below image*/
 }
 
 .navbar-container {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: green;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar-container li {
+    list-style: none;
+    margin: 4px 50px;
+}
+
+.navbar-container li a {
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+.navbar-container li a:hover {
+    background-color: rgb(177, 167, 167);
+    transition: 0.2s ease;
+    color: black;
 }
