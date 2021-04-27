@@ -1,38 +1,45 @@
 .home-container {
-    padding: 16px;
+  padding: 16px;
 }
 
 .home-art img {
-    height: 160px;
-    width: 100%;
+  height: 80vh;
+  width: 100%;
 }
 
 .home-slideshow-container {
-    position: relative;
+  position: relative;
 }
 
-.home-slides {
-    display: none;
+/* .home-slides {
+  display: none;
+} */
+
+.home-slides img {
+  width: 100%;
+  height: 90vh;
 }
 
 .home-prev,
 .home-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    border: none;
-    background-color: white;
-    user-select: none;
-    transition: 0.6s ease;
-    transition-duration: 0.4s;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  border: none;
+  background-color: transparent;
+  color: white;
+  user-select: none;
+  font-size: 36px;
+  border-radius: 0 3px 3px 0;
+  padding: 16px;
+  transition: 0.6s ease;
 }
 
 .home-next {
-    right: 0;
+  right: 0;
 }
 
 .home-next:hover,
 .home-prev:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+  background-color: rgba(0, 0, 0, 0.8);
 }

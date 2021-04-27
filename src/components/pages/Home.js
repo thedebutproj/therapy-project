@@ -1,33 +1,27 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 import { siteLogo, homeBlog, homeDirectory, homeDonor } from "../../assets";
 import "./Home.css";
 
 const Home = () => {
-  const numOfSlides = useRef(0); //For knowing how many slides are used
+  const slides = [
+    <img src={homeBlog} alt="Blog" />,
+    <img src={homeDirectory} alt="Blog" />,
+    <img src={homeDonor} alt="Blog" />,
+  ];
   const [slideNum, setSlideNum] = useState(0); //For keeping tab on which slide we are currently on
 
   const decrementSlide = () => {
     setSlideNum((value) => {
-      return (value - 1) % numOfSlides;
+      return (value - 1) % slides.length;
     });
   };
 
   const incrementSlide = () => {
     setSlideNum((value) => {
-      return (value + 1) % numOfSlides;
+      return (value + 1) % slides.length;
     });
-    console.log(slideNum);
   };
-
-  useEffect(() => {
-    numOfSlides.current = document.getElementsByClassName("home-slides").length;
-    console.log(typeof slideNum);
-  });
-
-  //   useEffect(() => {
-  //     //console.log(numOfSlides);
-  //   }, [slideNum]);
 
   return (
     <div className="home-container">
@@ -36,23 +30,13 @@ const Home = () => {
       </div>
 
       <div className="home-slideshow-container">
-        <div className="home-slides">
-          <img src={homeBlog} alt="Blog" />
-        </div>
-
-        <div className="home-slides">
-          <img src={homeDirectory} alt="Directory" />
-        </div>
-
-        <div className="home-slides">
-          <img src={homeDonor} alt="Donors" />
-        </div>
+        <div className="home-slides">{slides[slideNum]}</div>
 
         <span className="home-prev" onClick={decrementSlide}>
-          &#10094;
+          <ion-icon name="chevron-back-circle-outline"></ion-icon>
         </span>
         <span className="home-next" onClick={incrementSlide}>
-          &#10095;
+          <ion-icon name="chevron-forward-circle-outline"></ion-icon>
         </span>
       </div>
     </div>

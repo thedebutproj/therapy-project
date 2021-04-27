@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { siteLogo } from "../../assets";
 import "./Navbar.css";
 
@@ -8,14 +9,31 @@ const Navbar = () => {
         <img src={siteLogo}></img>
       </div>
       <div className="navbar-container">
-        <li className="nav-items"> <a href=""> Home</a></li>
-        <li className="nav-items"> <a href="">Articles</a> </li>
-        <li className="nav-items"> <a href="">Find a Therapist</a> </li>
-        <li className="nav-items"> <a href="">Blog</a> </li>
-        <li className="nav-items"> <a href="">Donor/Donees</a> </li>
-        <li className="nav-items"> <a href=""> Contact Us</a></li>
+        <li className="nav-items">
+          {" "}
+          <Link to="/"> Home</Link>
+        </li>
+        <li className="nav-items">
+          {" "}
+          <Link to="">Articles</Link>{" "}
+        </li>
+        <li className="nav-items">
+          {" "}
+          <Link to="">Find Link Therapist</Link>{" "}
+        </li>
+        <li className="nav-items">
+          {" "}
+          <Link to="">Blog</Link>{" "}
+        </li>
+        <li className="nav-items">
+          {" "}
+          <Link to="">Donor/Donees</Link>{" "}
+        </li>
+        <li className="nav-items">
+          {" "}
+          <Link to="/contactus"> Contact Us</Link>
+        </li>
       </div>
-    
     </nav>
   );
 };
