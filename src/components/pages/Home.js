@@ -13,7 +13,7 @@ const Home = () => {
 
   const decrementSlide = () => {
     setSlideNum((value) => {
-      return (value - 1) % slides.length;
+      return (slides.length + value - 1) % slides.length;
     });
   };
 
@@ -30,7 +30,7 @@ const Home = () => {
       </div>
 
       <div className="home-slideshow-container">
-        <div className="home-slides">{slides[slideNum]}</div>
+        <div className="home-slides">{slides[Math.abs(slideNum)]}</div>
 
         <span className="home-prev" onClick={decrementSlide}>
           <ion-icon name="chevron-back-circle-outline"></ion-icon>
