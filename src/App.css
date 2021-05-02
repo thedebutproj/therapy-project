@@ -1,10 +1,10 @@
 .App {
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 125px; /*Because of fixed navabar*/
 }
 
-.App-content{
+.App-content {
   flex: 1 0 auto;
 }
-

@@ -1,14 +1,32 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { siteLogo } from "../../assets";
 import "./Navbar.css";
 
 const Navbar = () => {
+  useEffect(() => {
+    document.addEventListener("scroll", (event) => {
+      const logoTop = document.getElementsByClassName("navbar-logo")[0];
+      const logoList = document.getElementsByClassName("nav-list-logo")[0];
+      if (window.scrollY > 0) {
+        logoTop.style.display = "none";
+        logoList.style.display = "block";
+      } else {
+        logoTop.style.display = "block";
+        logoList.style.display = "none";
+      }
+    });
+  }, []);
+
   return (
-    <nav id="navbar">
+    <nav>
       <div className="navbar-logo">
         <img src={siteLogo}></img>
       </div>
       <div className="navbar-container">
+        <li className="nav-items nav-list-logo">
+          <img src={siteLogo}></img>
+        </li>
         <li className="nav-items">
           {" "}
           <Link to="/"> Home</Link>
@@ -19,7 +37,7 @@ const Navbar = () => {
         </li>
         <li className="nav-items">
           {" "}
-          <Link to="">Find Link Therapist</Link>{" "}
+          <Link to="">Find Therapist</Link>{" "}
         </li>
         <li className="nav-items">
           {" "}

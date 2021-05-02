@@ -11,13 +11,32 @@
   position: relative;
 }
 
-/* .home-slides {
-  display: none;
-} */
-
 .home-slides img {
   width: 100%;
   height: 90vh;
+}
+
+.home-slides-content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0px 10px 10px;
+}
+
+.home-slides-button button {
+  margin-right: 10px;
+  padding: 10px;
+  border: 3px solid black;
+  background-color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.home-slides-button button:hover {
+  color: white;
+  background-color: black;
 }
 
 .home-prev,
