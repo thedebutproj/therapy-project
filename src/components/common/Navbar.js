@@ -21,11 +21,16 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navbar-logo">
-        <img src={siteLogo}></img>
+        <Link to="/">
+          <img src={siteLogo}></img>
+        </Link>
       </div>
       <div className="navbar-container">
         <li className="nav-items nav-list-logo">
-          <img src={siteLogo}></img>
+          <Link to="/">
+            <img src={siteLogo}></img>
+            <span>Debut Project</span>
+          </Link>
         </li>
         <li className="nav-items">
           {" "}

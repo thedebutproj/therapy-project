@@ -20,20 +20,18 @@ const Footer = () => {
           </li>
           <li>9876543210</li>
           <li>ask@thedebutproj.in</li>
-        </ul>
 
-        <ul className="footer-social-media-icons">
-          <li className="footer-facebook">
+          <li className="footer-social-media-icons footer-facebook">
             <ion-icon name="logo-facebook">
               <a href="#"></a>
             </ion-icon>
           </li>
-          <li className="footer-instagram">
+          <li className="footer-social-media-icons footer-instagram">
             <ion-icon name="logo-instagram">
               <a href="#"></a>
             </ion-icon>
           </li>
-          <li className="footer-linkedin">
+          <li className="footer-social-media-icons footer-linkedin">
             <ion-icon name="logo-linkedin">
               <a href="#"></a>
             </ion-icon>
