@@ -7,23 +7,23 @@ const Home = () => {
   //Content for the carousel
   const slides = [
     [
-      <img src={homeDirectory} alt="Blog" />,
+      <img className="dir-img" src={homeDirectory} alt="Blog" />,
       <>
-        <h1>The Directory</h1>
-        <p>
+        <h1 className="dir-h1">The Directory</h1>
+        <p className="dir-p">
           Find the right therapist, counsellor, or psychologists for you. Visit
           our directory of verified mental health professionals and use our
           filters to create your shortlist!
         </p>
       </>,
-      <button>VISIT</button>,
+      <button className="dir-btn">VISIT</button>,
     ],
 
     [
-      <img src={homeBlog} alt="Blog" />,
+      <img className="blog-img" src={homeBlog} alt="Blog" />,
       <>
-        <h1>FEATURED BLOG</h1>
-        <p>
+        <h1 className="blog-h1">FEATURED BLOG</h1>
+        <p className="blog-p">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
           tincidunt odio
           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -31,18 +31,23 @@ const Home = () => {
         </p>
       </>,
       <>
-        <button>VISIT</button>
+        <button className="blog-btn">VISIT</button>
       </>,
     ],
 
     [
-      <img src={homeDonor} alt="Blog" />,
+      <img className="donor-img" src={homeDonor} alt="Blog" />,
       <>
-        <h1>Connect with potential donors</h1>
-        <p>(Beta)</p>
+        <h1 className="donor-h1">DONOR/DONEE</h1>
+        <p className="donor-p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+          tincidunt odio
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          
+        </p>
       </>,
       <>
-        <button>VISIT</button>
+        <button className="donor-btn">VISIT</button>
       </>,
     ],
   ];

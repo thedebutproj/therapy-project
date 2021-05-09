@@ -42,19 +42,16 @@
 
 .home-slides-content h1 {
     font-size: 79px;
-    font-weight: 200;
+    font-weight: 400;
     font-family: var(--font1);
     margin: 0px;
-    color: #fae3d1;
-    text-shadow: 5px 5px 0px #61878c;
 }
 
 .home-slides-content p {
     font-family: var(--font1);
-    font-size: 24px;
-    margin-bottom: 40px;
-    color: #447a7d;
-    /* font-weight: 500; */
+    font-size: 28px;
+    margin-bottom: 80px;
+    font-weight: 600;
 }
 
 .home-slides-button button {
@@ -76,6 +73,24 @@
     background-color: white;
     color: #e96571;
     border: 2px solid #e96571;
+}
+
+.blog-h1 {
+    color: #fae3d1;
+    text-shadow: 5px 5px 0px #61878c;
+}
+
+.blog-p {
+    color: #447a7d;
+}
+
+.donor-h1 {
+    color: white;
+    text-shadow: 5px 5px 0px var(--color3);
+}
+
+.donor-p {
+    color: var(--color2);
 }
 
 .home-prev,
