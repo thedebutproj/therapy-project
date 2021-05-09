@@ -1,64 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+:root {
+    --font1: 'Neucha', cursive;
+    --color1: #f9bb75;
+    --color2: #e96671;
+    --color3: #f79a90;
+    --color4: #61878c;
+    --color5: #413243;
+    --color6: #f78a3f;
+    --color7: #fffaf6;
+    --color8: #fddec7;
+    --color9: #56a0a2;
+}
+
 .home-container {
-  padding: 16px;
+    padding: 0px 10px;
 }
 
 .home-art img {
-  height: 80vh;
-  width: 100%;
+    height: 80vh;
+    width: 100%;
 }
 
 .home-slideshow-container {
-  position: relative;
+    position: relative;
 }
 
 .home-slides img {
-  width: 100%;
-  height: 90vh;
+    width: 100%;
+    height: 85vh;
 }
 
 .home-slides-content {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 0px 10px 10px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    /* backdrop-filter: blur(2px); */
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    padding: 0px 10px 10px;
+    width: 30vw;
+}
+
+.home-slides-content h1 {
+    font-size: 79px;
+    font-weight: 200;
+    font-family: var(--font1);
+    margin: 0px;
+    color: #fae3d1;
+    text-shadow: 5px 5px 0px #61878c;
+}
+
+.home-slides-content p {
+    font-family: var(--font1);
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #447a7d;
+    /* font-weight: 500; */
 }
 
 .home-slides-button button {
-  margin-right: 10px;
-  padding: 10px;
-  border: 3px solid black;
-  background-color: white;
-  cursor: pointer;
-  transition-duration: 0.5s;
+    /* margin-right: 10px; */
+    padding: 6px 38px;
+    font-size: 24px;
+    border-radius: 20px;
+    /* border: 3px solid black; */
+    background-color: #e96571;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    color: white;
+    border: none;
+    font-family: var(--font1);
 }
 
 .home-slides-button button:hover {
-  color: white;
-  background-color: black;
+    color: white;
+    background-color: white;
+    color: #e96571;
+    border: 2px solid #e96571;
 }
 
 .home-prev,
 .home-next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  border: none;
-  background-color: transparent;
-  color: white;
-  user-select: none;
-  font-size: 36px;
-  border-radius: 0 3px 3px 0;
-  padding: 16px;
-  transition: 0.6s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    user-select: none;
+    font-size: 36px;
+    border-radius: 0 3px 3px 0;
+    padding: 16px;
+    transition: 0.6s ease;
 }
 
 .home-next {
-  right: 0;
+    right: 0;
 }
 
 .home-next:hover,
 .home-prev:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }

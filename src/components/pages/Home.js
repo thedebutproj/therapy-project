@@ -16,22 +16,22 @@ const Home = () => {
           filters to create your shortlist!
         </p>
       </>,
-      <button>Go to the directory</button>,
+      <button>VISIT</button>,
     ],
 
     [
       <img src={homeBlog} alt="Blog" />,
       <>
-        <h1>Featured Blog</h1>
+        <h1>FEATURED BLOG</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-          tincidunt odio, ac ultrices nisl. Sed hendrerit posuere ante luctus
-          scelerisque.
+          tincidunt odio
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          
         </p>
       </>,
       <>
-        <button>Hello</button>
-        <button>Hello</button>
+        <button>VISIT</button>
       </>,
     ],
 
@@ -42,8 +42,7 @@ const Home = () => {
         <p>(Beta)</p>
       </>,
       <>
-        <button>Hello</button>
-        <button>Hello</button>
+        <button>VISIT</button>
       </>,
     ],
   ];
