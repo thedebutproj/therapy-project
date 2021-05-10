@@ -93,6 +93,15 @@
     color: var(--color2);
 }
 
+.dir-h1 {
+    color: var(--color2);
+    text-shadow: 3px 2px 0px var(--color5);
+}
+
+.dir-p {
+    color: #447a7d;
+}
+
 .home-prev,
 .home-next {
     cursor: pointer;

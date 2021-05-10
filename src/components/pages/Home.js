@@ -11,9 +11,10 @@ const Home = () => {
       <>
         <h1 className="dir-h1">The Directory</h1>
         <p className="dir-p">
-          Find the right therapist, counsellor, or psychologists for you. Visit
-          our directory of verified mental health professionals and use our
-          filters to create your shortlist!
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+          tincidunt odio
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          
         </p>
       </>,
       <button className="dir-btn">VISIT</button>,
