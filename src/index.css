@@ -1,7 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+:root {
+  --font1: "Neucha", cursive;
+  --color1: #f9bb75;
+  --color2: #e96671;
+  --color3: #f79a90;
+  --color4: #61878c;
+  --color5: #413243;
+  --color6: #f78a3f;
+  --color7: #fffaf6;
+  --color8: #fddec7;
+  --color9: #56a0a2;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Neucha", cursive, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: var(--font1), -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue";
   -webkit-font-smoothing: antialiased;

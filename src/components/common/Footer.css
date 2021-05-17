@@ -1,5 +1,5 @@
 footer {
-  background-color: #413243;
+  background-color: var(--color5);
   color: white;
   display: flex;
   justify-content: space-between;

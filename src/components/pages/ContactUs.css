@@ -1,8 +1,30 @@
 .contactus-container {
-  padding: 16px;
-  max-width: 1170px;
+  position: relative;
+  /* padding: 32px 64px; */
   width: auto;
   margin: auto;
+  background-color: #c0d2d2;
+}
+
+.contactus-container img {
+  width: 100%;
+  display: block;
+}
+
+.contactus-container .figure1 {
+  position: absolute;
+  width: 50%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.contactus-text {
+  position: relative; /*This helps in using text over the image, because z-index will not work without relative position*/
+  padding: 18px 64px;
+  z-index: 2;
+  /* top: 0;
+  left: 0; */
 }
 
 .contactus-form-container {
@@ -11,15 +33,16 @@
 }
 
 .h-primary {
-  font-size: 34px;
+  font-size: 40px;
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  margin-bottom: 16px;
 }
 
 .contactus-container p {
-  color: #393f44;
-  font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  color: var(--color2);
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0px;
   margin-bottom: 30px;
 }
 
@@ -35,10 +58,10 @@
   margin: 10px;
   margin-left: 0px;
   font-size: 18px;
-  border-radius: 10px;
-  border: none;
-  background-color: bisque;
-  font-family: monospace, "Open Sans", sans-serif;
+  border-radius: 40px;
+  border: 2px solid var(--color4);
+  background-color: white;
+  font-family: var(--font1);
 }
 
 .contactus-left textarea {
@@ -47,50 +70,73 @@
   margin: 10px;
   margin-left: 0px;
   font-size: 18px;
-  border-radius: 10px;
-  border: none;
-  background-color: bisque;
+  border-radius: 18px;
+  border: 2px solid var(--color4);
+  background-color: white;
   height: 130px;
-  font-family: monospace, "Open Sans", sans-serif;
+  font-family: var(--font1);
 }
 
 .contactus-left button {
+  display: block;
+  margin: auto;
   padding: 15px;
-  width: 96%;
-  margin: 10px;
-  margin-left: 0px;
+  width: 50%;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: 40px;
   border: none;
-  background-color: rgb(97, 93, 93);
+  background-color: var(--color2);
   color: white;
   cursor: pointer;
-  font-family: monospace, "Open Sans", sans-serif;
+  font-family: var(--font1);
 }
 
 .contactus-right {
+  position: relative;
   width: 50%;
+  /* background-image: url(../../assets/contactUs_PostIt.png); */
 }
 
-.contactus-right h2 {
+.contactus-right .figure2 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.contactus-right .figure3_lines {
+  position: absolute;
+  width: 20%;
+  bottom: 80%;
+  left: 35%;
+}
+
+.contactus-right-text {
+  position: relative;
+  z-index: 10;
+  padding: 90px;
+}
+
+.contactus-right-text h2 {
   margin-top: 0px;
-  color: #68cceb;
+  text-decoration: underline;
   font-size: 30px;
   font-weight: 500;
 }
 
-.contactus-right ul {
+.contactus-right-text ul {
   padding-left: 0px;
 }
 
-.contactus-right li {
+.contactus-right-text li {
   list-style: none;
   line-height: 2.2;
   font-size: 18px;
+  font-weight: bold;
 }
 
-.contactus-right li a {
+.contactus-right-text li a {
   text-decoration: none;
   cursor: unset;
-  color: black;
+  font-weight: normal;
+  color: var(--color4);
 }

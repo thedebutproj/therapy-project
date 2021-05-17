@@ -1,54 +1,82 @@
 import { useState } from "react";
 
-import { siteLogo, homeBlog, homeDirectory, homeDonor } from "../../assets";
+import {
+  siteLogo,
+  homeBlog,
+  homeDirectory,
+  homeDonor,
+  home_directory_MainIllustration,
+  home_directory_LHSGraphic,
+  home_blog_MainIllustration,
+  home_donor_MainIllustration,
+  home_donor_LHSPuzzle,
+} from "../../assets";
 import "./Home.css";
 
 const Home = () => {
   //Content for the carousel
   const slides = [
     [
-      <img className="dir-img" src={homeDirectory} alt="Blog" />,
+      "home-directory",
       <>
-        <h1 className="dir-h1">The Directory</h1>
-        <p className="dir-p">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-          tincidunt odio
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          
-        </p>
-      </>,
-      <button className="dir-btn">VISIT</button>,
-    ],
-
-    [
-      <img className="blog-img" src={homeBlog} alt="Blog" />,
-      <>
-        <h1 className="blog-h1">FEATURED BLOG</h1>
-        <p className="blog-p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-          tincidunt odio
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          
-        </p>
-      </>,
-      <>
-        <button className="blog-btn">VISIT</button>
+        <img src={home_directory_LHSGraphic} className="figure1" />
+        <div className="home-slide-content">
+          <div className="home-slide-left">
+            <h1 className="dir-h1">THE DIRECTORY</h1>
+            <p className="dir-p">
+              Find the right therapist, counsellor, or psychologists for you.
+              Visit our directory of verified mental health professionals and
+              use our filters to create your shortlist!
+            </p>
+            <button className="dir-btn">VISIT</button>
+          </div>
+          <div className="home-slide-right home-slide-right-directory">
+            <img src={home_directory_MainIllustration} />
+          </div>
+        </div>
       </>,
     ],
 
     [
-      <img className="donor-img" src={homeDonor} alt="Blog" />,
+      "home-blog",
       <>
-        <h1 className="donor-h1">DONOR/DONEE</h1>
-        <p className="donor-p">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-          tincidunt odio
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          
-        </p>
+        <div className="home-slide-content">
+          <div className="home-slide-left">
+            <h1 className="blog-h1">FEATURED BLOG</h1>
+            <p className="blog-p">
+              For IIT Roorkee only
+              <br></br>
+              Don't know if therapy is for you? Try it out for free. Reach out
+              to our partner donors and blah blah blah.
+            </p>
+            <button className="blog-btn">VISIT</button>
+          </div>
+          <div className="home-slide-right">
+            <img src={home_blog_MainIllustration} />
+          </div>
+        </div>
       </>,
+    ],
+
+    [
+      "home-donor",
       <>
-        <button className="donor-btn">VISIT</button>
+        <img src={home_donor_LHSPuzzle} className="figure1" />
+        <div className="home-slide-content">
+          <div className="home-slide-left">
+            <h1 className="donor-h1">DONOR/DONEE</h1>
+            <p className="donor-p">
+              For IIT Roorkee only
+              <br></br>
+              Don't know if therapy is for you? Try it out for free. Reach out
+              to our partner donors and blah blah blah.
+            </p>
+            <button className="donor-btn">VISIT</button>
+          </div>
+          <div className="home-slide-right home-slide-right-donor">
+            <img src={home_donor_MainIllustration} />
+          </div>
+        </div>
       </>,
     ],
   ];
@@ -72,8 +100,10 @@ const Home = () => {
         <img src={siteLogo} alt="Art" />
       </div>
 
-      <div className="home-slideshow-container">
-        <div className="home-slides">{slides[Math.abs(slideNum)][0]}</div>
+      <div
+        className={"home-slideshow-container " + slides[Math.abs(slideNum)][0]}
+      >
+        {/* <div className="home-slides">{slides[Math.abs(slideNum)][0]}</div>
 
         <div className="home-slides-content">
           <div className="home-slides-text">
@@ -84,6 +114,13 @@ const Home = () => {
           </div>
         </div>
 
+        <span className="home-prev" onClick={decrementSlide}>
+          <ion-icon name="chevron-back-circle-outline"></ion-icon>
+        </span>
+        <span className="home-next" onClick={incrementSlide}>
+          <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+        </span> */}
+        {slides[Math.abs(slideNum)][1]}
         <span className="home-prev" onClick={decrementSlide}>
           <ion-icon name="chevron-back-circle-outline"></ion-icon>
         </span>
