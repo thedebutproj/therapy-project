@@ -11,6 +11,11 @@ import home_directory_LHSGraphic from "./home/directory/directory_LHSGraphic.png
 import home_blog_MainIllustration from "./home/blog/blog_MainIllustration.png";
 import home_donor_MainIllustration from "./home/donor/donor_MainIllustration.png";
 import home_donor_LHSPuzzle from "./home/donor/donor_LHSPuzzle.png";
+import directory_LHSPatch from "./directory/directory_LHSPatch.png";
+import directory_RHSPatch from "./directory/directory_RHSPatch.png";
+import directory_Spiral from "./directory/directory_Spiral.png";
+import directory_RedLine from "./directory/directory_RedLine.png";
+import directory_Dp01 from "./directory/directory_Dp01.png";
 
 export {
   siteLogo,
@@ -26,4 +31,9 @@ export {
   home_blog_MainIllustration,
   home_donor_MainIllustration,
   home_donor_LHSPuzzle,
+  directory_LHSPatch,
+  directory_RHSPatch,
+  directory_Spiral,
+  directory_RedLine,
+  directory_Dp01,
 };

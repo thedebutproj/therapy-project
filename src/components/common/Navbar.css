@@ -7,6 +7,10 @@ nav {
   z-index: 100;
 }
 
+.navbar-logo {
+  background-color: var(--color7);
+}
+
 .navbar-logo img {
   height: 5vw;
   margin-left: auto; /* For making image at center */
@@ -18,7 +22,7 @@ nav {
 .navbar-container {
   display: flex;
   justify-content: center;
-  background-color: #fffaf6;
+  background-color: var(--color7);
   align-items: center;
   height: 50px;
 }

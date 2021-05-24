@@ -38,11 +38,7 @@ const Navbar = () => {
         </li>
         <li className="nav-items">
           {" "}
-          <Link to="">Articles</Link>{" "}
-        </li>
-        <li className="nav-items">
-          {" "}
-          <Link to="">Find Therapist</Link>{" "}
+          <Link to="/directory">Find Therapist</Link>{" "}
         </li>
         <li className="nav-items">
           {" "}

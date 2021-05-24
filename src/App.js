@@ -1,6 +1,6 @@
 import "./App.css";
 import { Navbar, Footer } from "./components/common";
-import { Home, ContactUs } from "./components/pages";
+import { Home, ContactUs, Directory } from "./components/pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -15,6 +15,9 @@ function App() {
             </Route>
             <Route exact path="/contactus">
               <ContactUs />
+            </Route>
+            <Route exact path="/directory">
+              <Directory />
             </Route>
           </Switch>
         </div>

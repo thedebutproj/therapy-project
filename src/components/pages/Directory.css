@@ -1,0 +1,102 @@
+.directory-container {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  background-color: var(--color8);
+}
+
+.directory-container .lhsPatch {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 50%;
+}
+
+.directory-container .rhsPatch {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 75%;
+}
+
+.directory-left {
+  position: relative;
+  z-index: 10;
+}
+
+.directory-left .directory-redLine {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  left: 10%;
+  height: 100%;
+}
+
+.directory-heading {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.directory-heading img {
+  width: 80px;
+}
+
+.directory-heading h1 {
+  color: var(--color2);
+  font-size: 42px;
+  font-weight: normal;
+}
+
+.directory-left ul {
+  overflow-y: auto;
+  /* height: 600px; */
+  height: 55vh;
+  padding: 0px 30px;
+  list-style: none;
+}
+
+.directory-left ul li {
+  display: flex;
+  margin-bottom: 40px;
+  /* justify-content: space-between; */
+}
+
+.directory-therapist-image {
+  width: 88px;
+  height: 88px;
+}
+
+.directory-therapist-data {
+  flex: 1 0 auto;
+  width: 384px;
+  /* margin-right: 64px; */
+}
+
+.directory-therapist-data p {
+  margin: 8px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.directory-therapist-location {
+  display: flex;
+  color: #6b8c8f;
+  font-size: 20px;
+}
+
+.directory-therapist-location ion-icon {
+  margin-right: 8px;
+  vertical-align: top;
+}
+
+.directory-right {
+  position: relative;
+  z-index: 10;
+  margin-top: 32px;
+}
