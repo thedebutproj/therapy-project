@@ -15,7 +15,21 @@ import directory_LHSPatch from "./directory/directory_LHSPatch.png";
 import directory_RHSPatch from "./directory/directory_RHSPatch.png";
 import directory_Spiral from "./directory/directory_Spiral.png";
 import directory_RedLine from "./directory/directory_RedLine.png";
-import directory_Dp01 from "./directory/directory_Dp01.png";
+// import directory_Dp01 from "./directory/directory_Dp01.png";
+// import * from
+import directory_SearchIcon from "./directory/directory_SearchIcon.png";
+
+function importAll(r) {
+  let images = [];
+  r.keys().map((item, index) => {
+    images.push(r(item));
+  });
+  return images;
+}
+
+const therapistImages = importAll(
+  require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
+);
 
 export {
   siteLogo,
@@ -35,5 +49,6 @@ export {
   directory_RHSPatch,
   directory_Spiral,
   directory_RedLine,
-  directory_Dp01,
+  therapistImages,
+  directory_SearchIcon,
 };
