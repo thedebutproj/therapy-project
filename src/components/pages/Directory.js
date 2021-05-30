@@ -118,6 +118,7 @@ const Directory = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
+
     setTherapistData(
       therapistDataDefault.filter((ele) => {
         return ele["Full Name"]
