@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import {
   siteLogo,
+  home_FullBGWithText,
   homeBlog,
   homeDirectory,
   homeDonor,
@@ -97,7 +98,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-art">
-        <img src={siteLogo} alt="Art" />
+        <img src={home_FullBGWithText} alt="Art" />
       </div>
 
       <div

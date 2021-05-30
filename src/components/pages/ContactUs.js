@@ -69,7 +69,7 @@ function ContactUs() {
                 onChange={handleChange}
               ></textarea>
 
-              <button>Send Message</button>
+              <button>SEND MESSAGE</button>
             </form>
           </div>
           <div className="contactus-right">

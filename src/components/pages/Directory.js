@@ -16,6 +16,9 @@ const Directory = () => {
   //useRef is used because we want to preserve the data between re-renders
   const search = useRef("");
 
+  const filterIDs = ["profession", "location", "language", "medium"];
+
+  //Holds the value of filters user has selected
   const filters = useRef({
     profession: [],
     language: [],
@@ -25,6 +28,13 @@ const Directory = () => {
 
   const [therapistData, setTherapistData] = useState([]); //Handling data that is filtered
   const [therapistDataDefault, setTherapistDataDefault] = useState([]); //Handling data that is being fetched
+
+  const stringChecker = (word, array) => {
+    for (let i = 0; i < array.length; i++) {
+      if (word.includes(array[i])) return true;
+    }
+    return false;
+  };
 
   const fetchData = async (doc) => {
     try {
@@ -66,12 +76,44 @@ const Directory = () => {
 
     setTherapistData(
       therapistDataDefault.filter((ele) => {
-        if (filters.current.location.length == 0) return true;
+        let flag = true;
 
-        return filters.current.location.includes(ele["Location"].toLowerCase());
+        if (filters.current.profession.length != 0) {
+          flag = stringChecker(
+            ele["Type of Professional"].toLowerCase(),
+            filters.current.profession
+          );
+        }
+
+        if (filters.current.location.length != 0) {
+          flag = stringChecker(
+            ele["Location"].toLowerCase(),
+            filters.current.location
+          );
+        }
+
+        if (filters.current.language.length != 0) {
+          flag = stringChecker(
+            ele["Languages"].toLowerCase(),
+            filters.current.language
+          );
+        }
+
+        if (filters.current.medium.length != 0) {
+          flag = stringChecker(
+            ele["Medium"].toLowerCase(),
+            filters.current.medium
+          );
+        }
+
+        return flag;
       })
     );
     // console.log(filters.current);
+  };
+
+  const handleFiltersReset = (e) => {
+    window.location.reload();
   };
 
   const handleSearchSubmit = (e) => {
@@ -83,6 +125,25 @@ const Directory = () => {
           .includes(search.current.toLowerCase());
       })
     );
+  };
+
+  const handleDropdown = (e) => {
+    const filterName = e.target.getAttribute("data-filter-name");
+    const element = document.getElementById(filterName);
+    console.log();
+    if (element.style.display == "block") {
+      element.style.display = "none";
+      element.parentElement.classList.remove("directory-filter-open");
+    } else {
+      for (let i = 0; i < filterIDs.length; i++) {
+        const ele = document.getElementById(filterIDs[i]);
+        ele.style.display = "none";
+        ele.parentElement.classList.remove("directory-filter-open");
+      }
+
+      element.style.display = "block";
+      element.parentElement.classList.add("directory-filter-open");
+    }
   };
 
   useEffect(() => {
@@ -126,75 +187,312 @@ const Directory = () => {
         </ul>
       </div>
       <div className="directory-right">
-        <div className="directory-right-heading">
-          <img src={directory_Spiral} />
-          <h2>Search</h2>
+        <div className="directory-search-heading">
+          <img src={directory_Spiral} className="directory-right-spiral" />
+          <p>Search</p>
+        </div>
+
+        <div className="directory-input-field">
+          <input
+            type="search"
+            placeholder="Any Keyword..."
+            onChange={(e) => (search.current = e.target.value)}
+          />
+          <img src={directory_SearchIcon} onClick={handleSearchSubmit} />
         </div>
         <ul>
-          <li className="directory-input-field">
+          {/* <li className="directory-input-field">
             <input
               type="search"
               placeholder="Any Keyword..."
               onChange={(e) => (search.current = e.target.value)}
             />
             <img src={directory_SearchIcon} onClick={handleSearchSubmit} />
+          </li> */}
+          <li className="directory-filter">
+            <div
+              className="directory-filter-heading"
+              data-filter-name="profession"
+              onClick={handleDropdown}
+            >
+              <p data-filter-name="profession">Profession</p>
+              <ion-icon
+                name="caret-down-outline"
+                data-filter-name="profession"
+              ></ion-icon>
+            </div>
+
+            <div className="directory-dropdown-content" id="profession">
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="profession"
+                    value="therapist"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Therapist</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="profession"
+                    value="Counselor"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Counselor</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="profession"
+                    value="clinician"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Clinician</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="profession"
+                    value="psychologist"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Psychologist</span>
+              </label>
+            </div>
           </li>
 
-          <li className="directory-fliters">
-            <h2>Location</h2>
-            <input
-              type="checkbox"
-              name="location"
-              value="new delhi"
-              onChange={handleFilters}
-            ></input>
-            <label>New Delhi</label>
-            <br />
-            <input
-              type="checkbox"
-              name="location"
-              value="mumbai"
-              onChange={handleFilters}
-            ></input>
-            <label>Mumbai</label>
-            <br />
-            <input
-              type="checkbox"
-              name="location"
-              value="kota"
-              onChange={handleFilters}
-            ></input>
-            <label>Kota</label>
-            <br />
-            <input
-              type="checkbox"
-              name="location"
-              value="gurgaon"
-              onChange={handleFilters}
-            ></input>
-            <label>Gurgaon</label>
-            <br />
-            <input
-              type="checkbox"
-              name="location"
-              value="faridabad"
-              onChange={handleFilters}
-            ></input>
-            <label>Faridabad</label>
-            <br />
+          <li className="directory-filter">
+            <div
+              className="directory-filter-heading"
+              data-filter-name="location"
+              onClick={handleDropdown}
+            >
+              <p data-filter-name="location">Location</p>
+              <ion-icon
+                name="caret-down-outline"
+                data-filter-name="location"
+              ></ion-icon>
+            </div>
 
-            <label className="container">
-              Exp
-              <input type="checkbox" />
-              <span className="checkmark"></span>
-            </label>
+            <div className="directory-dropdown-content" id="location">
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="location"
+                    value="new delhi"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">New Delhi</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="location"
+                    value="mumbai"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Mumbai</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="location"
+                    value="kota"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Kota</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="location"
+                    value="gurgaon"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Gurgaon</span>
+              </label>
+            </div>
           </li>
-          <div>
+
+          <li className="directory-filter">
+            <div
+              className="directory-filter-heading"
+              data-filter-name="language"
+              onClick={handleDropdown}
+            >
+              <p data-filter-name="language">Language</p>
+              <ion-icon
+                name="caret-down-outline"
+                data-filter-name="language"
+              ></ion-icon>
+            </div>
+
+            <div className="directory-dropdown-content" id="language">
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="language"
+                    value="english"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">English</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="language"
+                    value="hindi"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Hindi</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="language"
+                    value="marathi"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Marathi</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="language"
+                    value="gujarati"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Gujarati</span>
+              </label>
+            </div>
+          </li>
+
+          <li className="directory-filter">
+            <div
+              className="directory-filter-heading"
+              data-filter-name="medium"
+              onClick={handleDropdown}
+            >
+              <p data-filter-name="medium">Medium</p>
+              <ion-icon
+                name="caret-down-outline"
+                data-filter-name="medium"
+              ></ion-icon>
+            </div>
+
+            <div className="directory-dropdown-content" id="medium">
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="medium"
+                    value="audio"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Audio</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="medium"
+                    value="video"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Video</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="medium"
+                    value="in-person"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">In-Person</span>
+              </label>
+
+              <label className="directory-checkbox-container">
+                <span className="directory-checkbox-input">
+                  <input
+                    type="checkbox"
+                    name="medium"
+                    value="chat"
+                    onChange={handleFilters}
+                  ></input>
+                  <span class="directory-checkbox-control"></span>
+                </span>
+                <span class="directory-checkbox-label">Chat</span>
+              </label>
+            </div>
+          </li>
+
+          <div className="directory-filter-button">
             <input
               className="directory-filter-submit"
               type="submit"
               value="Go"
               onClick={handleFiltersSubmit}
+            ></input>
+            <input
+              className="directory-filter-reset"
+              type="submit"
+              value="Reset"
+              onClick={handleFiltersReset}
             ></input>
           </div>
         </ul>

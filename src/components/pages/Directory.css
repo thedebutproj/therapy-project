@@ -54,8 +54,7 @@
 
 .directory-left ul {
   overflow-y: auto;
-  /* height: 600px; */
-  height: 55vh;
+  height: 70vh;
   padding: 0px 30px;
   list-style: none;
 }
@@ -96,34 +95,43 @@
 }
 
 .directory-right {
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 10;
   margin-top: 32px;
+  margin-bottom: 32px;
 }
 
-.directory-right-heading {
+.directory-search-heading {
   display: flex;
   align-items: center;
+  padding-left: 10px;
 }
 
-.directory-right-heading img {
+.directory-search-heading .directory-right-spiral {
   width: 80px;
   margin-right: 10px;
   transform: rotate(180deg);
 }
 
-.directory-right-heading h2 {
+.directory-search-heading p {
   font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 0px;
 }
 
 /* ">" is used so this css only apply to direct child*/
 .directory-right > ul {
   list-style: none;
-  padding-left: 90px;
+  margin-top: 30px;
+  padding-left: 95px;
+  /* flex: 1 0 auto; */
 }
 
 .directory-input-field {
   display: flex;
+  padding-left: 100px;
 }
 
 .directory-input-field input {
@@ -139,46 +147,56 @@
 
 .directory-input-field img {
   width: 32px;
-}
-
-.directory-filters-dropdown {
-  list-style: none;
-  padding-left: 0px !important;
-}
-
-.directory-filters-dropdown li::before {
-  content: "\25CB";
-  color: var(--color3);
-  background-color: white;
-  margin-right: 10px;
-}
-
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
+.directory-filter-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+.directory-filter-heading ion-icon {
+  font-size: 1.2em;
+  color: var(--color2);
+}
+
+.directory-filter-heading p {
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.directory-filter-button {
+  display: flex;
+  margin-top: 10px;
 }
 
 .directory-filter-submit {
   display: block;
   margin: auto;
-  width: 50%;
+  /* margin-left: 50%; */
+  width: 30%;
+  font-size: 18px;
+  border-radius: 40px;
+  border: 2px solid var(--color2);
+  background-color: var(--color2);
+  color: white;
+  cursor: pointer;
+  font-family: var(--font1);
+  transition-duration: 0.3s;
+}
+
+.directory-filter-reset {
+  display: block;
+  margin: auto;
+
+  width: 30%;
   font-size: 18px;
   border-radius: 40px;
   border: 2px solid var(--color2);
@@ -195,47 +213,59 @@
   border: 2px solid var(--color2);
 }
 
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+.directory-filter-reset:hover {
+  background-color: white;
+  color: var(--color2);
+  border: 2px solid var(--color2);
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
+.directory-checkbox-container {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+  margin-bottom: 5px;
 }
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196f3;
+.directory-checkbox-input input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin: 0px;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.directory-checkbox-control {
   display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid var(--color3);
 }
 
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.directory-checkbox-input {
+  display: flex;
+  align-items: center;
+}
+
+.directory-checkbox-control {
+  background: white;
+}
+
+.directory-checkbox-input input:checked + .directory-checkbox-control {
+  background: radial-gradient(var(--color3) 50%, white 51%);
+}
+
+.directory-dropdown-content {
+  display: none;
+  height: 15vh;
+  overflow-y: auto;
+}
+
+.directory-filter {
+  padding: 10px;
+}
+
+.directory-filter-open {
+  background-color: white;
+  border: 0.2em solid var(--color3);
+  border-radius: 10%;
 }
