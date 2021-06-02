@@ -1,5 +1,6 @@
 footer {
   background-color: var(--color5);
+  font-family: "Cabin Sketch", cursive;
   color: white;
   display: flex;
   justify-content: space-between;

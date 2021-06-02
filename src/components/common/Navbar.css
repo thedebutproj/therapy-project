@@ -1,11 +1,6 @@
-nav {
-  width: 100%;
-  height: 10vh;
-}
-
 .navbar-logo {
   height: 10vh;
-  background-color: var(--color7);
+  background-color: var(--color5);
 }
 
 .navbar-logo img {
@@ -19,8 +14,10 @@ nav {
 nav {
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--color7);
+  background-color: var(--color5);
   align-items: center;
+  width: 100%;
+  height: 10vh;
 }
 
 .nav-list-logo {
@@ -44,8 +41,10 @@ nav li {
 
 nav li a {
   text-decoration: none;
-  color: #e96571;
+  font-family: "Cabin Sketch", cursive;
+  color: var(--color6);
   font-size: large;
+  font-weight: bolder;
   border-radius: 20px;
   padding: 8px 20px;
 }
