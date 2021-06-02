@@ -1,30 +1,26 @@
 nav {
-  position: fixed;
-  overflow: hidden;
   width: 100%;
-  top: 0;
-  /* left: 0; */
-  z-index: 100;
+  height: 10vh;
 }
 
 .navbar-logo {
+  height: 10vh;
   background-color: var(--color7);
 }
 
 .navbar-logo img {
-  height: 5vw;
+  height: 100%;
   margin-left: auto; /* For making image at center */
   margin-right: auto; /* For making image at center */
   display: block;
   /*without this extra space would come below image*/
 }
 
-.navbar-container {
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: var(--color7);
   align-items: center;
-  height: 50px;
 }
 
 .nav-list-logo {
@@ -40,13 +36,13 @@ nav {
   vertical-align: middle;
 }
 
-.navbar-container li {
+nav li {
   flex-shrink: 0; /*So the text present in the list dont break into multiple lines*/
   list-style: none;
   margin: 4px 50px;
 }
 
-.navbar-container li a {
+nav li a {
   text-decoration: none;
   color: #e96571;
   font-size: large;
@@ -54,7 +50,17 @@ nav {
   padding: 8px 20px;
 }
 
-/* .navbar-container li a:hover {
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.sticky + div {
+  margin-top: 10vh;
+}
+
+/* nav li a:hover {
   background-color: rgb(177, 167, 167);
   transition: 0.2s ease;
   color: black;

@@ -1,32 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { siteLogo } from "../../assets";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const navbar = useRef();
+  const navListLogo = useRef();
+
   useEffect(() => {
+    let sticky = navbar.current.offsetTop;
+    console.log(sticky);
     document.addEventListener("scroll", (event) => {
-      const logoTop = document.getElementsByClassName("navbar-logo")[0];
-      const logoList = document.getElementsByClassName("nav-list-logo")[0];
-      if (window.scrollY > 0) {
-        logoTop.style.display = "none";
-        logoList.style.display = "block";
+      // console.log(navbar);
+
+      // const logoTop = document.getElementsByClassName("navbar-logo")[0];
+      if (window.pageYOffset >= sticky) {
+        navbar.current.classList.add("sticky");
+        // logoTop.style.display = "none";
+        navListLogo.current.style.display = "block";
       } else {
-        logoTop.style.display = "block";
-        logoList.style.display = "none";
+        // logoTop.style.display = "block";
+        navbar.current.classList.remove("sticky");
+        navListLogo.current.style.display = "none";
       }
     });
   }, []);
 
   return (
-    <nav>
+    <>
       <div className="navbar-logo">
         <Link to="/">
           <img src={siteLogo}></img>
         </Link>
       </div>
-      <div className="navbar-container">
-        <li className="nav-items nav-list-logo">
+
+      <nav ref={navbar}>
+        <li className="nav-items nav-list-logo" ref={navListLogo}>
           <Link to="/">
             <img src={siteLogo}></img>
             <span>Debut Project</span>
@@ -52,8 +61,8 @@ const Navbar = () => {
           {" "}
           <Link to="/contactus"> Contact Us</Link>
         </li>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
