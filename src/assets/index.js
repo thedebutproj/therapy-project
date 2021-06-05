@@ -17,38 +17,56 @@ import directory_RHSPatch from "./directory/directory_RHSPatch.png";
 import directory_Spiral from "./directory/directory_Spiral.png";
 import directory_RedLine from "./directory/directory_RedLine.png";
 import directory_SearchIcon from "./directory/directory_SearchIcon.png";
+import profile_LogoInstagram from "./profile/profile_LogoInstagram.png";
+import profile_LogoLinkedin from "./profile/profile_LogoLinkedin.png";
+import profile_LogoTwitter from "./profile/profile_LogoTwitter.png";
+import profile_LogoWebsite from "./profile/profile_LogoWebsite.png";
+import profile_Section_ScheduleDaysOFF from "./profile/profile_Section_ScheduleDaysOFF.png";
+import profile_Section_ScheduleIcon from "./profile/profile_Section_ScheduleIcon.png";
+import profile_Section_ContactLocation from "./profile/profile_Section_ContactLocation.png";
+import profile_SquigglyPointer from "./profile/profile_SquigglyPointer.png";
+import profile_JumpToArrow from "./profile/profile_JumpToArrow.png";
 
 function importAll(r) {
-  let images = [];
-  r.keys().map((item, index) => {
-    images.push(r(item));
-  });
-  return images;
+    let images = [];
+    r.keys().map((item, index) => {
+        images.push(r(item));
+    });
+    return images;
 }
 
 const therapistImages = importAll(
-  require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
+    require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
 );
 
 export {
-  siteLogo,
-  homeBlog,
-  homeDonor,
-  homeDirectory,
-  contactUS,
-  contactUs_LHSPatch,
-  contactUs_PostIt,
-  contactUs_LinesGraphic,
-  home_FullBGWithText,
-  home_directory_MainIllustration,
-  home_directory_LHSGraphic,
-  home_blog_MainIllustration,
-  home_donor_MainIllustration,
-  home_donor_LHSPuzzle,
-  directory_LHSPatch,
-  directory_RHSPatch,
-  directory_Spiral,
-  directory_RedLine,
-  therapistImages,
-  directory_SearchIcon,
+    siteLogo,
+    homeBlog,
+    homeDonor,
+    homeDirectory,
+    contactUS,
+    contactUs_LHSPatch,
+    contactUs_PostIt,
+    contactUs_LinesGraphic,
+    home_FullBGWithText,
+    home_directory_MainIllustration,
+    home_directory_LHSGraphic,
+    home_blog_MainIllustration,
+    home_donor_MainIllustration,
+    home_donor_LHSPuzzle,
+    directory_LHSPatch,
+    directory_RHSPatch,
+    directory_Spiral,
+    directory_RedLine,
+    therapistImages,
+    directory_SearchIcon,
+    profile_LogoInstagram,
+    profile_LogoLinkedin,
+    profile_LogoTwitter,
+    profile_LogoWebsite,
+    profile_Section_ScheduleDaysOFF,
+    profile_Section_ScheduleIcon,
+    profile_Section_ContactLocation,
+    profile_SquigglyPointer,
+    profile_JumpToArrow,
 };
