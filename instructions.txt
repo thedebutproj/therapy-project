@@ -1,0 +1,8 @@
+Always wrap pages with div only [Because Navbar is coded to add padding to next div automatically].
+
+Don't change the header in the excel sheet (sheet from where data is fetched from), if changing then change it in the code also.
+
+Reference:
+Sticky Navbar : https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+Sticky Footer : https://dev.to/letsbsocial1/flexbox-sticky-footer-and-react-e1h
+React Folder Structure : https://dev.to/pcofilada/simple-react-folder-structure-31lj

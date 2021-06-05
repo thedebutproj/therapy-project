@@ -1,30 +1,23 @@
-nav {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  top: 0;
-  /* left: 0; */
-  z-index: 100;
-}
-
 .navbar-logo {
-  background-color: var(--color7);
+  height: 10vh;
+  background-color: var(--color5);
 }
 
 .navbar-logo img {
-  height: 5vw;
+  height: 100%;
   margin-left: auto; /* For making image at center */
   margin-right: auto; /* For making image at center */
   display: block;
   /*without this extra space would come below image*/
 }
 
-.navbar-container {
+nav {
   display: flex;
-  justify-content: center;
-  background-color: var(--color7);
+  justify-content: space-evenly;
+  background-color: var(--color5);
   align-items: center;
-  height: 50px;
+  width: 100%;
+  height: 10vh;
 }
 
 .nav-list-logo {
@@ -40,21 +33,33 @@ nav {
   vertical-align: middle;
 }
 
-.navbar-container li {
+nav li {
   flex-shrink: 0; /*So the text present in the list dont break into multiple lines*/
   list-style: none;
   margin: 4px 50px;
 }
 
-.navbar-container li a {
+nav li a {
   text-decoration: none;
-  color: #e96571;
+  font-family: "Cabin Sketch", cursive;
+  color: var(--color6);
   font-size: large;
+  font-weight: bolder;
   border-radius: 20px;
   padding: 8px 20px;
 }
 
-/* .navbar-container li a:hover {
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.sticky + div {
+  margin-top: 10vh;
+}
+
+/* nav li a:hover {
   background-color: rgb(177, 167, 167);
   transition: 0.2s ease;
   color: black;

@@ -83,6 +83,8 @@ const Directory = () => {
             ele["Type of Professional"].toLowerCase(),
             filters.current.profession
           );
+
+          if (!flag) return false;
         }
 
         if (filters.current.location.length != 0) {
@@ -90,6 +92,8 @@ const Directory = () => {
             ele["Location"].toLowerCase(),
             filters.current.location
           );
+
+          if (!flag) return false;
         }
 
         if (filters.current.language.length != 0) {
@@ -97,6 +101,8 @@ const Directory = () => {
             ele["Languages"].toLowerCase(),
             filters.current.language
           );
+
+          if (!flag) return false;
         }
 
         if (filters.current.medium.length != 0) {
@@ -104,6 +110,8 @@ const Directory = () => {
             ele["Medium"].toLowerCase(),
             filters.current.medium
           );
+
+          if (!flag) return false;
         }
 
         return flag;
