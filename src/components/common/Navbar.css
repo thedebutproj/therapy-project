@@ -36,23 +36,22 @@ nav {
 nav li {
   flex-shrink: 0; /*So the text present in the list dont break into multiple lines*/
   list-style: none;
-  margin: 4px 50px;
 }
 
 nav li a {
   text-decoration: none;
-  font-family: "Cabin Sketch", cursive;
+  font-family: var(--font2);
   color: var(--color6);
   font-size: large;
   font-weight: bolder;
   border-radius: 20px;
-  padding: 8px 20px;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   z-index: 100;
+  background-color: var(--color7);
 }
 
 .sticky + div {

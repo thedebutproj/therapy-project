@@ -3,6 +3,8 @@
   position: relative;
   justify-content: space-evenly;
   background-color: var(--color8);
+  width: 100%;
+  /* height: 90vh; */
 }
 
 .directory-container .lhsPatch {
@@ -62,6 +64,7 @@
 .directory-left ul li {
   display: flex;
   margin-bottom: 40px;
+  width: 50vw;
   /* justify-content: space-between; */
 }
 
@@ -106,7 +109,7 @@
 .directory-search-heading {
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 .directory-search-heading .directory-right-spiral {
@@ -125,13 +128,13 @@
 .directory-right > ul {
   list-style: none;
   margin-top: 30px;
-  padding-left: 95px;
+  padding-left: 0px;
   /* flex: 1 0 auto; */
 }
 
 .directory-input-field {
   display: flex;
-  padding-left: 100px;
+  /* padding-left: 100px; */
 }
 
 .directory-input-field input {

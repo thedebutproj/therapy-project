@@ -38,7 +38,7 @@ const Navbar = () => {
         <li className="nav-items nav-list-logo" ref={navListLogo}>
           <Link to="/">
             <img src={siteLogo}></img>
-            <span>Debut Project @</span>
+            <span>Debut Project</span>
           </Link>
         </li>
         <li className="nav-items">

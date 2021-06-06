@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap");
 :root {
   --font1: "Neucha", cursive;
+  --font2: "Cabin Sketch", cursive;
   --color1: #f9bb75;
   --color2: #e96671;
   --color3: #f79a90;
