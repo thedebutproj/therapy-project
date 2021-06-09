@@ -1,23 +1,47 @@
 import siteLogo from "./Logo.png";
+
+// Might need to delete
 import homeBlog from "./home/home-blog.png";
 import homeDirectory from "./home/home-directory.jpg";
 import homeDonor from "./home/home-donor.png";
+
+// Contact Us page imports
 import contactUS from "./contactUs/contactUs.png";
 import contactUs_LHSPatch from "./contactUs/contactUs_LHSPatch.png";
 import contactUs_LinesGraphic from "./contactUs/contactUs_LinesGraphic.png";
 import contactUs_PostIt from "./contactUs/contactUs_PostIt.png";
+
+// Home imports
 import home_FullBGWithText from "./home/home_FullBGWithText.png";
 import home_directory_MainIllustration from "./home/directory/directory_MainIllustration.png";
 import home_directory_LHSGraphic from "./home/directory/directory_LHSGraphic.png";
 import home_blog_MainIllustration from "./home/blog/blog_MainIllustration.png";
 import home_donor_MainIllustration from "./home/donor/donor_MainIllustration.png";
 import home_donor_LHSPuzzle from "./home/donor/donor_LHSPuzzle.png";
+
+// Directory imports
 import directory_LHSPatch from "./directory/directory_LHSPatch.png";
 import directory_RHSPatch from "./directory/directory_RHSPatch.png";
 import directory_Spiral from "./directory/directory_Spiral.png";
 import directory_RedLine from "./directory/directory_RedLine.png";
 import directory_SearchIcon from "./directory/directory_SearchIcon.png";
 
+// Individual directory page or profile imports
+import profile_LogoInstagram from "./profile/profile_LogoInstagram.png";
+import profile_LogoLinkedin from "./profile/profile_LogoLinkedin.png";
+import profile_LogoTwitter from "./profile/profile_LogoTwitter.png";
+import profile_LogoWebsite from "./profile/profile_LogoWebsite.png";
+import profile_Section_ScheduleDaysOFF from "./profile/profile_Section_ScheduleDaysOFF.png";
+import profile_Section_ScheduleIcon from "./profile/profile_Section_ScheduleIcon.png";
+import profile_Section_ContactLocation from "./profile/profile_Section_ContactLocation.png";
+import profile_SquigglyPointer from "./profile/profile_SquigglyPointer.png";
+import profile_JumpToArrow from "./profile/profile_JumpToArrow.png";
+
+// Blog imports
+import blog_CLOUD1 from "./blog/blog_CLOUD1.png";
+import blog_CLOUD2 from "./blog/blog_CLOUD2.png";
+
+// Function for importing all the files in the Therapist Images in the directory folder
 function importAll(r) {
   let images = [];
   r.keys().map((item, index) => {
@@ -51,4 +75,15 @@ export {
   directory_RedLine,
   therapistImages,
   directory_SearchIcon,
+  profile_LogoInstagram,
+  profile_LogoLinkedin,
+  profile_LogoTwitter,
+  profile_LogoWebsite,
+  profile_Section_ScheduleDaysOFF,
+  profile_Section_ScheduleIcon,
+  profile_Section_ContactLocation,
+  profile_SquigglyPointer,
+  profile_JumpToArrow,
+  blog_CLOUD1,
+  blog_CLOUD2,
 };

@@ -1,6 +1,6 @@
 import "./App.css";
-import { Navbar, Footer } from "./components/common";
-import { Home, ContactUs, Directory } from "./components/pages";
+import { Navbar, Footer, Profile } from "./components/common";
+import { Home, ContactUs, Directory, Blog } from "./components/pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -18,6 +18,12 @@ function App() {
             </Route>
             <Route exact path="/directory">
               <Directory />
+            </Route>
+            <Route exact path="/blog">
+              <Blog />
+            </Route>
+            <Route exact path="/profile">
+              <Profile />
             </Route>
           </Switch>
         </div>

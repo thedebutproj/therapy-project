@@ -1,11 +1,7 @@
 import { useState } from "react";
 
 import {
-  siteLogo,
   home_FullBGWithText,
-  homeBlog,
-  homeDirectory,
-  homeDonor,
   home_directory_MainIllustration,
   home_directory_LHSGraphic,
   home_blog_MainIllustration,
@@ -32,7 +28,7 @@ const Home = () => {
             <button className="dir-btn">VISIT</button>
           </div>
           <div className="home-slide-right home-slide-right-directory">
-            <img src={home_directory_MainIllustration} />
+            <img src={home_directory_MainIllustration} className="pure-img" />
           </div>
         </div>
       </>,

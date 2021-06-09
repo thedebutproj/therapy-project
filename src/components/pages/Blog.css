@@ -1,0 +1,110 @@
+.blog-container {
+  position: relative;
+  padding: 30px;
+  background-color: #b0bfc2;
+}
+
+.blog-lhsPatch {
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 0;
+}
+
+.blog-lhsPatch img {
+  width: 50%;
+}
+
+.blog-rhsPatch {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+}
+
+.blog-rhsPatch img {
+  width: 50%;
+  float: right;
+}
+
+.blog-featured {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 15vh;
+}
+
+.blog-featured h1 {
+  font-size: 2em;
+  font-family: var(--font1);
+  color: #fae3d1;
+  text-shadow: 3px 3px 0px #61878c;
+}
+
+.blog-img {
+  border-radius: 10px;
+}
+
+.blog-list {
+  position: relative;
+  z-index: 2;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.blog-box {
+  padding: 1rem;
+  padding-top: 0;
+  margin-bottom: 2rem;
+}
+
+.blog-img-container {
+  padding: 10px 20px 10px 0px;
+}
+
+.b-h2 {
+  font-family: var(--font1);
+  font-size: 1.5em;
+  color: #fae3d1;
+  text-shadow: 2px 2px 0px #61878c;
+}
+
+.b-h3 {
+  font-family: var(--font1);
+  font-size: 1.2em;
+  color: #fae3d1;
+  text-shadow: 2px 2px 0px #61878c;
+}
+
+.b-p {
+  font-family: var(--font1);
+  color: #456c71;
+}
+
+.b-heading-btn {
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 0px #61878c;
+  border-radius: 20px;
+  border: 2px solid var(--color2);
+  background-color: #e96571;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  color: white;
+  font-family: var(--font1);
+}
+
+.b-heading-btn:hover {
+  background-color: white;
+  color: #e96571;
+  border: 2px solid #e96571;
+  box-shadow: none;
+}
+
+.b-btn {
+  color: #fae3d1;
+  font-family: var(--font1);
+  font-size: 1.5em;
+  background: transparent;
+  border: 0px solid transparent;
+  padding: 0;
+  cursor: pointer;
+}
