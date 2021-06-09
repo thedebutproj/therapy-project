@@ -121,7 +121,6 @@ var id = url.searchParams.get("id");
     const handleDropdown2 = () => {
         const element = document.getElementById("dropdownID");
         const buttonElement = document.getElementById("jump-to-ID");
-
         element.classList.remove("flexAnything");
         element.classList.add("hideAnything");
         buttonElement.classList.remove("hideAnything");
@@ -181,27 +180,27 @@ var id = url.searchParams.get("id");
                                     ></ion-icon>
                                 </button>
                                 <div>
-                                    <a href="#id">
+                                    <a href="#profile-contact-main">
                                         <div></div>
                                         <p>Contact</p>
                                     </a>
-                                    <a href="#id">
+                                    <a href="#profile-details-main">
                                         <div ></div>
                                         <p>Background</p>
                                     </a>
-                                    <a href="#id">
+                                    <a href="#profile-time-main">
                                         <div ></div>
                                         <p>Schedule</p>
                                     </a>
-                                    <a href="#id">
+                                    <a href="#profile-session-main">
                                         <div ></div>
                                         <p>Sessions</p>
                                     </a>
-                                    <a href="#id">
+                                    <a href="#profile-typical-session-fees-main">
                                         <div ></div>
                                         <p>Pricing</p>
                                     </a>
-                                    <a href="#id">
+                                    <a href="#profile-background-main">
                                         <div ></div>
                                         <p>Additional Info</p>
                                     </a>
@@ -217,7 +216,7 @@ var id = url.searchParams.get("id");
 
 
                             {/* contact */}
-                            <div className="profile-contact-main">
+                            <div id="profile-contact-main">
 
                                 <div className="profile-contact">
                                     <h1>CONTACT-</h1>
@@ -233,7 +232,7 @@ var id = url.searchParams.get("id");
 
                             </div>
                             {/* office hours */}
-                            <div className="profile-time-main">
+                            <div id="profile-time-main">
 
                                 <div className="profile-office-hours">
                                     <h1>OFFICE HOURS-</h1>
@@ -263,7 +262,7 @@ var id = url.searchParams.get("id");
                             </div>
 
                             {/* typical session cost */}
-                            <div className="profile-typical-session-fees-main">
+                            <div id="profile-typical-session-fees-main">
                                 <div className="profile-typical-session-fees">
                                     <h1>TYPICAL SESSION COST-</h1>
                                     <h1>{typicalSessionCost}</h1>
@@ -286,7 +285,7 @@ var id = url.searchParams.get("id");
                         </div>
                         <div className="profile-body-one-right">
                             {/* qualific */}
-                            <div className="profile-details-main">
+                            <div id="profile-details-main">
                                 <div className="profile-qualification">
                                     <h1>QUALIFICATIONS-</h1>
                                     <p>{qualifications}</p>
@@ -307,7 +306,7 @@ var id = url.searchParams.get("id");
 
                             {/* first session */}
 
-                            <div className="profile-session-main">
+                            <div id="profile-session-main">
                                 <div className="profile-first-session">
                                     <h1>YOUR FIRST SESSION-</h1>
                                     <p>
@@ -322,7 +321,7 @@ var id = url.searchParams.get("id");
                         </div>
                     </div>
                     <div className="profile-body-two">
-                        <div className="profile-background-main">
+                        <div id="profile-background-main">
                             <div className="profile-affiliations">
                                 <h1>AFFILIATIONS-</h1>
                                 <p>{affiliations}</p>

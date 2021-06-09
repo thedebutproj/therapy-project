@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 .flexAnything {
     display: flex !important;
 }
@@ -160,7 +164,7 @@
     display: flex;
 }
 
-.profile-contact-main {
+#profile-contact-main {
     background-image: url(../../assets/profile/profile_Section_ContactPostit.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -215,7 +219,7 @@
     height: 30px;
 }
 
-.profile-time-main {
+#profile-time-main {
     background-image: url(../../assets/profile/profile_Section_SchedulePostit.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -310,7 +314,7 @@
     cursor: pointer;
 }
 
-.profile-typical-session-fees-main {
+#profile-typical-session-fees-main {
     background-image: url(../../assets/profile/profile_Section_PricingPostit.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -416,7 +420,7 @@
     margin-left: 94px;
 }
 
-.profile-details-main {
+#profile-details-main {
     background-image: url(../../assets/profile/profile_Section_BackgroundPostit.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -490,7 +494,7 @@
     margin-bottom: 20px;
 }
 
-.profile-session-main {
+#profile-session-main {
     background-image: url(../../assets/profile/profile_Section_SessionPostit.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -534,7 +538,7 @@
     margin-bottom: 20px;
 }
 
-.profile-background-main {
+#profile-background-main {
     background-image: url(../../assets/profile/profile_Section_AddInfoPostit.png);
     background-repeat: no-repeat;
     background-size: cover;
