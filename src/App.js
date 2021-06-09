@@ -19,11 +19,11 @@ function App() {
             <Route exact path="/directory">
               <Directory />
             </Route>
+            <Route exact path="/directory/:id">
+              <Profile />
+            </Route>
             <Route exact path="/blog">
               <Blog />
-            </Route>
-            <Route exact path="/profile">
-              <Profile />
             </Route>
           </Switch>
         </div>

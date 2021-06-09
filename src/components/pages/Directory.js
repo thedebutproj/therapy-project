@@ -9,6 +9,7 @@ import {
   therapistImages,
   directory_SearchIcon,
 } from "../../assets";
+import { Link } from "react-router-dom";
 
 const Directory = () => {
   const SPREADSHEET_ID = "1hMoXkynBu22BWqfFGcfCRQfUkd65HB45lBflNIsfzto";
@@ -38,13 +39,12 @@ const Directory = () => {
 
   const fetchData = async (doc) => {
     try {
-      await doc.useApiKey("AIzaSyCXAsyMDl9PSPSD_VXRO0J - JUSiYoeD - io");
+      await doc.useApiKey(process.env.REACT_APP_API_KEY);
       await doc.loadInfo();
 
       const sheet = doc.sheetsByIndex[0];
       const rows = await sheet.getRows();
-        console.log(rows[0]["Contact - Email ID"]);
-
+      // console.log(rows);
       setTherapistData(rows);
       setTherapistDataDefault(rows);
     } catch (e) {
@@ -54,7 +54,6 @@ const Directory = () => {
 
   const handleFilters = (e) => {
     if (e.target.checked) {
-      //   console.log(filters.current);
       filters.current = {
         ...filters.current,
         [e.target.name]: filters.current[e.target.name].concat(e.target.value),
@@ -63,11 +62,9 @@ const Directory = () => {
       filters.current = {
         ...filters.current,
         [e.target.name]: filters.current[e.target.name].filter((ele) => {
-          //console.log(e.target.value);
-          return ele != e.target.value;
+          return ele !== e.target.value;
         }),
       };
-      //console.log(filters.current[e.target.name]);
     }
   };
 
@@ -78,7 +75,7 @@ const Directory = () => {
       therapistDataDefault.filter((ele) => {
         let flag = true;
 
-        if (filters.current.profession.length != 0) {
+        if (filters.current.profession.length !== 0) {
           flag = stringChecker(
             ele["Type of Professional"].toLowerCase(),
             filters.current.profession
@@ -87,7 +84,7 @@ const Directory = () => {
           if (!flag) return false;
         }
 
-        if (filters.current.location.length != 0) {
+        if (filters.current.location.length !== 0) {
           flag = stringChecker(
             ele["Location"].toLowerCase(),
             filters.current.location
@@ -96,7 +93,7 @@ const Directory = () => {
           if (!flag) return false;
         }
 
-        if (filters.current.language.length != 0) {
+        if (filters.current.language.length !== 0) {
           flag = stringChecker(
             ele["Languages"].toLowerCase(),
             filters.current.language
@@ -105,7 +102,7 @@ const Directory = () => {
           if (!flag) return false;
         }
 
-        if (filters.current.medium.length != 0) {
+        if (filters.current.medium.length !== 0) {
           flag = stringChecker(
             ele["Medium"].toLowerCase(),
             filters.current.medium
@@ -117,7 +114,6 @@ const Directory = () => {
         return flag;
       })
     );
-    // console.log(filters.current);
   };
 
   const handleFiltersReset = (e) => {
@@ -139,8 +135,8 @@ const Directory = () => {
   const handleDropdown = (e) => {
     const filterName = e.target.getAttribute("data-filter-name");
     const element = document.getElementById(filterName);
-    console.log();
-    if (element.style.display == "block") {
+
+    if (element.style.display === "block") {
       element.style.display = "none";
       element.parentElement.classList.remove("directory-filter-open");
     } else {
@@ -176,21 +172,23 @@ const Directory = () => {
         <ul>
           {therapistData.map((row, index) => {
             return (
-              <li>
-                <img
-                  src={therapistImages[index % 10].default}
-                  className="directory-therapist-image"
-                />
-                <div className="directory-therapist-data">
-                  <p>{row["Full Name"]}</p>
-                  <p>{row["Experience"]} Years of Experience</p>
-                  <p>{row["Type of Professional"]}</p>
-                </div>
-                <div className="directory-therapist-location">
-                  <ion-icon name="location-sharp"></ion-icon>
-                  <span>{row.Location}</span>
-                </div>
-              </li>
+              <Link to={`/directory/${row._rowNumber}`} key={row._rowNumber}>
+                <li>
+                  <img
+                    src={therapistImages[index % 10].default}
+                    className="directory-therapist-image"
+                  />
+                  <div className="directory-therapist-data">
+                    <p>{row["Full Name"]}</p>
+                    <p>{row["Experience"]} Years of Experience</p>
+                    <p>{row["Type of Professional"]}</p>
+                  </div>
+                  <div className="directory-therapist-location">
+                    <ion-icon name="location-sharp"></ion-icon>
+                    <span>{row.Location}</span>
+                  </div>
+                </li>
+              </Link>
             );
           })}
         </ul>
@@ -240,9 +238,9 @@ const Directory = () => {
                     value="therapist"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Therapist</span>
+                <span className="directory-checkbox-label">Therapist</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -253,9 +251,9 @@ const Directory = () => {
                     value="Counselor"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Counselor</span>
+                <span className="directory-checkbox-label">Counselor</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -266,9 +264,9 @@ const Directory = () => {
                     value="clinician"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Clinician</span>
+                <span className="directory-checkbox-label">Clinician</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -279,9 +277,9 @@ const Directory = () => {
                     value="psychologist"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Psychologist</span>
+                <span className="directory-checkbox-label">Psychologist</span>
               </label>
             </div>
           </li>
@@ -308,9 +306,9 @@ const Directory = () => {
                     value="new delhi"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">New Delhi</span>
+                <span className="directory-checkbox-label">New Delhi</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -321,9 +319,9 @@ const Directory = () => {
                     value="mumbai"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Mumbai</span>
+                <span className="directory-checkbox-label">Mumbai</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -334,9 +332,9 @@ const Directory = () => {
                     value="kota"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Kota</span>
+                <span className="directory-checkbox-label">Kota</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -347,9 +345,9 @@ const Directory = () => {
                     value="gurgaon"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Gurgaon</span>
+                <span className="directory-checkbox-label">Gurgaon</span>
               </label>
             </div>
           </li>
@@ -376,9 +374,9 @@ const Directory = () => {
                     value="english"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">English</span>
+                <span className="directory-checkbox-label">English</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -389,9 +387,9 @@ const Directory = () => {
                     value="hindi"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Hindi</span>
+                <span className="directory-checkbox-label">Hindi</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -402,9 +400,9 @@ const Directory = () => {
                     value="marathi"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Marathi</span>
+                <span className="directory-checkbox-label">Marathi</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -415,9 +413,9 @@ const Directory = () => {
                     value="gujarati"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Gujarati</span>
+                <span className="directory-checkbox-label">Gujarati</span>
               </label>
             </div>
           </li>
@@ -444,9 +442,9 @@ const Directory = () => {
                     value="audio"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Audio</span>
+                <span className="directory-checkbox-label">Audio</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -457,9 +455,9 @@ const Directory = () => {
                     value="video"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Video</span>
+                <span className="directory-checkbox-label">Video</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -470,9 +468,9 @@ const Directory = () => {
                     value="in-person"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">In-Person</span>
+                <span className="directory-checkbox-label">In-Person</span>
               </label>
 
               <label className="directory-checkbox-container">
@@ -483,9 +481,9 @@ const Directory = () => {
                     value="chat"
                     onChange={handleFilters}
                   ></input>
-                  <span class="directory-checkbox-control"></span>
+                  <span className="directory-checkbox-control"></span>
                 </span>
-                <span class="directory-checkbox-label">Chat</span>
+                <span className="directory-checkbox-label">Chat</span>
               </label>
             </div>
           </li>

@@ -2,6 +2,10 @@ Always wrap pages with div only [Because Navbar is coded to add padding to next 
 
 Don't change the header in the excel sheet (sheet from where data is fetched from), if changing then change it in the code also.
 
+Row Number is used as a parameter to connect Directory to Profile
+
+Don't leave href empty it ion-icon will throw error (use <Link> instead of <a> tag)  
+
 Reference:
 Sticky Navbar : https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 Sticky Footer : https://dev.to/letsbsocial1/flexbox-sticky-footer-and-react-e1h
