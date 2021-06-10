@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     let sticky = navbar.current.offsetTop;
-    console.log(sticky);
+
     document.addEventListener("scroll", (event) => {
       // console.log(navbar);
 
