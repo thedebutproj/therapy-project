@@ -129,7 +129,6 @@ var id = url.searchParams.get("id");
 
     return (
         <div className="profile-main-container">
-            <div className="profile-container">
 
                 <div className="profile-header-container">
                     <div className="profile-to-directory">
@@ -185,23 +184,23 @@ var id = url.searchParams.get("id");
                                         <p>Contact</p>
                                     </a>
                                     <a href="#profile-details-main">
-                                        <div ></div>
+                                        <div></div>
                                         <p>Background</p>
                                     </a>
                                     <a href="#profile-time-main">
-                                        <div ></div>
+                                        <div></div>
                                         <p>Schedule</p>
                                     </a>
                                     <a href="#profile-session-main">
-                                        <div ></div>
+                                        <div></div>
                                         <p>Sessions</p>
                                     </a>
                                     <a href="#profile-typical-session-fees-main">
-                                        <div ></div>
+                                        <div></div>
                                         <p>Pricing</p>
                                     </a>
                                     <a href="#profile-background-main">
-                                        <div ></div>
+                                        <div></div>
                                         <p>Additional Info</p>
                                     </a>
                                 </div>
@@ -209,6 +208,8 @@ var id = url.searchParams.get("id");
                         </div>
                     </div>
                 </div>
+
+            <div className="profile-container">
                 <div className="profile-body-container">
                     <div className="profile-body-one">
 
