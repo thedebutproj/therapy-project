@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import { GoogleSpreadsheet } from "google-spreadsheet";
 import "./Directory.css";
 import {
   directory_LHSPatch,
@@ -10,10 +9,9 @@ import {
   directory_SearchIcon,
 } from "../../assets";
 import { Link } from "react-router-dom";
+import { fetchSheet } from "../../api";
 
 const Directory = () => {
-  const SPREADSHEET_ID = "1hMoXkynBu22BWqfFGcfCRQfUkd65HB45lBflNIsfzto";
-
   //useRef is used because we want to preserve the data between re-renders
   const search = useRef("");
 
@@ -35,21 +33,6 @@ const Directory = () => {
       if (word.includes(array[i])) return true;
     }
     return false;
-  };
-
-  const fetchData = async (doc) => {
-    try {
-      await doc.useApiKey(process.env.REACT_APP_API_KEY);
-      await doc.loadInfo();
-
-      const sheet = doc.sheetsByIndex[0];
-      const rows = await sheet.getRows();
-      // console.log(rows);
-      setTherapistData(rows);
-      setTherapistDataDefault(rows);
-    } catch (e) {
-      console.error("Error : ", e);
-    }
   };
 
   const handleFilters = (e) => {
@@ -152,8 +135,13 @@ const Directory = () => {
   };
 
   useEffect(() => {
-    const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
-    fetchData(doc);
+    // const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
+    // fetchData(doc);
+
+    fetchSheet().then((rows) => {
+      setTherapistData(rows);
+      setTherapistDataDefault(rows);
+    });
   }, []);
 
   return (
