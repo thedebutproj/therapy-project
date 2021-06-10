@@ -15,15 +15,15 @@
     height: 280vh;
 }
 
-.profile-container {
-    width: 70vw;
-    margin: 0px auto;
-}
-
 .profile-header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 20vh;
+    position: sticky;
+    top: 83px;
+    width: 100vw;
+    z-index: 3;
+    background-color: bisque;
 }
 
 .profile-to-directory a {
@@ -158,6 +158,11 @@
 
 .jump-to-container a p {
     margin: 0px;
+}
+
+.profile-container {
+    width: 70vw;
+    margin: 0px auto;
 }
 
 .profile-body-one {
