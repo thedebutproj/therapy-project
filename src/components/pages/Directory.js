@@ -17,6 +17,21 @@ const Directory = () => {
 
   const filterIDs = ["profession", "location", "language", "medium"];
 
+  //Columns that are considered for Search Input
+  const searchIDs = [
+    "Full Name",
+    "Location",
+    "Languages",
+    "Qualifications",
+    "Type of Professional",
+    "Medium",
+    "Notes on Financial Assistance",
+    "Affiliations",
+    "Target Demographic",
+    "Evaluations Administered",
+    "Areas of Expertise",
+  ];
+
   //Holds the value of filters user has selected
   const filters = useRef({
     profession: [],
@@ -33,6 +48,18 @@ const Directory = () => {
       if (word.includes(array[i])) return true;
     }
     return false;
+  };
+
+  //Check if both filters and search are empty or not
+  const isFilterEmpty = () => {
+    for (let key in filters.current) {
+      console.log(filters.current.key);
+      if (!filters.current.key) return false;
+    }
+
+    if (search.current || search.current.trim()) return false;
+
+    return true;
   };
 
   const handleFilters = (e) => {
@@ -53,6 +80,14 @@ const Directory = () => {
 
   const handleFiltersSubmit = (e) => {
     e.preventDefault();
+
+    //Deleting all white-space at start and end of string
+    const searchData = search.current.trim();
+
+    if (isFilterEmpty()) {
+      setTherapistData(therapistDataDefault);
+      return;
+    }
 
     setTherapistData(
       therapistDataDefault.filter((ele) => {
@@ -94,6 +129,19 @@ const Directory = () => {
           if (!flag) return false;
         }
 
+        if (searchData) {
+          if (
+            searchIDs.some((id) => {
+              //String can be undefined, we don't need to evaluate those
+              if (!ele[id]) return;
+
+              if (ele[id].toLowerCase().includes(searchData)) return true;
+            })
+          )
+            flag = true;
+          else flag = false;
+        }
+
         return flag;
       })
     );
@@ -101,18 +149,6 @@ const Directory = () => {
 
   const handleFiltersReset = (e) => {
     window.location.reload();
-  };
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-
-    setTherapistData(
-      therapistDataDefault.filter((ele) => {
-        return ele["Full Name"]
-          .toLowerCase()
-          .includes(search.current.toLowerCase());
-      })
-    );
   };
 
   const handleDropdown = (e) => {
@@ -193,7 +229,7 @@ const Directory = () => {
             placeholder="Any Keyword..."
             onChange={(e) => (search.current = e.target.value)}
           />
-          <img src={directory_SearchIcon} onClick={handleSearchSubmit} />
+          <img src={directory_SearchIcon} onClick={handleFiltersSubmit} />
         </div>
         <ul>
           {/* <li className="directory-input-field">

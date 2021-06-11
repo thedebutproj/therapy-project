@@ -15,7 +15,7 @@ const fetchSheetRow = async (id) => {
 
     return rows.filter((row) => {
       console.log(id);
-      return row._rowNumber == id;
+      return row._rowNumber === id;
     })[0];
   } catch (e) {
     console.error("Error : ", e);
