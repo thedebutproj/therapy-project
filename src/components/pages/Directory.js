@@ -82,7 +82,7 @@ const Directory = () => {
     e.preventDefault();
 
     //Deleting all white-space at start and end of string
-    const searchData = search.current.trim();
+    const searchData = search.current.trim().toLowerCase();
 
     if (isFilterEmpty()) {
       setTherapistData(therapistDataDefault);
