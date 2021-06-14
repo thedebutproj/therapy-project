@@ -1,6 +1,6 @@
 import "./App.css";
 import { Navbar, Footer, Profile } from "./components/common";
-import { Home, ContactUs, Directory, Blog } from "./components/pages";
+import { Home, ContactUs, Directory, Blog, Donor } from "./components/pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -24,6 +24,9 @@ function App() {
             </Route>
             <Route exact path="/blog">
               <Blog />
+            </Route>
+            <Route exact path="/donor">
+              <Donor />
             </Route>
           </Switch>
         </div>

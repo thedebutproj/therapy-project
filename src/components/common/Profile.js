@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import { useWindowScroll } from "react-use";
 import "./Profile.css";
 import { Link } from "react-router-dom";
 
@@ -111,214 +111,124 @@ const Profile = () => {
     buttonElement.classList.add("flexAnything");
   };
 
-<<<<<<< HEAD
-    return (
-        <div className="profile-main-container">
-=======
+  // const scrollFunction = () => {
+  //   if (window.pageYOffset > 20) {
+  //     mybutton.style.display = "block";
+  //   } else {
+  //     mybutton.style.display = "none";
+  //   }
+  // };
+  // window.onscroll = () => {
+  //   scrollFunction();
+  // };
+
+  const scrollFunction = () => {
+    let mybutton = document.getElementById("myBtn");
+    if (document.body.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  const topFunction = () => {
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div className="profile-main-container">
-      <div className="profile-container">
-        <div className="profile-header-container">
-          <div className="profile-to-directory">
-            <a href="/directory">
-              {/* <Link to='/directory'> */}
->>>>>>> f3840c820d07e721a24d5414a86e714ff9ae8733
-
-              <ion-icon
-                name="caret-down-outline"
-                data-filter-name="profession"
-              ></ion-icon>
-              <span>DIRECTORY</span>
-              {/* </Link> */}
+      {/* <div className="profile-container"> */}
+      <div className="profile-header-container">
+        <div className="profile-to-directory">
+          <a href="/directory">
+            {/* <Link to='/directory'> */}
+            <ion-icon
+              name="caret-down-outline"
+              data-filter-name="profession"
+            ></ion-icon>
+            <span>DIRECTORY</span>
+            {/* </Link> */}
+          </a>
+        </div>
+        <div className="profile-user-main">
+          <div className="profile-name">{name}</div>
+          <div className="profile-icons">
+            <a>
+              {" "}
+              <img src={profile_LogoInstagram} alt="" />
             </a>
+            <a>
+              {" "}
+              <img src={profile_LogoLinkedin} alt="" />
+            </a>
+            <a>
+              {" "}
+              <img src={profile_LogoTwitter} alt="" />
+            </a>
+            <a>
+              {" "}
+              <img src={profile_LogoWebsite} alt="" />
+            </a>
+
+            {/* icons */}
           </div>
-          <div className="profile-user-main">
-            <div className="profile-name">{name}</div>
-            <div className="profile-icons">
-              <a>
-                {" "}
-                <img src={profile_LogoInstagram} alt="" />
-              </a>
-              <a>
-                {" "}
-                <img src={profile_LogoLinkedin} alt="" />
-              </a>
-              <a>
-                {" "}
-                <img src={profile_LogoTwitter} alt="" />
-              </a>
-              <a>
-                {" "}
-                <img src={profile_LogoWebsite} alt="" />
-              </a>
+        </div>
+        <div>
+          <button
+            className="jump-to"
+            id="jump-to-ID"
+            onClick={handleDropdown}
+          >
+            <p>JUMP TO</p>
+            {/* <img src={profile_JumpToArrow} alt="" /> */}
 
-              {/* icons */}
-            </div>
-          </div>
-          <div>
-            <button
-              className="jump-to"
-              id="jump-to-ID"
-              onClick={handleDropdown}
-            >
-              <p>JUMP TO</p>
-              {/* <img src={profile_JumpToArrow} alt="" /> */}
+            <ion-icon
+              name="caret-down-outline"
+              data-filter-name="profession"
+            ></ion-icon>
+          </button>
+          <div id="dropdownID" onClick={handleDropdown2}>
+            <div className="jump-to-container">
+              <button className="jump-to-two">
+                <p>JUMP TO</p>
+                {/* <img src={profile_JumpToArrow} alt="" /> */}
 
-              <ion-icon
-                name="caret-down-outline"
-                data-filter-name="profession"
-              ></ion-icon>
-            </button>
-            <div id="dropdownID" onClick={handleDropdown2}>
-              <div className="jump-to-container">
-                <button className="jump-to-two">
-                  <p>JUMP TO</p>
-                  {/* <img src={profile_JumpToArrow} alt="" /> */}
-
-<<<<<<< HEAD
-                                    <ion-icon
-                                        name="caret-down-outline"
-                                        data-filter-name="profession"
-                                    ></ion-icon>
-                                </button>
-                                <div>
-                                    <a href="#profile-contact-main">
-                                        <div></div>
-                                        <p>Contact</p>
-                                    </a>
-                                    <a href="#profile-details-main">
-                                        <div></div>
-                                        <p>Background</p>
-                                    </a>
-                                    <a href="#profile-time-main">
-                                        <div></div>
-                                        <p>Schedule</p>
-                                    </a>
-                                    <a href="#profile-session-main">
-                                        <div></div>
-                                        <p>Sessions</p>
-                                    </a>
-                                    <a href="#profile-typical-session-fees-main">
-                                        <div></div>
-                                        <p>Pricing</p>
-                                    </a>
-                                    <a href="#profile-background-main">
-                                        <div></div>
-                                        <p>Additional Info</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            <div className="profile-container">
-                <div className="profile-body-container">
-                    <div className="profile-body-one">
-
-                        <div className="profile-body-one-left">
-
-
-                            {/* contact */}
-                            <div id="profile-contact-main">
-
-                                <div className="profile-contact">
-                                    <h1>CONTACT-</h1>
-                                    <div className="profile-contact-details">
-                                        <p>Phone- {contact}</p>
-                                        <p>Email- {email}</p>
-                                    </div>
-                                </div>
-                                <div className="profile-location">
-                                    <h1>LOCATION-</h1>
-                                    <p> <img src={profile_Section_ContactLocation} alt="" /> {location}</p>
-                                </div>
-
-                            </div>
-                            {/* office hours */}
-                            <div id="profile-time-main">
-
-                                <div className="profile-office-hours">
-                                    <h1>OFFICE HOURS-</h1>
-                                    <p>{workingTime}</p>
-                                   
-                                </div>
-                                <div className="profile-working-days">
-                                    <h1>WORKING DAYS-</h1>
-                                    <div className="profile-days">
-                                        <img src={profile_Section_ScheduleDaysOFF} alt="" />
-                                    </div>
-                                    <p>
-                                       {notesOnAvailability}
-                                    </p>
-                                </div>
-                                <div className="profile-medium">
-                                    <h1>MEDIUM-</h1>
-                                    <p>{medium}</p>
-                                </div>
-                                <div className="profile-schedule">
-                                    <h1>SCHEDULING-</h1>
-                                    <p>Phone, Whatsapp, Email</p>
-                                    <div className="profile-schedule-calender">
-                                        <img src={profile_Section_ScheduleIcon} alt="" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* typical session cost */}
-                            <div id="profile-typical-session-fees-main">
-                                <div className="profile-typical-session-fees">
-                                    <h1>TYPICAL SESSION COST-</h1>
-                                    <h1>{typicalSessionCost}</h1>
-                                    <p>{notesOnFinancialAssistance}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="profile-body-one-middle">
-                            <div className="center-line-images-one">
-                                <img src={profile_SquigglyPointer} alt="" />
-                                <img src={profile_SquigglyPointer} alt="" />
-                                <img src={profile_SquigglyPointer} alt="" />
-                            </div>
-                            <div className="center-line-images-two">
-                                <img src={profile_SquigglyPointer} alt="" />
-                                <img src={profile_SquigglyPointer} alt="" />
-=======
-                  <ion-icon
-                    name="caret-down-outline"
-                    data-filter-name="profession"
-                  ></ion-icon>
-                </button>
-                <div>
-                  <a href="#profile-contact-main">
-                    <div></div>
-                    <p>Contact</p>
-                  </a>
-                  <a href="#profile-details-main">
-                    <div></div>
-                    <p>Background</p>
-                  </a>
-                  <a href="#profile-time-main">
-                    <div></div>
-                    <p>Schedule</p>
-                  </a>
-                  <a href="#profile-session-main">
-                    <div></div>
-                    <p>Sessions</p>
-                  </a>
-                  <a href="#profile-typical-session-fees-main">
-                    <div></div>
-                    <p>Pricing</p>
-                  </a>
-                  <a href="#profile-background-main">
-                    <div></div>
-                    <p>Additional Info</p>
-                  </a>
-                </div>
+                <ion-icon
+                  name="caret-down-outline"
+                  data-filter-name="profession"
+                ></ion-icon>
+              </button>
+              <div>
+                <a href="#profile-contact-main">
+                  <div></div>
+                  <p>Contact</p>
+                </a>
+                <a href="#profile-details-main">
+                  <div></div>
+                  <p>Background</p>
+                </a>
+                <a href="#profile-time-main">
+                  <div></div>
+                  <p>Schedule</p>
+                </a>
+                <a href="#profile-session-main">
+                  <div></div>
+                  <p>Sessions</p>
+                </a>
+                <a href="#profile-typical-session-fees-main">
+                  <div></div>
+                  <p>Pricing</p>
+                </a>
+                <a href="#profile-background-main">
+                  <div></div>
+                  <p>Additional Info</p>
+                </a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="profile-container">
         <div className="profile-body-container">
           <div className="profile-body-one">
             <div className="profile-body-one-left">
@@ -365,7 +275,6 @@ const Profile = () => {
                   </div>
                 </div>
               </div>
->>>>>>> f3840c820d07e721a24d5414a86e714ff9ae8733
 
               {/* typical session cost */}
               <div id="profile-typical-session-fees-main">
@@ -439,9 +348,12 @@ const Profile = () => {
               </div>
               <div className="profile-area-of-experience">
                 <h1>AREAS OF EXPERIENCE</h1>
-                <p>{}areaOfExpertise</p>
+                <p>{areaOfExpertise}</p>
               </div>
             </div>
+          </div>
+          <div>
+            <button onClick={topFunction} id="myBtn">Top</button>
           </div>
         </div>
       </div>
