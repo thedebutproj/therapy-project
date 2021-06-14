@@ -111,6 +111,7 @@ const Profile = () => {
     buttonElement.classList.add("flexAnything");
   };
 
+<<<<<<< HEAD
   // const scrollFunction = () => {
   //   if (window.pageYOffset > 20) {
   //     mybutton.style.display = "block";
@@ -168,10 +169,27 @@ const Profile = () => {
             <a>
               {" "}
               <img src={profile_LogoWebsite} alt="" />
+=======
+  return (
+    <div className="profile-main-container">
+      <div className="profile-container">
+        <div className="profile-header-container">
+          <div className="profile-to-directory">
+            <a href="/directory">
+              {/* <Link to='/directory'> */}
+
+              <ion-icon
+                name="caret-down-outline"
+                data-filter-name="profession"
+              ></ion-icon>
+              <span>DIRECTORY</span>
+              {/* </Link> */}
+>>>>>>> dcc03d8aa0fac5cfeec6e69de516ccf7de560c60
             </a>
 
             {/* icons */}
           </div>
+<<<<<<< HEAD
         </div>
         <div>
           <button
@@ -223,6 +241,59 @@ const Profile = () => {
                   <div></div>
                   <p>Additional Info</p>
                 </a>
+=======
+          <div>
+            <button
+              className="jump-to"
+              id="jump-to-ID"
+              onClick={handleDropdown}
+            >
+              <p>JUMP TO</p>
+              {/* <img src={profile_JumpToArrow} alt="" /> */}
+
+              <ion-icon
+                name="caret-down-outline"
+                data-filter-name="profession"
+              ></ion-icon>
+            </button>
+            <div id="dropdownID" onClick={handleDropdown2}>
+              <div className="jump-to-container">
+                <button className="jump-to-two">
+                  <p>JUMP TO</p>
+                  {/* <img src={profile_JumpToArrow} alt="" /> */}
+
+                  <ion-icon
+                    name="caret-down-outline"
+                    data-filter-name="profession"
+                  ></ion-icon>
+                </button>
+                <div>
+                  <a href="#profile-contact-main">
+                    <div></div>
+                    <p>Contact</p>
+                  </a>
+                  <a href="#profile-details-main">
+                    <div></div>
+                    <p>Background</p>
+                  </a>
+                  <a href="#profile-time-main">
+                    <div></div>
+                    <p>Schedule</p>
+                  </a>
+                  <a href="#profile-session-main">
+                    <div></div>
+                    <p>Sessions</p>
+                  </a>
+                  <a href="#profile-typical-session-fees-main">
+                    <div></div>
+                    <p>Pricing</p>
+                  </a>
+                  <a href="#profile-background-main">
+                    <div></div>
+                    <p>Additional Info</p>
+                  </a>
+                </div>
+>>>>>>> dcc03d8aa0fac5cfeec6e69de516ccf7de560c60
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import { GoogleSpreadsheet } from "google-spreadsheet";
 import "./Directory.css";
 import {
   directory_LHSPatch,
@@ -10,14 +9,28 @@ import {
   directory_SearchIcon,
 } from "../../assets";
 import { Link } from "react-router-dom";
+import { fetchSheet } from "../../api";
 
 const Directory = () => {
-  const SPREADSHEET_ID = "1hMoXkynBu22BWqfFGcfCRQfUkd65HB45lBflNIsfzto";
-
   //useRef is used because we want to preserve the data between re-renders
   const search = useRef("");
 
   const filterIDs = ["profession", "location", "language", "medium"];
+
+  //Columns that are considered for Search Input
+  const searchIDs = [
+    "Full Name",
+    "Location",
+    "Languages",
+    "Qualifications",
+    "Type of Professional",
+    "Medium",
+    "Notes on Financial Assistance",
+    "Affiliations",
+    "Target Demographic",
+    "Evaluations Administered",
+    "Areas of Expertise",
+  ];
 
   //Holds the value of filters user has selected
   const filters = useRef({
@@ -37,19 +50,16 @@ const Directory = () => {
     return false;
   };
 
-  const fetchData = async (doc) => {
-    try {
-      await doc.useApiKey(process.env.REACT_APP_API_KEY);
-      await doc.loadInfo();
-
-      const sheet = doc.sheetsByIndex[0];
-      const rows = await sheet.getRows();
-      // console.log(rows);
-      setTherapistData(rows);
-      setTherapistDataDefault(rows);
-    } catch (e) {
-      console.error("Error : ", e);
+  //Check if both filters and search are empty or not
+  const isFilterEmpty = () => {
+    for (let key in filters.current) {
+      console.log(filters.current.key);
+      if (!filters.current.key) return false;
     }
+
+    if (search.current || search.current.trim()) return false;
+
+    return true;
   };
 
   const handleFilters = (e) => {
@@ -70,6 +80,14 @@ const Directory = () => {
 
   const handleFiltersSubmit = (e) => {
     e.preventDefault();
+
+    //Deleting all white-space at start and end of string
+    const searchData = search.current.trim().toLowerCase();
+
+    if (isFilterEmpty()) {
+      setTherapistData(therapistDataDefault);
+      return;
+    }
 
     setTherapistData(
       therapistDataDefault.filter((ele) => {
@@ -111,6 +129,19 @@ const Directory = () => {
           if (!flag) return false;
         }
 
+        if (searchData) {
+          if (
+            searchIDs.some((id) => {
+              //String can be undefined, we don't need to evaluate those
+              if (!ele[id]) return;
+
+              if (ele[id].toLowerCase().includes(searchData)) return true;
+            })
+          )
+            flag = true;
+          else flag = false;
+        }
+
         return flag;
       })
     );
@@ -118,18 +149,6 @@ const Directory = () => {
 
   const handleFiltersReset = (e) => {
     window.location.reload();
-  };
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-
-    setTherapistData(
-      therapistDataDefault.filter((ele) => {
-        return ele["Full Name"]
-          .toLowerCase()
-          .includes(search.current.toLowerCase());
-      })
-    );
   };
 
   const handleDropdown = (e) => {
@@ -152,8 +171,13 @@ const Directory = () => {
   };
 
   useEffect(() => {
-    const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
-    fetchData(doc);
+    // const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
+    // fetchData(doc);
+
+    fetchSheet().then((rows) => {
+      setTherapistData(rows);
+      setTherapistDataDefault(rows);
+    });
   }, []);
 
   return (
@@ -205,7 +229,7 @@ const Directory = () => {
             placeholder="Any Keyword..."
             onChange={(e) => (search.current = e.target.value)}
           />
-          <img src={directory_SearchIcon} onClick={handleSearchSubmit} />
+          <img src={directory_SearchIcon} onClick={handleFiltersSubmit} />
         </div>
         <ul>
           {/* <li className="directory-input-field">
