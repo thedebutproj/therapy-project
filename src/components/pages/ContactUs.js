@@ -73,11 +73,9 @@ function ContactUs() {
             </form>
           </div>
           <div className="contactus-right">
-            {/* <div className="figure2">
-              <img src={contactUs_PostIt}></img>
-            </div> */}
             <img src={contactUs_PostIt} className="figure2"></img>
             <img src={contactUs_LinesGraphic} className="figure3_lines"></img>
+
             <div className="contactus-right-text">
               <h2>Please contact us for more information</h2>
               <ul>

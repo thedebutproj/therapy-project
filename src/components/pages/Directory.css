@@ -128,13 +128,13 @@
 .directory-right > ul {
   list-style: none;
   margin-top: 30px;
-  padding-left: 0px;
+  padding-left: 5.5rem;
   /* flex: 1 0 auto; */
 }
 
 .directory-input-field {
   display: flex;
-  /* padding-left: 100px; */
+  padding-left: 5.5rem;
 }
 
 .directory-input-field input {
