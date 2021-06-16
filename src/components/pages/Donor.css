@@ -26,19 +26,25 @@ body {
     text-shadow: 3px 2px 0px var(--color2);
 }
 
+
+/* 
 .donor-benefits-content {
     background-image: url(../../assets/donor/BenefitsDetails.png);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     width: 88vw;
     height: 95vh;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     padding: 4px;
+} */
+
+.donor-benefits-content {
+    position: relative;
 }
 
 .donor-benefits-content p {
@@ -49,6 +55,15 @@ body {
     margin-bottom: 30px;
     font-size: 34px;
     line-height: 44px;
+}
+
+.donor-benefits-content img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
 .donor-benefits-content p:nth-of-type(1) {
@@ -168,11 +183,18 @@ body {
 }
 
 .donor-register-form-right {
-    background-image: url(../../assets/donor/Donor_MainIllustration.png);
-    background-repeat: no-repeat;
-    width: 34vw;
-    height: 55vh;
-    background-size: cover;
-    margin-top: 22vh;
+    height: 70vh;
+    width: 40vw;
+    /* border: 2px solid red; */
+    margin-top: 12vh;
     margin-left: 4vw;
+    position: relative;
+}
+
+.donor-register-form-right img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

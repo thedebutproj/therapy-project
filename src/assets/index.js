@@ -31,6 +31,12 @@ import profile_LogoInstagram from "./profile/profile_LogoInstagram.png";
 import profile_LogoLinkedin from "./profile/profile_LogoLinkedin.png";
 import profile_LogoTwitter from "./profile/profile_LogoTwitter.png";
 import profile_LogoWebsite from "./profile/profile_LogoWebsite.png";
+import profile_Section_ContactPostit from "./profile/profile_Section_ContactPostit.png";
+import profile_Section_SchedulePostit from "./profile/profile_Section_SchedulePostit.png";
+import profile_Section_PricingPostit from "./profile/profile_Section_PricingPostit.png";
+import profile_Section_BackgroundPostit from "./profile/profile_Section_BackgroundPostit.png";
+import profile_Section_SessionPostit from "./profile/profile_Section_SessionPostit.png";
+import profile_Section_AddInfoPostit from "./profile/profile_Section_AddInfoPostit.png";
 import profile_Section_ScheduleDaysOFF from "./profile/profile_Section_ScheduleDaysOFF.png";
 import profile_Section_ScheduleIcon from "./profile/profile_Section_ScheduleIcon.png";
 import profile_Section_ContactLocation from "./profile/profile_Section_ContactLocation.png";
@@ -41,49 +47,61 @@ import profile_JumpToArrow from "./profile/profile_JumpToArrow.png";
 import blog_CLOUD1 from "./blog/blog_CLOUD1.png";
 import blog_CLOUD2 from "./blog/blog_CLOUD2.png";
 
+// Donor imports
+import donor_BenefitsDetails from "./donor/donor_BenefitsDetails.png";
+import donor_MainIllustration from "./donor/donor_MainIllustration.png";
+
 // Function for importing all the files in the Therapist Images in the directory folder
 function importAll(r) {
-  let images = [];
-  r.keys().map((item, index) => {
-    images.push(r(item));
-  });
-  return images;
+    let images = [];
+    r.keys().map((item, index) => {
+        images.push(r(item));
+    });
+    return images;
 }
 
 const therapistImages = importAll(
-  require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
+    require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
 );
 
 export {
-  siteLogo,
-  homeBlog,
-  homeDonor,
-  homeDirectory,
-  contactUS,
-  contactUs_LHSPatch,
-  contactUs_PostIt,
-  contactUs_LinesGraphic,
-  home_FullBGWithText,
-  home_directory_MainIllustration,
-  home_directory_LHSGraphic,
-  home_blog_MainIllustration,
-  home_donor_MainIllustration,
-  home_donor_LHSPuzzle,
-  directory_LHSPatch,
-  directory_RHSPatch,
-  directory_Spiral,
-  directory_RedLine,
-  therapistImages,
-  directory_SearchIcon,
-  profile_LogoInstagram,
-  profile_LogoLinkedin,
-  profile_LogoTwitter,
-  profile_LogoWebsite,
-  profile_Section_ScheduleDaysOFF,
-  profile_Section_ScheduleIcon,
-  profile_Section_ContactLocation,
-  profile_SquigglyPointer,
-  profile_JumpToArrow,
-  blog_CLOUD1,
-  blog_CLOUD2,
+    siteLogo,
+    homeBlog,
+    homeDonor,
+    homeDirectory,
+    contactUS,
+    contactUs_LHSPatch,
+    contactUs_PostIt,
+    contactUs_LinesGraphic,
+    home_FullBGWithText,
+    home_directory_MainIllustration,
+    home_directory_LHSGraphic,
+    home_blog_MainIllustration,
+    home_donor_MainIllustration,
+    home_donor_LHSPuzzle,
+    directory_LHSPatch,
+    directory_RHSPatch,
+    directory_Spiral,
+    directory_RedLine,
+    therapistImages,
+    directory_SearchIcon,
+    profile_LogoInstagram,
+    profile_LogoLinkedin,
+    profile_LogoTwitter,
+    profile_LogoWebsite,
+    profile_Section_ScheduleDaysOFF,
+    profile_Section_ScheduleIcon,
+    profile_Section_ContactLocation,
+    profile_SquigglyPointer,
+    profile_JumpToArrow,
+    blog_CLOUD1,
+    blog_CLOUD2,
+    donor_BenefitsDetails,
+    donor_MainIllustration,
+    profile_Section_ContactPostit,
+    profile_Section_SchedulePostit,
+    profile_Section_PricingPostit,
+    profile_Section_BackgroundPostit,
+    profile_Section_SessionPostit,
+    profile_Section_AddInfoPostit,
 };

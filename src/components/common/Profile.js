@@ -5,7 +5,7 @@ import "./Profile.css";
 import { Link } from "react-router-dom";
 
 import { fetchSheetRow } from "../../api";
-
+// test
 import {
   profile_LogoInstagram,
   profile_LogoLinkedin,
@@ -16,6 +16,12 @@ import {
   profile_Section_ContactLocation,
   profile_SquigglyPointer,
   profile_JumpToArrow,
+  profile_Section_ContactPostit,
+  profile_Section_SchedulePostit,
+  profile_Section_PricingPostit,
+  profile_Section_BackgroundPostit,
+  profile_Section_SessionPostit,
+  profile_Section_AddInfoPostit,
 } from "../../assets";
 
 const Profile = () => {
@@ -131,6 +137,9 @@ const Profile = () => {
     }
   }
 
+  // window.onscroll = () => {
+  //   scrollFunction();
+  // }
   const topFunction = () => {
     document.documentElement.scrollTop = 0;
   };
@@ -172,6 +181,7 @@ const Profile = () => {
 
             {/* icons */}
           </div>
+        </div>
           <div>
             <button
               className="jump-to"
@@ -224,7 +234,6 @@ const Profile = () => {
                   </a>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -234,6 +243,7 @@ const Profile = () => {
             <div className="profile-body-one-left">
               {/* contact */}
               <div id="profile-contact-main">
+                <img id="contact-back-img" src={profile_Section_ContactPostit} alt="" />
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
                   <div className="profile-contact-details">
@@ -252,6 +262,7 @@ const Profile = () => {
               </div>
               {/* office hours */}
               <div id="profile-time-main">
+                <img id="time-back-img" src={profile_Section_SchedulePostit} alt="" />
                 <div className="profile-office-hours">
                   <h1>OFFICE HOURS-</h1>
                   <p>{user.workingTime}</p>
@@ -278,6 +289,7 @@ const Profile = () => {
 
               {/* typical session cost */}
               <div id="profile-typical-session-fees-main">
+                <img id="typical-session-back-img" src={profile_Section_PricingPostit} alt="" />
                 <div className="profile-typical-session-fees">
                   <h1>TYPICAL SESSION COST-</h1>
                   <h1>{user.typicalSessionCost}</h1>
@@ -300,6 +312,7 @@ const Profile = () => {
             <div className="profile-body-one-right">
               {/* qualific */}
               <div id="profile-details-main">
+                <img id="profile-details-back-img" src={profile_Section_BackgroundPostit} alt="" />
                 <div className="profile-qualification">
                   <h1>QUALIFICATIONS-</h1>
                   <p>{user.qualifications}</p>
@@ -321,6 +334,7 @@ const Profile = () => {
               {/* first session */}
 
               <div id="profile-session-main">
+                <img id="first-session-back-img" src={profile_Section_SessionPostit} alt="" />
                 <div className="profile-first-session">
                   <h1>YOUR FIRST SESSION-</h1>
                   <p>{user.yourFirstSession}</p>
@@ -333,7 +347,9 @@ const Profile = () => {
             </div>
           </div>
           <div className="profile-body-two">
+
             <div id="profile-background-main">
+              <img id="profile-background-back-img" src={profile_Section_AddInfoPostit} alt="" />
               <div className="profile-affiliations">
                 <h1>AFFILIATIONS-</h1>
                 <p>{user.affiliations}</p>
