@@ -31,6 +31,12 @@ import profile_LogoInstagram from "./profile/profile_LogoInstagram.png";
 import profile_LogoLinkedin from "./profile/profile_LogoLinkedin.png";
 import profile_LogoTwitter from "./profile/profile_LogoTwitter.png";
 import profile_LogoWebsite from "./profile/profile_LogoWebsite.png";
+import profile_Section_ContactPostit from "./profile/profile_Section_ContactPostit.png";
+import profile_Section_SchedulePostit from "./profile/profile_Section_SchedulePostit.png";
+import profile_Section_PricingPostit from "./profile/profile_Section_PricingPostit.png";
+import profile_Section_BackgroundPostit from "./profile/profile_Section_BackgroundPostit.png";
+import profile_Section_SessionPostit from "./profile/profile_Section_SessionPostit.png";
+import profile_Section_AddInfoPostit from "./profile/profile_Section_AddInfoPostit.png";
 import profile_Section_ScheduleDaysOFF from "./profile/profile_Section_ScheduleDaysOFF.png";
 import profile_Section_ScheduleIcon from "./profile/profile_Section_ScheduleIcon.png";
 import profile_Section_ContactLocation from "./profile/profile_Section_ContactLocation.png";
@@ -92,4 +98,10 @@ export {
     blog_CLOUD2,
     donor_BenefitsDetails,
     donor_MainIllustration,
+    profile_Section_ContactPostit,
+    profile_Section_SchedulePostit,
+    profile_Section_PricingPostit,
+    profile_Section_BackgroundPostit,
+    profile_Section_SessionPostit,
+    profile_Section_AddInfoPostit,
 };
