@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { homeDirectory, blog_CLOUD1, blog_CLOUD2 } from "../../assets";
 import "./Blog.css";
 
@@ -33,7 +34,9 @@ const Blog = () => {
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
             </p>
-            <button className="b-heading-btn">Read More</button>
+            <Link to="/blog/">
+              <button className="b-heading-btn">Read More</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -49,7 +52,9 @@ const Blog = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type
             </p>
-            <button className="b-btn">Read More</button>
+            <Link>
+              <button className="b-btn">Read More</button>
+            </Link>
           </div>
         </div>
 

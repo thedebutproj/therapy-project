@@ -43,6 +43,20 @@ const Directory = () => {
   const [therapistData, setTherapistData] = useState([]); //Handling data that is filtered
   const [therapistDataDefault, setTherapistDataDefault] = useState([]); //Handling data that is being fetched
 
+  const stringToArray = (str) => {
+    let array = str.split(",");
+    let n = array.length;
+    console.log(n);
+    if (n <= 3) return array.map((value) => value.trim());
+    else {
+      let new_arr = [];
+      for (let i = 0; i < 3; i++) array[i] = array[i].trim();
+      array.splice(3, n - 3);
+      array = [...array, ` + ${n - 3}`];
+      return array;
+    }
+  };
+
   const stringChecker = (word, array) => {
     for (let i = 0; i < array.length; i++) {
       if (word.includes(array[i])) return true;
@@ -53,7 +67,6 @@ const Directory = () => {
   //Check if both filters and search are empty or not
   const isFilterEmpty = () => {
     for (let key in filters.current) {
-      console.log(filters.current.key);
       if (!filters.current.key) return false;
     }
 
@@ -196,7 +209,11 @@ const Directory = () => {
         <ul>
           {therapistData.map((row, index) => {
             return (
-              <Link to={`/directory/${row._rowNumber}`} key={row._rowNumber}>
+              <Link
+                to={`/directory/${row._rowNumber}`}
+                key={row._rowNumber}
+                className="directory-therapist-list"
+              >
                 <li>
                   <img
                     src={therapistImages[index % 10].default}
@@ -204,8 +221,30 @@ const Directory = () => {
                   />
                   <div className="directory-therapist-data">
                     <p>{row["Full Name"]}</p>
-                    <p>{row["Experience"]} Years of Experience</p>
-                    <p>{row["Type of Professional"]}</p>
+                    <p>
+                      {row["Experience"] <= 1
+                        ? row["Experience"] + " Year"
+                        : row["Experience"] + " Years"}{" "}
+                      of Experience
+                    </p>
+                    <p className="directory-therapist-professional">
+                      {stringToArray(row["Type of Professional"]).map(
+                        (item, index) => {
+                          if (index == 0 || index >= 3)
+                            return <span>{item}</span>;
+                          else if (index > 0 && index < 3) {
+                            return (
+                              <>
+                                <span key={index}>
+                                  {index ? ` \u2022 ` : ""}
+                                </span>
+                                <span>{item}</span>
+                              </>
+                            );
+                          }
+                        }
+                      )}
+                    </p>
                   </div>
                   <div className="directory-therapist-location">
                     <ion-icon name="location-sharp"></ion-icon>

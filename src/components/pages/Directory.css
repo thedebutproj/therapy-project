@@ -61,6 +61,11 @@
   list-style: none;
 }
 
+.directory-therapist-list {
+  text-decoration: none;
+  color: black;
+}
+
 .directory-left ul li {
   display: flex;
   margin-bottom: 40px;
@@ -75,7 +80,10 @@
 
 .directory-therapist-data {
   flex: 1 0 auto;
-  width: 384px;
+
+  /* For text no-wrap to work we need to specify width */
+  width: 50%;
+
   /* margin-right: 64px; */
 }
 
@@ -84,6 +92,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.directory-therapist-professional {
+  color: var(--color2);
 }
 
 .directory-therapist-location {

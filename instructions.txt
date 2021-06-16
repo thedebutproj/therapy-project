@@ -8,5 +8,9 @@ Don't leave href empty it ion-icon will throw error (use <Link> instead of <a> t
 
 Reference:
 Sticky Navbar : https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+
 Sticky Footer : https://dev.to/letsbsocial1/flexbox-sticky-footer-and-react-e1h
+
 React Folder Structure : https://dev.to/pcofilada/simple-react-folder-structure-31lj
+
+For adding classname from markdown to html : https://github.com/showdownjs/showdown/issues/542#issuecomment-660437310
