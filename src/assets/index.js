@@ -41,49 +41,55 @@ import profile_JumpToArrow from "./profile/profile_JumpToArrow.png";
 import blog_CLOUD1 from "./blog/blog_CLOUD1.png";
 import blog_CLOUD2 from "./blog/blog_CLOUD2.png";
 
+// Donor imports
+import donor_BenefitsDetails from "./donor/donor_BenefitsDetails.png";
+import donor_MainIllustration from "./donor/donor_MainIllustration.png";
+
 // Function for importing all the files in the Therapist Images in the directory folder
 function importAll(r) {
-  let images = [];
-  r.keys().map((item, index) => {
-    images.push(r(item));
-  });
-  return images;
+    let images = [];
+    r.keys().map((item, index) => {
+        images.push(r(item));
+    });
+    return images;
 }
 
 const therapistImages = importAll(
-  require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
+    require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
 );
 
 export {
-  siteLogo,
-  homeBlog,
-  homeDonor,
-  homeDirectory,
-  contactUS,
-  contactUs_LHSPatch,
-  contactUs_PostIt,
-  contactUs_LinesGraphic,
-  home_FullBGWithText,
-  home_directory_MainIllustration,
-  home_directory_LHSGraphic,
-  home_blog_MainIllustration,
-  home_donor_MainIllustration,
-  home_donor_LHSPuzzle,
-  directory_LHSPatch,
-  directory_RHSPatch,
-  directory_Spiral,
-  directory_RedLine,
-  therapistImages,
-  directory_SearchIcon,
-  profile_LogoInstagram,
-  profile_LogoLinkedin,
-  profile_LogoTwitter,
-  profile_LogoWebsite,
-  profile_Section_ScheduleDaysOFF,
-  profile_Section_ScheduleIcon,
-  profile_Section_ContactLocation,
-  profile_SquigglyPointer,
-  profile_JumpToArrow,
-  blog_CLOUD1,
-  blog_CLOUD2,
+    siteLogo,
+    homeBlog,
+    homeDonor,
+    homeDirectory,
+    contactUS,
+    contactUs_LHSPatch,
+    contactUs_PostIt,
+    contactUs_LinesGraphic,
+    home_FullBGWithText,
+    home_directory_MainIllustration,
+    home_directory_LHSGraphic,
+    home_blog_MainIllustration,
+    home_donor_MainIllustration,
+    home_donor_LHSPuzzle,
+    directory_LHSPatch,
+    directory_RHSPatch,
+    directory_Spiral,
+    directory_RedLine,
+    therapistImages,
+    directory_SearchIcon,
+    profile_LogoInstagram,
+    profile_LogoLinkedin,
+    profile_LogoTwitter,
+    profile_LogoWebsite,
+    profile_Section_ScheduleDaysOFF,
+    profile_Section_ScheduleIcon,
+    profile_Section_ContactLocation,
+    profile_SquigglyPointer,
+    profile_JumpToArrow,
+    blog_CLOUD1,
+    blog_CLOUD2,
+    donor_BenefitsDetails,
+    donor_MainIllustration,
 };

@@ -43,27 +43,27 @@ const Profile = () => {
     areaOfExpertise: "",
   });
 
-  // const {
-  //   name,
-  //   contact,
-  //   email,
-  //   location,
-  //   workingTime,
-  //   notesOnAvailability,
-  //   medium,
-  //   typicalSessionCost,
-  //   notesOnFinancialAssistance,
-  //   qualifications,
-  //   typeOfProfessional,
-  //   experience,
-  //   languages,
-  //   yourFirstSession,
-  //   typicalSessionLength,
-  //   affiliations,
-  //   targetDemographic,
-  //   evaluationsAdministered,
-  //   areaOfExpertise,
-  // } = user;
+  const {
+    name,
+    contact,
+    email,
+    location,
+    workingTime,
+    notesOnAvailability,
+    medium,
+    typicalSessionCost,
+    notesOnFinancialAssistance,
+    qualifications,
+    typeOfProfessional,
+    experience,
+    languages,
+    yourFirstSession,
+    typicalSessionLength,
+    affiliations,
+    targetDemographic,
+    evaluationsAdministered,
+    areaOfExpertise,
+  } = user;
 
   useEffect(() => {
     fetchSheetRow(id).then((rowData) => {
@@ -172,6 +172,7 @@ const Profile = () => {
 
             {/* icons */}
           </div>
+        </div>
           <div>
             <button
               className="jump-to"
@@ -224,7 +225,6 @@ const Profile = () => {
                   </a>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
