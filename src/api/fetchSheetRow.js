@@ -14,8 +14,8 @@ const fetchSheetRow = async (id) => {
     const rows = await sheet.getRows();
 
     return rows.filter((row) => {
-      console.log(id);
-      return row._rowNumber === id;
+      //We are getting id as a string but rowNumber is a number that's why we have to convert
+      return row._rowNumber.toString() === id;
     })[0];
   } catch (e) {
     console.error("Error : ", e);

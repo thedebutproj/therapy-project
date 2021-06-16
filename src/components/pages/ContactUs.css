@@ -104,24 +104,40 @@
   /* background-image: url(../../assets/contactUs_PostIt.png); */
 }
 
+/* Defined height and width so it change according to div */
 .contactus-right .figure2 {
   position: absolute;
   top: 0%;
   left: 0%;
+  width: 100%;
+  height: 100%;
 }
 
 .contactus-right .figure3_lines {
   position: absolute;
   width: 20%;
-  bottom: 80%;
-  left: 35%;
+  height: 20%;
+  top: -5%;
+  left: 40%;
+  /* For rotating 180 degree the image */
+  transform: rotateX(180deg);
 }
 
 .contactus-right-text {
   position: relative;
   z-index: 10;
-  padding: 90px;
+  padding: 5rem;
 }
+
+/* .contactus-right-text img {
+  position: absolute;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  
+  width: 100%;
+  height: 100%;
+} */
 
 .contactus-right-text h2 {
   margin-top: 0px;

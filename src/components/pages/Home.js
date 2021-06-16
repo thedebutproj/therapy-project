@@ -8,6 +8,8 @@ import {
   home_donor_MainIllustration,
   home_donor_LHSPuzzle,
 } from "../../assets";
+
+// import "./Home.css";
 import "./Home.css";
 
 const Home = () => {
@@ -17,8 +19,8 @@ const Home = () => {
       "home-directory",
       <>
         <img src={home_directory_LHSGraphic} className="figure1" />
-        <div className="home-slide-content">
-          <div className="home-slide-left">
+        <div className="home-slide-content pure-g">
+          <div className="home-slide-left pure-u-1-2">
             <h1 className="dir-h1">THE DIRECTORY</h1>
             <p className="dir-p">
               Find the right therapist, counsellor, or psychologists for you.
@@ -27,7 +29,7 @@ const Home = () => {
             </p>
             <button className="dir-btn">VISIT</button>
           </div>
-          <div className="home-slide-right home-slide-right-directory">
+          <div className="home-slide-right pure-u-1-2 home-slide-right-directory">
             <img src={home_directory_MainIllustration} className="pure-img" />
           </div>
         </div>
@@ -37,8 +39,8 @@ const Home = () => {
     [
       "home-blog",
       <>
-        <div className="home-slide-content">
-          <div className="home-slide-left">
+        <div className="home-slide-content pure-g">
+          <div className="home-slide-left pure-u-1-2">
             <h1 className="blog-h1">FEATURED BLOG</h1>
             <p className="blog-p">
               For IIT Roorkee only
@@ -48,8 +50,8 @@ const Home = () => {
             </p>
             <button className="blog-btn">VISIT</button>
           </div>
-          <div className="home-slide-right">
-            <img src={home_blog_MainIllustration} />
+          <div className="home-slide-right pure-u-1-2 home-slide-right-blog">
+            <img src={home_blog_MainIllustration} className="pure-img" />
           </div>
         </div>
       </>,
@@ -59,8 +61,8 @@ const Home = () => {
       "home-donor",
       <>
         <img src={home_donor_LHSPuzzle} className="figure1" />
-        <div className="home-slide-content">
-          <div className="home-slide-left">
+        <div className="home-slide-content home-slide-content-donor pure-g">
+          <div className="home-slide-left  pure-u-1-2">
             <h1 className="donor-h1">DONOR/DONEE</h1>
             <p className="donor-p">
               For IIT Roorkee only
@@ -70,8 +72,8 @@ const Home = () => {
             </p>
             <button className="donor-btn">VISIT</button>
           </div>
-          <div className="home-slide-right home-slide-right-donor">
-            <img src={home_donor_MainIllustration} />
+          <div className="home-slide-right pure-u-1-2 home-slide-right-donor">
+            <img src={home_donor_MainIllustration} className="pure-img" />
           </div>
         </div>
       </>,
