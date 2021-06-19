@@ -30,6 +30,10 @@ const Profile = () => {
 
   const [user, setUser] = useState({
     name: "",
+    instagram: "",
+    linkedin: "",
+    website: "",
+    twitter: "",
     contact: "",
     email: "",
     location: "",
@@ -110,6 +114,26 @@ const Profile = () => {
       {
         expertiseElement.style.display="none";
       }
+
+      if(!rowData["Instagram"])
+      {
+          document.getElementById("profile-instagram-logo").style.display="none";
+      }
+      if(!rowData["LinkedIn"])
+      {
+          document.getElementById("profile-linkedin-logo").style.display="none";
+      }
+      if(!rowData["Twitter"])
+      {
+          document.getElementById("profile-twitter-logo").style.display="none";
+      }
+      if(!rowData["Website"])
+      {
+          document.getElementById("profile-website-logo").style.display="none";
+      }
+
+
+
       var contactoffsety=contactElement.offsetTop+40;
       document.getElementsByClassName("center-line-images-one-img")[0].style.top=contactoffsety+"px";
 
@@ -134,6 +158,10 @@ const Profile = () => {
       setUser({
         ...user,
         name: rowData["Full Name"],
+        instagram: rowData["Instagram"],
+        linkedin: rowData["LinkedIn"],
+        website: rowData["Website"],
+        twitter: rowData["Twitter"],
         contact: rowData["Contact - Phone Number"],
         email: rowData["Contact - Email ID"],
         location: rowData["Location"],
@@ -187,7 +215,7 @@ const Profile = () => {
   // window.onscroll = () => {
   //   scrollFunction();
   // }
-  
+
   const topFunction = () => {
     document.documentElement.scrollTop = 0;
   };
@@ -212,19 +240,19 @@ const Profile = () => {
           <img id="profile-user-main-back-img" src={profile_YellowNameBlob} alt="" />
           <div className="profile-name">{user.name}</div>
           <div className="profile-icons">
-            <a>
+            <a id="profile-instagram-logo">
               {" "}
               <img src={profile_LogoInstagram} alt="" />
             </a>
-            <a>
+            <a id="profile-linkedin-logo">
               {" "}
               <img src={profile_LogoLinkedin} alt="" />
             </a>
-            <a>
+            <a id="profile-twitter-logo">
               {" "}
               <img src={profile_LogoTwitter} alt="" />
             </a>
-            <a>
+            <a id="profile-website-logo">
               {" "}
               <img src={profile_LogoWebsite} alt="" />
             </a>

@@ -92,6 +92,10 @@
     margin: 0px 8vw;
 }
 
+.profile-icons a {
+    cursor: pointer;
+}
+
 .profile-icons img {
     height: 42px;
     width: 42px;
