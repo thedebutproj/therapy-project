@@ -46,7 +46,7 @@ const Directory = () => {
   const stringToArray = (str) => {
     let array = str.split(",");
     let n = array.length;
-    console.log(n);
+
     if (n <= 3) return array.map((value) => value.trim());
     else {
       let new_arr = [];
