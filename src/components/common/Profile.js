@@ -22,6 +22,7 @@ import {
   profile_Section_BackgroundPostit,
   profile_Section_SessionPostit,
   profile_Section_AddInfoPostit,
+  profile_YellowNameBlob,
 } from "../../assets";
 
 const Profile = () => {
@@ -160,6 +161,7 @@ const Profile = () => {
           </a>
         </div>
         <div className="profile-user-main">
+          <img id="profile-user-main-back-img" src={profile_YellowNameBlob} alt="" />
           <div className="profile-name">{user.name}</div>
           <div className="profile-icons">
             <a>
