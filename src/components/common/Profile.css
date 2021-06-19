@@ -16,7 +16,7 @@
 
 .profile-main-container {
     background-color: bisque;
-    height: 280vh;
+    height: 300vh;
     z-index: -3;
 }
 
@@ -59,17 +59,29 @@
 }
 
 .profile-user-main {
-    background-image: url(../../assets/profile/profile_YellowNameBlob.png);
+    /* background-image: url(../../assets/profile/profile_YellowNameBlob.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 31vw;
-    margin-left: 30px;
+    margin-left: 30px; */
     /* border: 2px solid red; */
+    position: relative;
+    z-index: 2;
+}
+
+#profile-user-main-back-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .profile-name {
     text-align: center;
     font-size: 40px;
+    margin: auto 8vw;
     margin-bottom: 0px;
     margin-top: 20px;
 }
@@ -77,6 +89,11 @@
 .profile-icons {
     display: flex;
     justify-content: center;
+    margin: 0px 8vw;
+}
+
+.profile-icons a {
+    cursor: pointer;
 }
 
 .profile-icons img {
@@ -189,6 +206,7 @@
     flex-direction: column;
     /* border: 2px solid red; */
     margin-left: 30px;
+    padding-bottom: 20px;
     color: var(--color5);
     z-index: 2;
 }
@@ -256,6 +274,7 @@
     /* border: 2px solid red; */
     margin-top: 30px;
     margin-left: -135px;
+    padding-bottom: 20px;
     color: var(--color5);
     position: relative;
     z-index: 2;
@@ -367,6 +386,7 @@
     color: var(--color5);
     position: relative;
     z-index: 1;
+    padding-bottom: 20px;
     padding: 10px 10px;
 }
 
@@ -410,13 +430,16 @@
 }
 
 .center-line-images-one {
-    background-image: url(../../assets/profile/profile_RedLine.png);
+    /* background-image: url(../../assets/profile/profile_RedLine.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    width: 10px;
+    background-size: cover; */
+    border-radius: 100px;
+    background-color: var(--color2);
+    height: 190vh;
+    width: 7px;
     margin-top: 10px;
-    margin-left: 94px;
+    margin-left: 80px;
+    margin-bottom: 0px;
 }
 
 .center-line-images-one img:nth-of-type(1) {
@@ -424,7 +447,7 @@
     width: 125px;
     position: absolute;
     top: 40vh;
-    left: 49vw;
+    left: 48vw;
 }
 
 .center-line-images-one img:nth-of-type(2) {
@@ -432,7 +455,7 @@
     width: 125px;
     position: absolute;
     top: 56vh;
-    right: 45.5vw;
+    right: 46.7vw;
     transform: rotate(180deg);
 }
 
@@ -441,33 +464,35 @@
     width: 125px;
     position: absolute;
     top: 80vh;
-    left: 48.5vw;
+    left: 48vw;
 }
 
-.center-line-images-two img:nth-of-type(1) {
+.center-line-images-one img:nth-of-type(4) {
     height: 80px;
     width: 125px;
     position: absolute;
     top: 132vh;
-    right: 45.5vw;
+    right: 46.7vw;
     transform: rotate(180deg);
 }
 
-.center-line-images-two img:nth-of-type(2) {
+.center-line-images-one img:nth-of-type(5) {
     height: 80px;
     width: 125px;
     position: absolute;
     top: 172vh;
-    left: 48.5vw;
+    left: 48vw;
 }
 
 .center-line-images-two {
-    background-image: url(../../assets/profile/profile_RedLine.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url(../../assets/profile/profile_RedLine.png); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    display: none;
+    background-color: var(--color2);
     height: 90vh;
     width: 10px;
-    margin-left: 94px;
+    margin-left: 80px;
 }
 
 #profile-details-main {
@@ -485,8 +510,10 @@
     /* flex-direction: column; */
     /* border: 2px solid red; */
     color: var(--color5);
+    padding-bottom: 20px;
     z-index: 2;
     position: relative;
+    /* padding-top: 20px; */
 }
 
 #profile-details-back-img {
@@ -564,6 +591,7 @@
     height: 65vh; */
     margin-top: 8vh;
     margin-left: 105px;
+    padding-bottom: 20px;
     text-align: center;
     /* display: flex; */
     /* justify-content: center; */
@@ -627,6 +655,8 @@
     align-items: center;
     flex-direction: column; */
     color: var(--color5);
+    padding-bottom: 20px;
+    padding-top: 80px;
     margin-bottom: 80px;
     position: relative;
     z-index: 2;
@@ -643,12 +673,13 @@
 }
 
 .profile-affiliations h1 {
+    display: block;
     margin: 0px;
-    padding-top: 80px;
+    /* padding-top: 40px; */
     text-decoration: underline;
     font-weight: 500;
     margin-bottom: 5px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
 .profile-affiliations p {
