@@ -199,7 +199,7 @@ const Profile = () => {
       var detailsoffsety=detailsElement.offsetTop+40;
       document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
 
-      var sessionoffsety=sessionElement.offsetTop+40;
+      var sessionoffsety=sessionElement.offsetTop+4;
       document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
 
       var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
@@ -213,8 +213,8 @@ const Profile = () => {
         name: rowData["Full Name"],
         instagram: "https://instagram.com/" + rowData["Instagram"].slice(1),
         linkedin: rowData["LinkedIn"],
-        website: rowData["Website"],
-        twitter: rowData["Twitter"],
+        website: "https://" + rowData["Website"],
+        twitter: "http://twitter.com/" + rowData["Twitter"].slice(1),
         contact: rowData["Contact - Phone Number"],
         email: rowData["Contact - Email ID"],
         location: rowData["Location"],
@@ -256,19 +256,6 @@ const Profile = () => {
     buttonElement.classList.add("flexAnything");
   };
 
-  const scrollFunction = () => {
-    let mybutton = document.getElementById("myBtn");
-    if (document.body.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-
-  // window.onscroll = () => {
-  //   scrollFunction();
-  // }
-
   const topFunction = () => {
     document.documentElement.scrollTop = 0;
   };
@@ -280,7 +267,6 @@ const Profile = () => {
       <div className="profile-header-container">
         <div className="profile-to-directory">
           <a href="/directory">
-            {/* <Link to='/directory'> */}
             <ion-icon
               name="caret-down-outline"
               data-filter-name="profession"
@@ -293,19 +279,19 @@ const Profile = () => {
           <img id="profile-user-main-back-img" src={profile_YellowNameBlob} alt="" />
           <div className="profile-name">{user.name}</div>
           <div className="profile-icons">
-            <a href={user.instagram} id="profile-instagram-logo">
+            <a href={user.instagram} target="_blank" id="profile-instagram-logo">
               {" "}
               <img src={profile_LogoInstagram} alt="" />
             </a>
-            <a href={user.linkedin} id="profile-linkedin-logo">
+            <a href={user.linkedin} target="_blank" id="profile-linkedin-logo">
               {" "}
               <img src={profile_LogoLinkedin} alt="" />
             </a>
-            <a href={user.twitter} id="profile-twitter-logo">
+            <a href={user.twitter} target="_blank" id="profile-twitter-logo">
               {" "}
               <img src={profile_LogoTwitter} alt="" />
             </a>
-            <a href={user.website} id="profile-website-logo">
+            <a href={user.website} target="_blank" id="profile-website-logo">
               {" "}
               <img src={profile_LogoWebsite} alt="" />
             </a>

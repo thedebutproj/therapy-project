@@ -425,6 +425,7 @@
     font-size: 28px;
     margin: 0px auto;
     margin-top: 10px;
+    margin-bottom: 15px;
     max-width: 380px;
     padding-bottom: 10px;
 }
@@ -440,7 +441,7 @@
     background-size: cover; */
     border-radius: 100px;
     background-color: var(--color2);
-    height: 190vh;
+    height: 100%;
     width: 7px;
     margin-top: 10px;
     margin-left: 80px;
