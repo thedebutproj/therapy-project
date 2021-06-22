@@ -4,6 +4,13 @@
   background-color: #b0bfc2;
 }
 
+.blog-container .loading {
+  font-size: 2em;
+  font-family: var(--font1);
+  color: #fae3d1;
+  text-shadow: 3px 3px 0px #61878c;
+}
+
 .blog-lhsPatch {
   position: absolute;
   z-index: 1;
@@ -49,6 +56,7 @@
   z-index: 2;
   overflow-y: auto;
   height: 100vh;
+  margin-bottom: 15vh;
 }
 
 .blog-box {

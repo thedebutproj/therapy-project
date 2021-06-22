@@ -26,11 +26,11 @@ function App() {
             <Route exact path="/blog">
               <Blog />
             </Route>
+            <Route exact path="/blog/:id">
+              <Article />
+            </Route>
             <Route exact path="/donor">
               <Donor />
-            </Route>
-            <Route exact path="/article">
-              <Article />
             </Route>
           </Switch>
         </div>

@@ -1,6 +1,6 @@
 import { GoogleSpreadsheet } from "google-spreadsheet";
 
-const fetchSheet = async () => {
+const fetchSheet = async (sheet_id) => {
   const API_KEY = "AIzaSyCXAsyMDl9PSPSD_VXRO0J - JUSiYoeD - io";
   const SPREADSHEET_ID = "1hMoXkynBu22BWqfFGcfCRQfUkd65HB45lBflNIsfzto";
 
@@ -10,7 +10,7 @@ const fetchSheet = async () => {
     await doc.useApiKey(API_KEY);
     await doc.loadInfo();
 
-    const sheet = doc.sheetsByIndex[0];
+    const sheet = doc.sheetsByIndex[sheet_id];
     const rows = await sheet.getRows();
 
     return rows;

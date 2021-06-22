@@ -6,6 +6,8 @@ Row Number is used as a parameter to connect Directory to Profile
 
 Don't leave href empty it ion-icon will throw error (use <Link> instead of <a> tag)  
 
+Data on therapist should always be the first sheet
+
 Reference:
 Sticky Navbar : https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 

@@ -77,83 +77,99 @@ const Profile = () => {
   // } = user;
 
   useEffect(() => {
-    fetchSheetRow(id).then((rowData) => {
-  const locationElement=document.getElementById("profileLocation");
-  const affiliationElement=document.getElementById("profileAffiliations");
-  const demographyElement=document.getElementById("profileTargetDemography");
-  const evaluationElement=document.getElementById("profileEvaluations");
-  const expertiseElement=document.getElementById("profileAreaofExperience");
-  const contactElement=document.getElementById("profile-contact-main");
-  const timeElement=document.getElementById("profile-time-main");
-  const typicalSessionElement=document.getElementById("profile-typical-session-fees-main");
-  const detailsElement=document.getElementById("profile-details-main");
-  const sessionElement=document.getElementById("profile-session-main");
-  const backgroundElement=document.getElementById("profile-background-main");
-  // const centerLineElement=document.getElementsByClassName("profile-body-one-middle");
+    // Therapist is data is in first sheet that's why sheet_id=0
+    fetchSheetRow(0, id).then((rowData) => {
+      const locationElement = document.getElementById("profileLocation");
+      const affiliationElement = document.getElementById("profileAffiliations");
+      const demographyElement = document.getElementById(
+        "profileTargetDemography"
+      );
+      const evaluationElement = document.getElementById("profileEvaluations");
+      const expertiseElement = document.getElementById(
+        "profileAreaofExperience"
+      );
+      const contactElement = document.getElementById("profile-contact-main");
+      const timeElement = document.getElementById("profile-time-main");
+      const typicalSessionElement = document.getElementById(
+        "profile-typical-session-fees-main"
+      );
+      const detailsElement = document.getElementById("profile-details-main");
+      const sessionElement = document.getElementById("profile-session-main");
+      const backgroundElement = document.getElementById(
+        "profile-background-main"
+      );
+      // const centerLineElement=document.getElementsByClassName("profile-body-one-middle");
 
       // console.log(rowData["Affiliations"]);
       // console.log(affiliationElement);
 
-      if(!rowData["Location"])
-      {
-        locationElement.style.display="none";
+      if (!rowData["Location"]) {
+        locationElement.style.display = "none";
       }
-      if(!rowData["Affiliations"])
-      {
-        affiliationElement.style.display="none";
+      if (!rowData["Affiliations"]) {
+        affiliationElement.style.display = "none";
       }
-      if(!rowData["Target Demographic"])
-      {
-        demographyElement.style.display="none";
+      if (!rowData["Target Demographic"]) {
+        demographyElement.style.display = "none";
       }
-      if(!rowData["Evaluations Administered"])
-      {
-        evaluationElement.style.display="none";
+      if (!rowData["Evaluations Administered"]) {
+        evaluationElement.style.display = "none";
       }
-      if(!rowData["Areas of Expertise"])
-      {
-        expertiseElement.style.display="none";
+      if (!rowData["Areas of Expertise"]) {
+        expertiseElement.style.display = "none";
       }
 
-      if(!rowData["Instagram"])
-      {
-          document.getElementById("profile-instagram-logo").style.display="none";
+      if (!rowData["Instagram"]) {
+        document.getElementById("profile-instagram-logo").style.display =
+          "none";
       }
-      if(!rowData["LinkedIn"])
-      {
-          document.getElementById("profile-linkedin-logo").style.display="none";
+      if (!rowData["LinkedIn"]) {
+        document.getElementById("profile-linkedin-logo").style.display = "none";
       }
-      if(!rowData["Twitter"])
-      {
-          document.getElementById("profile-twitter-logo").style.display="none";
+      if (!rowData["Twitter"]) {
+        document.getElementById("profile-twitter-logo").style.display = "none";
       }
-      if(!rowData["Website"])
-      {
-          document.getElementById("profile-website-logo").style.display="none";
+      if (!rowData["Website"]) {
+        document.getElementById("profile-website-logo").style.display = "none";
       }
 
+      var contactoffsety = contactElement.offsetTop + 40;
+      document.getElementsByClassName(
+        "center-line-images-one-img"
+      )[0].style.top = contactoffsety + "px";
 
+      var timeoffsety = timeElement.offsetTop + 40;
+      document.getElementsByClassName(
+        "center-line-images-one-img"
+      )[2].style.top = timeoffsety + "px";
 
-      var contactoffsety=contactElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[0].style.top=contactoffsety+"px";
+      var typicalsessionoffsety = typicalSessionElement.offsetTop + 40;
+      document.getElementsByClassName(
+        "center-line-images-one-img"
+      )[4].style.top = typicalsessionoffsety + "px";
 
-      var timeoffsety=timeElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[2].style.top=timeoffsety+"px";
+      var detailsoffsety = detailsElement.offsetTop + 40;
+      document.getElementsByClassName(
+        "center-line-images-one-img"
+      )[1].style.top = detailsoffsety + "px";
 
-      var typicalsessionoffsety=typicalSessionElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[4].style.top=typicalsessionoffsety+"px";
+      var sessionoffsety = sessionElement.offsetTop + 40;
+      document.getElementsByClassName(
+        "center-line-images-one-img"
+      )[3].style.top = sessionoffsety + "px";
 
-      var detailsoffsety=detailsElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
+      var centerlineoffsetheight =
+        typicalSessionElement.offsetTop +
+        typicalSessionElement.offsetHeight -
+        200;
+      document.getElementsByClassName(
+        "profile-body-one-middle"
+      )[0].style.height = centerlineoffsetheight + "px";
 
-      var sessionoffsety=sessionElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
-
-      var centerlineoffsetheight=typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight-200;
-      document.getElementsByClassName("profile-body-one-middle")[0].style.height=centerlineoffsetheight+"px";
-
-      var bottomoffsetheight=backgroundElement.offsetTop+backgroundElement.offsetHeight-100;
-      document.getElementById("mainContainer").style.height=bottomoffsetheight+"px";
+      var bottomoffsetheight =
+        backgroundElement.offsetTop + backgroundElement.offsetHeight - 100;
+      document.getElementById("mainContainer").style.height =
+        bottomoffsetheight + "px";
 
       setUser({
         ...user,
@@ -210,7 +226,7 @@ const Profile = () => {
     } else {
       mybutton.style.display = "none";
     }
-  }
+  };
 
   // window.onscroll = () => {
   //   scrollFunction();
@@ -219,7 +235,6 @@ const Profile = () => {
   const topFunction = () => {
     document.documentElement.scrollTop = 0;
   };
-
 
   return (
     <div id="mainContainer" className="profile-main-container">
@@ -237,7 +252,11 @@ const Profile = () => {
           </a>
         </div>
         <div className="profile-user-main">
-          <img id="profile-user-main-back-img" src={profile_YellowNameBlob} alt="" />
+          <img
+            id="profile-user-main-back-img"
+            src={profile_YellowNameBlob}
+            alt=""
+          />
           <div className="profile-name">{user.name}</div>
           <div className="profile-icons">
             <a id="profile-instagram-logo">
@@ -260,58 +279,54 @@ const Profile = () => {
             {/* icons */}
           </div>
         </div>
-          <div>
-            <button
-              className="jump-to"
-              id="jump-to-ID"
-              onClick={handleDropdown}
-            >
-              <p>JUMP TO</p>
-              {/* <img src={profile_JumpToArrow} alt="" /> */}
+        <div>
+          <button className="jump-to" id="jump-to-ID" onClick={handleDropdown}>
+            <p>JUMP TO</p>
+            {/* <img src={profile_JumpToArrow} alt="" /> */}
 
-              <ion-icon
-                name="caret-down-outline"
-                data-filter-name="profession"
-              ></ion-icon>
-            </button>
-            <div id="dropdownID" onClick={handleDropdown2}>
-              <div className="jump-to-container">
-                <button className="jump-to-two">
-                  <p>JUMP TO</p>
-                  {/* <img src={profile_JumpToArrow} alt="" /> */}
+            <ion-icon
+              name="caret-down-outline"
+              data-filter-name="profession"
+            ></ion-icon>
+          </button>
+          <div id="dropdownID" onClick={handleDropdown2}>
+            <div className="jump-to-container">
+              <button className="jump-to-two">
+                <p>JUMP TO</p>
+                {/* <img src={profile_JumpToArrow} alt="" /> */}
 
-                  <ion-icon
-                    name="caret-down-outline"
-                    data-filter-name="profession"
-                  ></ion-icon>
-                </button>
-                <div>
-                  <a href="#profile-contact-main">
-                    <div></div>
-                    <p>Contact</p>
-                  </a>
-                  <a href="#profile-details-main">
-                    <div></div>
-                    <p>Background</p>
-                  </a>
-                  <a href="#profile-time-main">
-                    <div></div>
-                    <p>Schedule</p>
-                  </a>
-                  <a href="#profile-session-main">
-                    <div></div>
-                    <p>Sessions</p>
-                  </a>
-                  <a href="#profile-typical-session-fees-main">
-                    <div></div>
-                    <p>Pricing</p>
-                  </a>
-                  <a href="#profile-background-main">
-                    <div></div>
-                    <p>Additional Info</p>
-                  </a>
-                </div>
+                <ion-icon
+                  name="caret-down-outline"
+                  data-filter-name="profession"
+                ></ion-icon>
+              </button>
+              <div>
+                <a href="#profile-contact-main">
+                  <div></div>
+                  <p>Contact</p>
+                </a>
+                <a href="#profile-details-main">
+                  <div></div>
+                  <p>Background</p>
+                </a>
+                <a href="#profile-time-main">
+                  <div></div>
+                  <p>Schedule</p>
+                </a>
+                <a href="#profile-session-main">
+                  <div></div>
+                  <p>Sessions</p>
+                </a>
+                <a href="#profile-typical-session-fees-main">
+                  <div></div>
+                  <p>Pricing</p>
+                </a>
+                <a href="#profile-background-main">
+                  <div></div>
+                  <p>Additional Info</p>
+                </a>
               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -321,7 +336,11 @@ const Profile = () => {
             <div className="profile-body-one-left">
               {/* contact */}
               <div id="profile-contact-main">
-                <img id="contact-back-img" src={profile_Section_ContactPostit} alt="" />
+                <img
+                  id="contact-back-img"
+                  src={profile_Section_ContactPostit}
+                  alt=""
+                />
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
                   <div className="profile-contact-details">
@@ -340,7 +359,11 @@ const Profile = () => {
               </div>
               {/* office hours */}
               <div id="profile-time-main">
-                <img id="time-back-img" src={profile_Section_SchedulePostit} alt="" />
+                <img
+                  id="time-back-img"
+                  src={profile_Section_SchedulePostit}
+                  alt=""
+                />
                 <div className="profile-office-hours">
                   <h1>OFFICE HOURS-</h1>
                   <p>{user.workingTime}</p>
@@ -367,7 +390,11 @@ const Profile = () => {
 
               {/* typical session cost */}
               <div id="profile-typical-session-fees-main">
-                <img id="typical-session-back-img" src={profile_Section_PricingPostit} alt="" />
+                <img
+                  id="typical-session-back-img"
+                  src={profile_Section_PricingPostit}
+                  alt=""
+                />
                 <div className="profile-typical-session-fees">
                   <h1>TYPICAL SESSION COST-</h1>
                   <h1>{user.typicalSessionCost}</h1>
@@ -377,20 +404,44 @@ const Profile = () => {
             </div>
             <div className="profile-body-one-middle">
               <div className="center-line-images-one">
-                <img className="center-line-images-one-img" src={profile_SquigglyPointer} alt="" />
-                <img className="center-line-images-one-img" src={profile_SquigglyPointer} alt="" />
-                <img className="center-line-images-one-img" src={profile_SquigglyPointer} alt="" />
-              {/* </div> */}
-              {/* <div className="center-line-images-two"> */}
-                <img className="center-line-images-one-img" src={profile_SquigglyPointer} alt="" />
-                <img className="center-line-images-one-img" src={profile_SquigglyPointer} alt="" />
+                <img
+                  className="center-line-images-one-img"
+                  src={profile_SquigglyPointer}
+                  alt=""
+                />
+                <img
+                  className="center-line-images-one-img"
+                  src={profile_SquigglyPointer}
+                  alt=""
+                />
+                <img
+                  className="center-line-images-one-img"
+                  src={profile_SquigglyPointer}
+                  alt=""
+                />
+                {/* </div> */}
+                {/* <div className="center-line-images-two"> */}
+                <img
+                  className="center-line-images-one-img"
+                  src={profile_SquigglyPointer}
+                  alt=""
+                />
+                <img
+                  className="center-line-images-one-img"
+                  src={profile_SquigglyPointer}
+                  alt=""
+                />
               </div>
               {/* center line */}
             </div>
             <div className="profile-body-one-right">
               {/* qualific */}
               <div id="profile-details-main">
-                <img id="profile-details-back-img" src={profile_Section_BackgroundPostit} alt="" />
+                <img
+                  id="profile-details-back-img"
+                  src={profile_Section_BackgroundPostit}
+                  alt=""
+                />
                 <div className="profile-qualification">
                   <h1>QUALIFICATIONS-</h1>
                   <p>{user.qualifications}</p>
@@ -412,7 +463,11 @@ const Profile = () => {
               {/* first session */}
 
               <div id="profile-session-main">
-                <img id="first-session-back-img" src={profile_Section_SessionPostit} alt="" />
+                <img
+                  id="first-session-back-img"
+                  src={profile_Section_SessionPostit}
+                  alt=""
+                />
                 <div className="profile-first-session">
                   <h1>YOUR FIRST SESSION-</h1>
                   <p>{user.yourFirstSession}</p>
@@ -425,14 +480,20 @@ const Profile = () => {
             </div>
           </div>
           <div className="profile-body-two">
-
             <div id="profile-background-main">
-              <img id="profile-background-back-img" src={profile_Section_AddInfoPostit} alt="" />
+              <img
+                id="profile-background-back-img"
+                src={profile_Section_AddInfoPostit}
+                alt=""
+              />
               <div className="profile-affiliations" id="profileAffiliations">
                 <h1>AFFILIATIONS-</h1>
                 <p>{user.affiliations}</p>
               </div>
-              <div className="profile-target-demography" id="profileTargetDemography">
+              <div
+                className="profile-target-demography"
+                id="profileTargetDemography"
+              >
                 <h1>TARGET DEMOGRAPHIC-</h1>
                 <p>{user.targetDemographic}</p>
               </div>
@@ -440,14 +501,19 @@ const Profile = () => {
                 <h1>EVALUATIONS ADMINISTERED-</h1>
                 <p>{user.evaluationsAdministered}</p>
               </div>
-              <div className="profile-area-of-experience" id="profileAreaofExperience">
+              <div
+                className="profile-area-of-experience"
+                id="profileAreaofExperience"
+              >
                 <h1>AREAS OF EXPERTISE-</h1>
                 <p>{user.areaOfExpertise}</p>
               </div>
             </div>
           </div>
           <div>
-            <button onClick={topFunction} id="myBtn">Top</button>
+            <button onClick={topFunction} id="myBtn">
+              Top
+            </button>
           </div>
         </div>
       </div>

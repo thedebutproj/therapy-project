@@ -50,7 +50,7 @@ import blog_CLOUD2 from "./blog/blog_CLOUD2.png";
 
 // Donor imports
 import donor_BenefitsDetails from "./donor/donor_BenefitsDetails.png";
-import donor_MainIllustration from "./donor/Donor_MainIllustration.png";
+import donor_MainIllustration from "./donor/donor_MainIllustration.png";
 
 // Function for importing all the files in the Therapist Images in the directory folder
 function importAll(r) {

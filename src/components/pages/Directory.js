@@ -187,7 +187,8 @@ const Directory = () => {
     // const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
     // fetchData(doc);
 
-    fetchSheet().then((rows) => {
+    // Data of therapist is on first sheet therefore 0 is passed as an argument
+    fetchSheet(0).then((rows) => {
       setTherapistData(rows);
       setTherapistDataDefault(rows);
     });

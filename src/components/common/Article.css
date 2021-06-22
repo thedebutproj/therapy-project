@@ -1,0 +1,51 @@
+.article-container {
+  background-color: #b0bfc2;
+  padding: 2rem;
+}
+
+.article-heading {
+  color: whitesmoke;
+  text-shadow: 3px 3px 0px #61878c;
+  margin-bottom: 0.5rem;
+}
+
+.article-author {
+  text-shadow: 2px 2px 0px white;
+}
+
+.article-content {
+  /* So text lines cover whole div horizontally */
+  text-align: justify;
+}
+
+.article-content h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+#blockquote {
+  padding: 0.5em 0em 0.5em 1em;
+  border-left: 10px solid var(--color5);
+  text-align: justify;
+}
+
+#quote {
+  margin-left: 1em;
+  color: whitesmoke;
+  quotes: "“" "„";
+
+  /* It is used so there is no effect of margin-left on quotes */
+  text-indent: -1em;
+}
+
+#quote::before {
+  content: open-quote;
+  font-size: 3em;
+  display: block;
+}
+
+#quote::after {
+  content: close-quote;
+  font-size: 3em;
+  display: block;
+}
