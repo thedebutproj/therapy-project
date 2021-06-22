@@ -43,6 +43,16 @@ import profile_Section_ContactLocation from "./profile/profile_Section_ContactLo
 import profile_SquigglyPointer from "./profile/profile_SquigglyPointer.png";
 import profile_JumpToArrow from "./profile/profile_JumpToArrow.png";
 import profile_YellowNameBlob from "./profile/profile_YellowNameBlob.png";
+import profile_Section_S_OFF from "./profile/profile_Section_S_OFF.png";
+import profile_Section_S_ON from "./profile/profile_Section_S_ON.png";
+import profile_Section_M_OFF from "./profile/profile_Section_M_OFF.png";
+import profile_Section_M_ON from "./profile/profile_Section_M_ON.png";
+import profile_Section_T_OFF from "./profile/profile_Section_T_OFF.png";
+import profile_Section_T_ON from "./profile/profile_Section_T_ON.png";
+import profile_Section_W_OFF from "./profile/profile_Section_W_OFF.png";
+import profile_Section_W_ON from "./profile/profile_Section_W_ON.png";
+import profile_Section_F_OFF from "./profile/profile_Section_F_OFF.png";
+import profile_Section_F_ON from "./profile/profile_Section_F_ON.png";
 
 // Blog imports
 import blog_CLOUD1 from "./blog/blog_CLOUD1.png";
@@ -106,4 +116,14 @@ export {
     profile_Section_SessionPostit,
     profile_Section_AddInfoPostit,
     profile_YellowNameBlob,
+    profile_Section_S_OFF,
+    profile_Section_S_ON,
+    profile_Section_M_OFF,
+    profile_Section_M_ON,
+    profile_Section_T_OFF,
+    profile_Section_T_ON,
+    profile_Section_W_OFF,
+    profile_Section_W_ON,
+    profile_Section_F_OFF,
+    profile_Section_F_ON,
 };

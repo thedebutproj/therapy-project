@@ -23,6 +23,16 @@ import {
   profile_Section_SessionPostit,
   profile_Section_AddInfoPostit,
   profile_YellowNameBlob,
+  profile_Section_S_OFF,
+  profile_Section_S_ON,
+  profile_Section_M_OFF,
+  profile_Section_M_ON,
+  profile_Section_T_OFF,
+  profile_Section_T_ON,
+  profile_Section_W_OFF,
+  profile_Section_W_ON,
+  profile_Section_F_OFF,
+  profile_Section_F_ON,
 } from "../../assets";
 
 const Profile = () => {
@@ -131,6 +141,49 @@ const Profile = () => {
       {
           document.getElementById("profile-website-logo").style.display="none";
       }
+      if(!rowData["Sunday"])
+      {
+          document.getElementsByClassName("week_days")[1].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[0].style.display="none"; 
+      }
+      if(!rowData["Monday"])
+      {
+          document.getElementsByClassName("week_days")[3].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[2].style.display="none"; 
+      }
+      if(!rowData["Tuesday"])
+      {
+          document.getElementsByClassName("week_days")[5].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[4].style.display="none"; 
+      }
+      if(!rowData["Wednesday"])
+      {
+          document.getElementsByClassName("week_days")[7].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[6].style.display="none"; 
+      }
+      if(!rowData["Thursday"])
+      {
+          document.getElementsByClassName("week_days")[9].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[8].style.display="none"; 
+      }
+      if(!rowData["Friday"])
+      {
+          document.getElementsByClassName("week_days")[11].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[10].style.display="none"; 
+      }
+      if(!rowData["Saturday"])
+      {
+          document.getElementsByClassName("week_days")[13].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[12].style.display="none"; 
+      }
+      
 
 
 
@@ -149,7 +202,7 @@ const Profile = () => {
       var sessionoffsety=sessionElement.offsetTop+40;
       document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
 
-      var centerlineoffsetheight=typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight-200;
+      var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
       document.getElementsByClassName("profile-body-one-middle")[0].style.height=centerlineoffsetheight+"px";
 
       var bottomoffsetheight=backgroundElement.offsetTop+backgroundElement.offsetHeight-100;
@@ -158,7 +211,7 @@ const Profile = () => {
       setUser({
         ...user,
         name: rowData["Full Name"],
-        instagram: rowData["Instagram"],
+        instagram: "https://instagram.com/" + rowData["Instagram"].slice(1),
         linkedin: rowData["LinkedIn"],
         website: rowData["Website"],
         twitter: rowData["Twitter"],
@@ -240,19 +293,19 @@ const Profile = () => {
           <img id="profile-user-main-back-img" src={profile_YellowNameBlob} alt="" />
           <div className="profile-name">{user.name}</div>
           <div className="profile-icons">
-            <a id="profile-instagram-logo">
+            <a href={user.instagram} id="profile-instagram-logo">
               {" "}
               <img src={profile_LogoInstagram} alt="" />
             </a>
-            <a id="profile-linkedin-logo">
+            <a href={user.linkedin} id="profile-linkedin-logo">
               {" "}
               <img src={profile_LogoLinkedin} alt="" />
             </a>
-            <a id="profile-twitter-logo">
+            <a href={user.twitter} id="profile-twitter-logo">
               {" "}
               <img src={profile_LogoTwitter} alt="" />
             </a>
-            <a id="profile-website-logo">
+            <a href={user.website} id="profile-website-logo">
               {" "}
               <img src={profile_LogoWebsite} alt="" />
             </a>
@@ -348,7 +401,20 @@ const Profile = () => {
                 <div className="profile-working-days">
                   <h1>WORKING DAYS-</h1>
                   <div className="profile-days">
-                    <img src={profile_Section_ScheduleDaysOFF} alt="" />
+                   <img className="week_days" src={profile_Section_S_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_S_ON} alt="" />
+                   <img className="week_days" src={profile_Section_M_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_M_ON} alt="" />
+                   <img className="week_days" src={profile_Section_T_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_T_ON} alt="" />
+                   <img className="week_days" src={profile_Section_W_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_W_ON} alt="" />
+                   <img className="week_days" src={profile_Section_T_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_T_ON} alt="" />
+                   <img className="week_days" src={profile_Section_F_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_F_ON} alt="" />
+                   <img className="week_days" src={profile_Section_S_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_S_ON} alt="" />
                   </div>
                   <p>{user.notesOnAvailability}</p>
                 </div>

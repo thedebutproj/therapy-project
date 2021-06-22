@@ -311,11 +311,16 @@
 }
 
 .profile-days {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 8px auto;
 }
 
 .profile-days img {
-    width: 20vw;
+    height: 5vh;
+    width: 3vw;
+    margin: 0px 4px;
 }
 
 .profile-working-days h1 {
@@ -589,6 +594,7 @@
     background-size: cover;
     width: 35vw;
     height: 65vh; */
+    padding: 0px 40px;
     margin-top: 8vh;
     margin-left: 105px;
     padding-bottom: 20px;
@@ -623,9 +629,10 @@
 
 .profile-first-session p {
     font-size: 28px;
-    margin: 0px 40px;
-    max-width: 360px;
+    margin: 0px 0px;
+    max-width: 400px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .profile-session-length h1 {
