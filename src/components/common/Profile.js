@@ -23,6 +23,16 @@ import {
   profile_Section_SessionPostit,
   profile_Section_AddInfoPostit,
   profile_YellowNameBlob,
+  profile_Section_S_OFF,
+  profile_Section_S_ON,
+  profile_Section_M_OFF,
+  profile_Section_M_ON,
+  profile_Section_T_OFF,
+  profile_Section_T_ON,
+  profile_Section_W_OFF,
+  profile_Section_W_ON,
+  profile_Section_F_OFF,
+  profile_Section_F_ON,
 } from "../../assets";
 
 const Profile = () => {
@@ -132,52 +142,80 @@ const Profile = () => {
       if (!rowData["Website"]) {
         document.getElementById("profile-website-logo").style.display = "none";
       }
+      if(!rowData["Sunday"])
+      {
+          document.getElementsByClassName("week_days")[1].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[0].style.display="none"; 
+      }
+      if(!rowData["Monday"])
+      {
+          document.getElementsByClassName("week_days")[3].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[2].style.display="none"; 
+      }
+      if(!rowData["Tuesday"])
+      {
+          document.getElementsByClassName("week_days")[5].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[4].style.display="none"; 
+      }
+      if(!rowData["Wednesday"])
+      {
+          document.getElementsByClassName("week_days")[7].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[6].style.display="none"; 
+      }
+      if(!rowData["Thursday"])
+      {
+          document.getElementsByClassName("week_days")[9].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[8].style.display="none"; 
+      }
+      if(!rowData["Friday"])
+      {
+          document.getElementsByClassName("week_days")[11].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[10].style.display="none"; 
+      }
+      if(!rowData["Saturday"])
+      {
+          document.getElementsByClassName("week_days")[13].style.display="none"; 
+      }else{
+        document.getElementsByClassName("week_days")[12].style.display="none"; 
+      }
+      
 
-      var contactoffsety = contactElement.offsetTop + 40;
-      document.getElementsByClassName(
-        "center-line-images-one-img"
-      )[0].style.top = contactoffsety + "px";
 
-      var timeoffsety = timeElement.offsetTop + 40;
-      document.getElementsByClassName(
-        "center-line-images-one-img"
-      )[2].style.top = timeoffsety + "px";
 
-      var typicalsessionoffsety = typicalSessionElement.offsetTop + 40;
-      document.getElementsByClassName(
-        "center-line-images-one-img"
-      )[4].style.top = typicalsessionoffsety + "px";
+      var contactoffsety=contactElement.offsetTop+40;
+      document.getElementsByClassName("center-line-images-one-img")[0].style.top=contactoffsety+"px";
 
-      var detailsoffsety = detailsElement.offsetTop + 40;
-      document.getElementsByClassName(
-        "center-line-images-one-img"
-      )[1].style.top = detailsoffsety + "px";
+      var timeoffsety=timeElement.offsetTop+40;
+      document.getElementsByClassName("center-line-images-one-img")[2].style.top=timeoffsety+"px";
 
-      var sessionoffsety = sessionElement.offsetTop + 40;
-      document.getElementsByClassName(
-        "center-line-images-one-img"
-      )[3].style.top = sessionoffsety + "px";
+      var typicalsessionoffsety=typicalSessionElement.offsetTop+40;
+      document.getElementsByClassName("center-line-images-one-img")[4].style.top=typicalsessionoffsety+"px";
 
-      var centerlineoffsetheight =
-        typicalSessionElement.offsetTop +
-        typicalSessionElement.offsetHeight -
-        200;
-      document.getElementsByClassName(
-        "profile-body-one-middle"
-      )[0].style.height = centerlineoffsetheight + "px";
+      var detailsoffsety=detailsElement.offsetTop+40;
+      document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
 
-      var bottomoffsetheight =
-        backgroundElement.offsetTop + backgroundElement.offsetHeight - 100;
-      document.getElementById("mainContainer").style.height =
-        bottomoffsetheight + "px";
+      var sessionoffsety=sessionElement.offsetTop+4;
+      document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
+
+      var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
+      document.getElementsByClassName("profile-body-one-middle")[0].style.height=centerlineoffsetheight+"px";
+
+      var bottomoffsetheight=backgroundElement.offsetTop+backgroundElement.offsetHeight-100;
+      document.getElementById("mainContainer").style.height=bottomoffsetheight+"px";
 
       setUser({
         ...user,
         name: rowData["Full Name"],
-        instagram: rowData["Instagram"],
+        instagram: "https://instagram.com/" + rowData["Instagram"].slice(1),
         linkedin: rowData["LinkedIn"],
-        website: rowData["Website"],
-        twitter: rowData["Twitter"],
+        website: "https://" + rowData["Website"],
+        twitter: "http://twitter.com/" + rowData["Twitter"].slice(1),
         contact: rowData["Contact - Phone Number"],
         email: rowData["Contact - Email ID"],
         location: rowData["Location"],
@@ -219,19 +257,6 @@ const Profile = () => {
     buttonElement.classList.add("flexAnything");
   };
 
-  const scrollFunction = () => {
-    let mybutton = document.getElementById("myBtn");
-    if (document.body.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  };
-
-  // window.onscroll = () => {
-  //   scrollFunction();
-  // }
-
   const topFunction = () => {
     document.documentElement.scrollTop = 0;
   };
@@ -242,7 +267,6 @@ const Profile = () => {
       <div className="profile-header-container">
         <div className="profile-to-directory">
           <a href="/directory">
-            {/* <Link to='/directory'> */}
             <ion-icon
               name="caret-down-outline"
               data-filter-name="profession"
@@ -259,19 +283,19 @@ const Profile = () => {
           />
           <div className="profile-name">{user.name}</div>
           <div className="profile-icons">
-            <a id="profile-instagram-logo">
+            <a href={user.instagram} target="_blank" id="profile-instagram-logo">
               {" "}
               <img src={profile_LogoInstagram} alt="" />
             </a>
-            <a id="profile-linkedin-logo">
+            <a href={user.linkedin} target="_blank" id="profile-linkedin-logo">
               {" "}
               <img src={profile_LogoLinkedin} alt="" />
             </a>
-            <a id="profile-twitter-logo">
+            <a href={user.twitter} target="_blank" id="profile-twitter-logo">
               {" "}
               <img src={profile_LogoTwitter} alt="" />
             </a>
-            <a id="profile-website-logo">
+            <a href={user.website} target="_blank" id="profile-website-logo">
               {" "}
               <img src={profile_LogoWebsite} alt="" />
             </a>
@@ -371,7 +395,20 @@ const Profile = () => {
                 <div className="profile-working-days">
                   <h1>WORKING DAYS-</h1>
                   <div className="profile-days">
-                    <img src={profile_Section_ScheduleDaysOFF} alt="" />
+                   <img className="week_days" src={profile_Section_S_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_S_ON} alt="" />
+                   <img className="week_days" src={profile_Section_M_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_M_ON} alt="" />
+                   <img className="week_days" src={profile_Section_T_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_T_ON} alt="" />
+                   <img className="week_days" src={profile_Section_W_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_W_ON} alt="" />
+                   <img className="week_days" src={profile_Section_T_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_T_ON} alt="" />
+                   <img className="week_days" src={profile_Section_F_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_F_ON} alt="" />
+                   <img className="week_days" src={profile_Section_S_OFF} alt="" />
+                   <img className="week_days" src={profile_Section_S_ON} alt="" />
                   </div>
                   <p>{user.notesOnAvailability}</p>
                 </div>
