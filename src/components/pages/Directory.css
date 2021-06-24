@@ -35,17 +35,16 @@
   z-index: -1;
   display: block;
   left: 10%;
-  height: 100%;
+  /* Height of ul is 70vh */
+  height: 70vh;
+  /* ul has a margin-bottom:1rem; */
+  bottom: 0.8rem;
 }
 
 .directory-heading {
   display: flex;
   align-items: center;
   margin-top: 32px;
-}
-
-.directory-heading img {
-  width: 80px;
 }
 
 .directory-heading h1 {
@@ -68,9 +67,15 @@
 
 .directory-left ul li {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
   width: 50vw;
-  /* justify-content: space-between; */
+}
+
+.directory-left ul li:hover {
+  background-color: white;
+  border: 0.1rem solid var(--color2);
+  border-radius: 1.5rem;
 }
 
 .directory-therapist-image {
@@ -152,7 +157,7 @@
 }
 
 .directory-input-field input {
-  border: 2px solid var(--color3);
+  border: 2px solid var(--color2);
   border-radius: 10px;
   margin-right: 10px;
 }
@@ -198,7 +203,7 @@
   display: block;
   margin: auto;
   /* margin-left: 50%; */
-  width: 30%;
+  width: 40%;
   font-size: 18px;
   border-radius: 40px;
   border: 2px solid var(--color2);
@@ -212,7 +217,7 @@
 .directory-filter-reset {
   display: block;
   margin: auto;
-  width: 30%;
+  width: 40%;
   font-size: 18px;
   border-radius: 40px;
   border: 2px solid var(--color2);
@@ -254,7 +259,7 @@
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  border: 0.1em solid var(--color3);
+  border: 0.1em solid var(--color2);
 }
 
 .directory-checkbox-input {
@@ -267,7 +272,7 @@
 }
 
 .directory-checkbox-input input:checked + .directory-checkbox-control {
-  background: radial-gradient(var(--color3) 50%, white 51%);
+  background: radial-gradient(var(--color2) 50%, white 51%);
 }
 
 .directory-dropdown-content {
@@ -282,6 +287,6 @@
 
 .directory-filter-open {
   background-color: white;
-  border: 0.2em solid var(--color3);
+  border: 0.1rem solid var(--color2);
   border-radius: 10%;
 }

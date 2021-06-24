@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import {
   home_FullBGWithText,
@@ -93,6 +93,14 @@ const Home = () => {
     });
   };
 
+  useEffect(() => {
+    // For automatic slide increment
+    const interval = setInterval(incrementSlide, 5000);
+
+    // It ensures that as soon as component is unmounted interval is cleared
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="home-container">
       <div className="home-art">
@@ -102,23 +110,6 @@ const Home = () => {
       <div
         className={"home-slideshow-container " + slides[Math.abs(slideNum)][0]}
       >
-        {/* <div className="home-slides">{slides[Math.abs(slideNum)][0]}</div>
-
-        <div className="home-slides-content">
-          <div className="home-slides-text">
-            {slides[Math.abs(slideNum)][1]}
-          </div>
-          <div className="home-slides-button">
-            {slides[Math.abs(slideNum)][2]}
-          </div>
-        </div>
-
-        <span className="home-prev" onClick={decrementSlide}>
-          <ion-icon name="chevron-back-circle-outline"></ion-icon>
-        </span>
-        <span className="home-next" onClick={incrementSlide}>
-          <ion-icon name="chevron-forward-circle-outline"></ion-icon>
-        </span> */}
         {slides[Math.abs(slideNum)][1]}
         <span className="home-prev" onClick={decrementSlide}>
           <ion-icon name="chevron-back-circle-outline"></ion-icon>
@@ -126,6 +117,20 @@ const Home = () => {
         <span className="home-next" onClick={incrementSlide}>
           <ion-icon name="chevron-forward-circle-outline"></ion-icon>
         </span>
+
+        <ul className="home-carousel-dots-container">
+          {slides.map((slide, index) => {
+            return (
+              <li onClick={() => setSlideNum(index)} key={index}>
+                {Math.abs(slideNum) === index ? (
+                  <ion-icon name="ellipse"></ion-icon>
+                ) : (
+                  <ion-icon name="ellipse-outline"></ion-icon>
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

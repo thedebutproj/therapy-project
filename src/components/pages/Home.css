@@ -136,6 +136,29 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.home-carousel-dots-container {
+  display: flex;
+  position: absolute;
+  list-style: none;
+  bottom: 0;
+
+  /* Apparently a great way to center a absolute div horizonatlly */
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.home-carousel-dots-container li {
+  margin-right: 1rem;
+  font-size: 1.5em;
+  color: gray;
+  cursor: pointer;
+}
+
+.home-carousel-dots-container li:hover {
+  color: black;
+}
+
 .home-slide-right-blog {
   /* To compensate for the 2rem padding we gave at home-slide-content and image can stick at top */
   margin-top: -3rem;

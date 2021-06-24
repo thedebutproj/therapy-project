@@ -45,7 +45,7 @@ const Blog = () => {
                   <span>{blogData[0]["Date"]}</span>
                 </p>
                 <Link to={`/blog/${blogData[0]._rowNumber}`}>
-                  <button className="b-heading-btn">Read More</button>
+                  <button className="b-heading-btn">READ MORE</button>
                 </Link>
               </div>
             </div>
@@ -60,7 +60,7 @@ const Blog = () => {
                     <h3 className="b-h3">{row["Heading"]}</h3>
                     <p className="b-p">{row["Description"]}</p>
                     <Link to={`/blog/${row._rowNumber}`}>
-                      <button className="b-btn">Read More</button>
+                      <button className="b-btn">READ MORE</button>
                     </Link>
                   </div>
                 </div>
