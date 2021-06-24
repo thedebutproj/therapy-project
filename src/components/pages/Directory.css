@@ -49,8 +49,9 @@
 
 .directory-heading h1 {
   color: var(--color2);
-  font-size: 42px;
+  font-size: 64px;
   font-weight: normal;
+  text-shadow: 2px 2px 0px black;
 }
 
 .directory-left ul {
@@ -85,10 +86,8 @@
 
 .directory-therapist-data {
   flex: 1 0 auto;
-
   /* For text no-wrap to work we need to specify width */
   width: 50%;
-
   /* margin-right: 64px; */
 }
 
@@ -144,6 +143,7 @@
 }
 
 /* ">" is used so this css only apply to direct child*/
+
 .directory-right > ul {
   list-style: none;
   margin-top: 30px;

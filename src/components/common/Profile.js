@@ -88,26 +88,27 @@ const Profile = () => {
 
   useEffect(() => {
     // Therapist is data is in first sheet that's why sheet_id=0
+    const locationElement = document.getElementById("profileLocation");
+    const affiliationElement = document.getElementById("profileAffiliations");
+    const demographyElement = document.getElementById(
+      "profileTargetDemography"
+    );
+    const evaluationElement = document.getElementById("profileEvaluations");
+    const expertiseElement = document.getElementById(
+      "profileAreaofExperience"
+    );
+    const contactElement = document.getElementById("profile-contact-main");
+    const timeElement = document.getElementById("profile-time-main");
+    const typicalSessionElement = document.getElementById(
+      "profile-typical-session-fees-main"
+    );
+    const detailsElement = document.getElementById("profile-details-main");
+    const sessionElement = document.getElementById("profile-session-main");
+    const backgroundElement = document.getElementById(
+      "profile-background-main"
+    );
     fetchSheetRow(0, id).then((rowData) => {
-      const locationElement = document.getElementById("profileLocation");
-      const affiliationElement = document.getElementById("profileAffiliations");
-      const demographyElement = document.getElementById(
-        "profileTargetDemography"
-      );
-      const evaluationElement = document.getElementById("profileEvaluations");
-      const expertiseElement = document.getElementById(
-        "profileAreaofExperience"
-      );
-      const contactElement = document.getElementById("profile-contact-main");
-      const timeElement = document.getElementById("profile-time-main");
-      const typicalSessionElement = document.getElementById(
-        "profile-typical-session-fees-main"
-      );
-      const detailsElement = document.getElementById("profile-details-main");
-      const sessionElement = document.getElementById("profile-session-main");
-      const backgroundElement = document.getElementById(
-        "profile-background-main"
-      );
+     
       // const centerLineElement=document.getElementsByClassName("profile-body-one-middle");
 
       // console.log(rowData["Affiliations"]);
@@ -186,29 +187,6 @@ const Profile = () => {
       }
       
 
-
-
-      var contactoffsety=contactElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[0].style.top=contactoffsety+"px";
-
-      var timeoffsety=timeElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[2].style.top=timeoffsety+"px";
-
-      var typicalsessionoffsety=typicalSessionElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[4].style.top=typicalsessionoffsety+"px";
-
-      var detailsoffsety=detailsElement.offsetTop+40;
-      document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
-
-      var sessionoffsety=sessionElement.offsetTop+4;
-      document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
-
-      var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
-      document.getElementsByClassName("profile-body-one-middle")[0].style.height=centerlineoffsetheight+"px";
-
-      var bottomoffsetheight=backgroundElement.offsetTop+backgroundElement.offsetHeight-100;
-      document.getElementById("mainContainer").style.height=bottomoffsetheight+"px";
-
       setUser({
         ...user,
         name: rowData["Full Name"],
@@ -235,7 +213,31 @@ const Profile = () => {
         evaluationsAdministered: rowData["Evaluations Administered"],
         areaOfExpertise: rowData["Areas of Expertise"],
       });
+      setTimeout(() => {
+        var contactoffsety=contactElement.offsetTop+40;
+        document.getElementsByClassName("center-line-images-one-img")[0].style.top=contactoffsety+"px";
+  
+        var timeoffsety=timeElement.offsetTop+40;
+        document.getElementsByClassName("center-line-images-one-img")[2].style.top=timeoffsety+"px";
+  
+        var typicalsessionoffsety=typicalSessionElement.offsetTop+60;
+        document.getElementsByClassName("center-line-images-one-img")[4].style.top=typicalsessionoffsety+"px";
+  
+        var detailsoffsety=detailsElement.offsetTop+40;
+        document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
+  
+        var sessionoffsety=sessionElement.offsetTop+40;
+        document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
+  
+        var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
+        document.getElementsByClassName("profile-body-one-middle")[0].style.height=centerlineoffsetheight+"px";
+  
+        var bottomoffsetheight=backgroundElement.offsetTop+backgroundElement.offsetHeight-100;
+        document.getElementById("mainContainer").style.height=bottomoffsetheight+"px";
+      }, 100);
     });
+
+    
   }, []);
 
   const handleDropdown = () => {
@@ -549,7 +551,7 @@ const Profile = () => {
           </div>
           <div>
             <button onClick={topFunction} id="myBtn">
-              Top
+            &#8593;
             </button>
           </div>
         </div>

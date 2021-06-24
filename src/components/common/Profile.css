@@ -750,14 +750,16 @@
     background-color: var(--color2);
     color: white;
     cursor: pointer;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 50px;
+    font-weight: 900;
 }
 
 #myBtn:hover {
     color: var(--color2);
     background-color: white;
-    padding: 13px;
+    padding: 8px;
     border: 2px solid var(--color2);
+    transition: 0.3s;
 }
