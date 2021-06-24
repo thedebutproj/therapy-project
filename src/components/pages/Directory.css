@@ -1,287 +1,288 @@
 .directory-container {
-  display: flex;
-  position: relative;
-  justify-content: space-evenly;
-  background-color: var(--color8);
-  width: 100%;
-  /* height: 90vh; */
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    background-color: var(--color8);
+    width: 100%;
+    /* height: 90vh; */
 }
 
 .directory-container .lhsPatch {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  width: 30%;
-  height: 50%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 50%;
 }
 
 .directory-container .rhsPatch {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  right: 0;
-  width: 25%;
-  height: 75%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    height: 75%;
 }
 
 .directory-left {
-  position: relative;
-  z-index: 10;
+    position: relative;
+    z-index: 10;
 }
 
 .directory-left .directory-redLine {
-  position: absolute;
-  z-index: -1;
-  display: block;
-  left: 10%;
-  height: 100%;
+    position: absolute;
+    z-index: -1;
+    display: block;
+    left: 10%;
+    height: 100%;
 }
 
 .directory-heading {
-  display: flex;
-  align-items: center;
-  margin-top: 32px;
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
 }
 
 .directory-heading img {
-  width: 80px;
+    width: 80px;
 }
 
 .directory-heading h1 {
-  color: var(--color2);
-  font-size: 42px;
-  font-weight: normal;
+    color: var(--color2);
+    font-size: 64px;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px black;
 }
 
 .directory-left ul {
-  overflow-y: auto;
-  height: 70vh;
-  padding: 0px 30px;
-  list-style: none;
+    overflow-y: auto;
+    height: 70vh;
+    padding: 0px 30px;
+    list-style: none;
 }
 
 .directory-therapist-list {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .directory-left ul li {
-  display: flex;
-  margin-bottom: 40px;
-  width: 50vw;
-  /* justify-content: space-between; */
+    display: flex;
+    margin-bottom: 40px;
+    width: 50vw;
+    /* justify-content: space-between; */
 }
 
 .directory-therapist-image {
-  width: 88px;
-  height: 88px;
+    width: 88px;
+    height: 88px;
 }
 
 .directory-therapist-data {
-  flex: 1 0 auto;
-
-  /* For text no-wrap to work we need to specify width */
-  width: 50%;
-
-  /* margin-right: 64px; */
+    flex: 1 0 auto;
+    /* For text no-wrap to work we need to specify width */
+    width: 50%;
+    /* margin-right: 64px; */
 }
 
 .directory-therapist-data p {
-  margin: 8px 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 1.1em;
-  font-weight: bold;
+    margin: 8px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .directory-therapist-professional {
-  color: var(--color2);
+    color: var(--color2);
 }
 
 .directory-therapist-location {
-  display: flex;
-  color: #6b8c8f;
-  font-size: 20px;
+    display: flex;
+    color: #6b8c8f;
+    font-size: 20px;
 }
 
 .directory-therapist-location ion-icon {
-  margin-right: 8px;
-  vertical-align: top;
+    margin-right: 8px;
+    vertical-align: top;
 }
 
 .directory-right {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 10;
-  margin-top: 32px;
-  margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .directory-search-heading {
-  display: flex;
-  align-items: center;
-  /* padding-left: 10px; */
+    display: flex;
+    align-items: center;
+    /* padding-left: 10px; */
 }
 
 .directory-search-heading .directory-right-spiral {
-  width: 80px;
-  margin-right: 10px;
-  transform: rotate(180deg);
+    width: 80px;
+    margin-right: 10px;
+    transform: rotate(180deg);
 }
 
 .directory-search-heading p {
-  font-weight: normal;
-  font-size: 24px;
-  margin-bottom: 0px;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 0px;
 }
 
+
 /* ">" is used so this css only apply to direct child*/
-.directory-right > ul {
-  list-style: none;
-  margin-top: 30px;
-  padding-left: 5.5rem;
-  /* flex: 1 0 auto; */
+
+.directory-right>ul {
+    list-style: none;
+    margin-top: 30px;
+    padding-left: 5.5rem;
+    /* flex: 1 0 auto; */
 }
 
 .directory-input-field {
-  display: flex;
-  padding-left: 5.5rem;
+    display: flex;
+    padding-left: 5.5rem;
 }
 
 .directory-input-field input {
-  border: 2px solid var(--color3);
-  border-radius: 10px;
-  margin-right: 10px;
+    border: 2px solid var(--color3);
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .directory-input-field input:focus {
-  outline: none;
-  border: 2px solid var(--color2);
+    outline: none;
+    border: 2px solid var(--color2);
 }
 
 .directory-input-field img {
-  width: 32px;
-  cursor: pointer;
+    width: 32px;
+    cursor: pointer;
 }
 
 .directory-filter-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  cursor: pointer;
-  background: transparent;
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
 }
 
 .directory-filter-heading ion-icon {
-  font-size: 1.2em;
-  color: var(--color2);
+    font-size: 1.2em;
+    color: var(--color2);
 }
 
 .directory-filter-heading p {
-  font-size: 24px;
-  margin-top: 0px;
-  margin-bottom: 10px;
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .directory-filter-button {
-  display: flex;
-  margin-top: 10px;
+    display: flex;
+    margin-top: 10px;
 }
 
 .directory-filter-submit {
-  display: block;
-  margin: auto;
-  /* margin-left: 50%; */
-  width: 30%;
-  font-size: 18px;
-  border-radius: 40px;
-  border: 2px solid var(--color2);
-  background-color: var(--color2);
-  color: white;
-  cursor: pointer;
-  font-family: var(--font1);
-  transition-duration: 0.3s;
+    display: block;
+    margin: auto;
+    /* margin-left: 50%; */
+    width: 30%;
+    font-size: 18px;
+    border-radius: 40px;
+    border: 2px solid var(--color2);
+    background-color: var(--color2);
+    color: white;
+    cursor: pointer;
+    font-family: var(--font1);
+    transition-duration: 0.3s;
 }
 
 .directory-filter-reset {
-  display: block;
-  margin: auto;
-  width: 30%;
-  font-size: 18px;
-  border-radius: 40px;
-  border: 2px solid var(--color2);
-  background-color: var(--color2);
-  color: white;
-  cursor: pointer;
-  font-family: var(--font1);
-  transition-duration: 0.3s;
+    display: block;
+    margin: auto;
+    width: 30%;
+    font-size: 18px;
+    border-radius: 40px;
+    border: 2px solid var(--color2);
+    background-color: var(--color2);
+    color: white;
+    cursor: pointer;
+    font-family: var(--font1);
+    transition-duration: 0.3s;
 }
 
 .directory-filter-submit:hover {
-  background-color: white;
-  color: var(--color2);
-  border: 2px solid var(--color2);
+    background-color: white;
+    color: var(--color2);
+    border: 2px solid var(--color2);
 }
 
 .directory-filter-reset:hover {
-  background-color: white;
-  color: var(--color2);
-  border: 2px solid var(--color2);
+    background-color: white;
+    color: var(--color2);
+    border: 2px solid var(--color2);
 }
 
 .directory-checkbox-container {
-  display: grid;
-  grid-template-columns: min-content auto;
-  grid-gap: 0.5em;
-  margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-gap: 0.5em;
+    margin-bottom: 5px;
 }
 
 .directory-checkbox-input input {
-  opacity: 0;
-  height: 0;
-  width: 0;
-  margin: 0px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    margin: 0px;
 }
 
 .directory-checkbox-control {
-  display: block;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  border: 0.1em solid var(--color3);
+    display: block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 0.1em solid var(--color3);
 }
 
 .directory-checkbox-input {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .directory-checkbox-control {
-  background: white;
+    background: white;
 }
 
-.directory-checkbox-input input:checked + .directory-checkbox-control {
-  background: radial-gradient(var(--color3) 50%, white 51%);
+.directory-checkbox-input input:checked+.directory-checkbox-control {
+    background: radial-gradient(var(--color3) 50%, white 51%);
 }
 
 .directory-dropdown-content {
-  display: none;
-  height: 15vh;
-  overflow-y: auto;
+    display: none;
+    height: 15vh;
+    overflow-y: auto;
 }
 
 .directory-filter {
-  padding: 10px;
+    padding: 10px;
 }
 
 .directory-filter-open {
-  background-color: white;
-  border: 0.2em solid var(--color3);
-  border-radius: 10%;
+    background-color: white;
+    border: 0.2em solid var(--color3);
+    border-radius: 10%;
 }

@@ -1,10 +1,10 @@
-body {
-    background-color: #ffc98c;
-}
-
 .donor-main-container {
     margin: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
     width: 90vw;
+    background-color: #ffc98c;
+    z-index: -2;
 }
 
 #donor-benefits {
@@ -19,32 +19,16 @@ body {
 
 .donor-benefits-heading p {
     margin: 0px;
-    font-size: 72px;
+    font-size: 64px;
     padding-left: 20px;
     margin-bottom: 10px;
     color: white;
     text-shadow: 3px 2px 0px var(--color2);
 }
 
-
-/* 
-.donor-benefits-content {
-    background-image: url(../../assets/donor/BenefitsDetails.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 88vw;
-    height: 95vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 4px;
-} */
-
 .donor-benefits-content {
     position: relative;
+    z-index: 2;
 }
 
 .donor-benefits-content p {
@@ -55,6 +39,7 @@ body {
     margin-bottom: 30px;
     font-size: 34px;
     line-height: 44px;
+    /* z-index:1; */
 }
 
 .donor-benefits-content img {
@@ -161,6 +146,17 @@ body {
     font-size: 22px;
     padding: 3px 0px;
     padding-left: 18px;
+    outline-width: 0;
+}
+
+#choice {
+    border: 3px solid #e96671;
+    border-radius: 16px;
+    font-size: 22px;
+    padding: 3px 0px;
+    padding-left: 18px;
+    height: 40px;
+    outline-width: 0;
 }
 
 .donor-register-form-fill textarea {
@@ -170,6 +166,7 @@ body {
     padding: 3px 0px;
     padding-left: 18px;
     height: 125px;
+    outline-width: 0;
 }
 
 .donor-register-form-fill button {
@@ -180,6 +177,15 @@ body {
     border-radius: 50px;
     padding: 6px 10px;
     font-size: 24px;
+}
+
+.donor-register-form-fill button:hover {
+    border: 2px solid #e96671;
+    background-color: white;
+    color: #e96671;
+    width: 131px;
+    padding: 4px 10px;
+    transition: 0.2s;
 }
 
 .donor-register-form-right {
