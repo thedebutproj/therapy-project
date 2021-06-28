@@ -62,7 +62,7 @@ const Donor = () => {
                                     <option value="Donate">Donate</option>
                                 </select>
                                 <textarea name="" id="" cols="30" rows="10" placeholder="Message for our team"></textarea>
-                                <button>Submit</button>
+                                <button>SUBMIT</button>
                             </form>
 
                         </div>
