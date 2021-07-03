@@ -96,7 +96,7 @@ const Donor = () => {
                   rows="10"
                   placeholder="Message for our team"
                 ></textarea>
-                <button>Submit</button>
+                <button>SUBMIT</button>
               </form>
             </div>
           </div>
