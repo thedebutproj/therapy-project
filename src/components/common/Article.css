@@ -3,6 +3,13 @@
   padding: 2rem;
 }
 
+.article-container .loading {
+  font-size: 2em;
+  font-family: var(--font1);
+  color: #fae3d1;
+  text-shadow: 3px 3px 0px #61878c;
+}
+
 .article-heading {
   color: whitesmoke;
   text-shadow: 3px 3px 0px #61878c;
@@ -16,6 +23,7 @@
 .article-content {
   /* So text lines cover whole div horizontally */
   text-align: justify;
+  font-size: 1.5em;
 }
 
 .article-content h1 {
@@ -23,13 +31,17 @@
   font-weight: normal;
 }
 
-#blockquote {
+/* .article-content p {
+  font-size: 1.5em;
+} */
+
+[id^="blockquote"] {
   padding: 0.5em 0em 0.5em 1em;
   border-left: 10px solid var(--color5);
   text-align: justify;
 }
 
-#quote {
+[id^="quote"] {
   margin-left: 1em;
   color: whitesmoke;
   quotes: "“" "„";
@@ -38,13 +50,13 @@
   text-indent: -1em;
 }
 
-#quote::before {
+[id^="quote"]::before {
   content: open-quote;
   font-size: 3em;
   display: block;
 }
 
-#quote::after {
+[id^="quote"]::after {
   content: close-quote;
   font-size: 3em;
   display: block;

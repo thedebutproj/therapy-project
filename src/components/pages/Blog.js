@@ -20,9 +20,9 @@ const Blog = () => {
         <h1 className="loading">...Loading</h1>
       ) : (
         <>
-          <div className="blog-lhsPatch">
+          {/* <div className="blog-lhsPatch">
             <img src={blog_CLOUD1} alt="cloud1" />
-          </div>
+          </div> */}
 
           <div className="blog-rhsPatch">
             <img src={blog_CLOUD2} alt="cloud2" />
@@ -51,6 +51,7 @@ const Blog = () => {
             </div>
           </div>
 
+          <h1 className="blog-list-heading">More Articles</h1>
           <div className="blog-list pure-g">
             {blogData.slice(1).map((row) => {
               return (

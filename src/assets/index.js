@@ -5,6 +5,11 @@ import homeBlog from "./home/home-blog.png";
 import homeDirectory from "./home/home-directory.jpg";
 import homeDonor from "./home/home-donor.png";
 
+//Footer imports
+import footer_facebook from "./footer/footer_facebook.png";
+import footer_instagram from "./footer/footer_instagram.png";
+import footer_linkedIn from "./footer/footer_linkedIn.png";
+
 // Contact Us page imports
 import contactUS from "./contactUs/contactUs.png";
 import contactUs_LHSPatch from "./contactUs/contactUs_LHSPatch.png";
@@ -64,66 +69,69 @@ import donor_MainIllustration from "./donor/donor_MainIllustration.png";
 
 // Function for importing all the files in the Therapist Images in the directory folder
 function importAll(r) {
-    let images = [];
-    r.keys().map((item, index) => {
-        images.push(r(item));
-    });
-    return images;
+  let images = [];
+  r.keys().map((item, index) => {
+    images.push(r(item));
+  });
+  return images;
 }
 
 const therapistImages = importAll(
-    require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
+  require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
 );
 
 export {
-    siteLogo,
-    homeBlog,
-    homeDonor,
-    homeDirectory,
-    contactUS,
-    contactUs_LHSPatch,
-    contactUs_PostIt,
-    contactUs_LinesGraphic,
-    home_FullBGWithText,
-    home_directory_MainIllustration,
-    home_directory_LHSGraphic,
-    home_blog_MainIllustration,
-    home_donor_MainIllustration,
-    home_donor_LHSPuzzle,
-    directory_LHSPatch,
-    directory_RHSPatch,
-    directory_Spiral,
-    directory_RedLine,
-    therapistImages,
-    directory_SearchIcon,
-    profile_LogoInstagram,
-    profile_LogoLinkedin,
-    profile_LogoTwitter,
-    profile_LogoWebsite,
-    profile_Section_ScheduleDaysOFF,
-    profile_Section_ScheduleIcon,
-    profile_Section_ContactLocation,
-    profile_SquigglyPointer,
-    profile_JumpToArrow,
-    blog_CLOUD1,
-    blog_CLOUD2,
-    donor_BenefitsDetails,
-    donor_MainIllustration,
-    profile_Section_ContactPostit,
-    profile_Section_SchedulePostit,
-    profile_Section_PricingPostit,
-    profile_Section_BackgroundPostit,
-    profile_Section_SessionPostit,
-    profile_Section_AddInfoPostit,
-    profile_YellowNameBlob,
-    profile_Section_S_OFF,
-    profile_Section_S_ON,
-    profile_Section_M_OFF,
-    profile_Section_M_ON,
-    profile_Section_T_OFF,
-    profile_Section_T_ON,
-    profile_Section_W_OFF,
-    profile_Section_W_ON,
-    profile_Section_F_OFF,
-    profile_Section_F_ON,
+  siteLogo,
+  homeBlog,
+  homeDonor,
+  homeDirectory,
+  contactUS,
+  contactUs_LHSPatch,
+  contactUs_PostIt,
+  contactUs_LinesGraphic,
+  home_FullBGWithText,
+  home_directory_MainIllustration,
+  home_directory_LHSGraphic,
+  home_blog_MainIllustration,
+  home_donor_MainIllustration,
+  home_donor_LHSPuzzle,
+  directory_LHSPatch,
+  directory_RHSPatch,
+  directory_Spiral,
+  directory_RedLine,
+  therapistImages,
+  directory_SearchIcon,
+  profile_LogoInstagram,
+  profile_LogoLinkedin,
+  profile_LogoTwitter,
+  profile_LogoWebsite,
+  profile_Section_ScheduleDaysOFF,
+  profile_Section_ScheduleIcon,
+  profile_Section_ContactLocation,
+  profile_SquigglyPointer,
+  profile_JumpToArrow,
+  blog_CLOUD1,
+  blog_CLOUD2,
+  donor_BenefitsDetails,
+  donor_MainIllustration,
+  profile_Section_ContactPostit,
+  profile_Section_SchedulePostit,
+  profile_Section_PricingPostit,
+  profile_Section_BackgroundPostit,
+  profile_Section_SessionPostit,
+  profile_Section_AddInfoPostit,
+  profile_YellowNameBlob,
+  profile_Section_S_OFF,
+  profile_Section_S_ON,
+  profile_Section_M_OFF,
+  profile_Section_M_ON,
+  profile_Section_T_OFF,
+  profile_Section_T_ON,
+  profile_Section_W_OFF,
+  profile_Section_W_ON,
+  profile_Section_F_OFF,
+  profile_Section_F_ON,
+  footer_facebook,
+  footer_instagram,
+  footer_linkedIn,
 };

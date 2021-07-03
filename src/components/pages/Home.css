@@ -58,6 +58,11 @@
   font-family: var(--font1);
 }
 
+.home-slide-left button a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .home-slide-left button:hover {
   background-color: white;
   color: #e96571;

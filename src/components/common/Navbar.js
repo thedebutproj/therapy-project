@@ -38,7 +38,7 @@ const Navbar = () => {
         <li className="nav-items nav-list-logo" ref={navListLogo}>
           <Link to="/">
             <img src={siteLogo}></img>
-            <span>Debut Project</span>
+            <span>The Debut Project</span>
           </Link>
         </li>
         <li className="nav-items">
@@ -55,7 +55,9 @@ const Navbar = () => {
         </li>
         <li className="nav-items">
           {" "}
-          <Link to="/donor">Donor/Donees</Link>{" "}
+          <Link to="/donor">
+            Assist <sup style={{ fontSize: "x-small" }}>BETA</sup>
+          </Link>{" "}
         </li>
         <li className="nav-items">
           {" "}

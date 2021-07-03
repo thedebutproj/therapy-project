@@ -28,7 +28,7 @@ function ContactUs() {
         <img src={contactUs_LHSPatch}></img>
       </div>
       <div className="contactus-text">
-        <h1 className="h-primary">Contact Us</h1>
+        <h1 className="contactus-heading">Contact Us</h1>
         <p>
           Do you have an idea or social enterprise you think we need to know
           about? Got any questions regarding our work or process? Are you

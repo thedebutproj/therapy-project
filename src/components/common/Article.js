@@ -41,7 +41,11 @@ const Article = () => {
             <span> {"\u2022"} </span>
             <span>{article["Date"]}</span>
           </span>
-          <p className="article-author">-by {article["Author"]}</p>
+          {article["Author"] ? (
+            <p className="article-author">{article["Author"]}</p>
+          ) : (
+            <></>
+          )}
         </>
       )}
       <div className="article-content" ref={contentContainer}></div>

@@ -301,7 +301,7 @@ const Directory = () => {
         <div className="directory-input-field">
           <input
             type="search"
-            placeholder="Any Keyword..."
+            placeholder="eg. Anxiety, Fear"
             onChange={(e) => (search.current = e.target.value)}
           />
           <img src={directory_SearchIcon} onClick={handleFiltersSubmit} />

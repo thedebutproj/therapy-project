@@ -1,6 +1,6 @@
 .blog-container {
   position: relative;
-  padding: 30px;
+  padding: 0 5vw;
   background-color: #b0bfc2;
 }
 
@@ -37,18 +37,28 @@
 .blog-featured {
   position: relative;
   z-index: 2;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 
 .blog-featured h1 {
   font-size: 4.5em;
   font-family: var(--font1);
+  font-weight: normal;
   color: #fae3d1;
-  text-shadow: 3px 3px 0px #61878c;
+  text-shadow: 3px 2px 0px #61878c;
 }
 
 .blog-img {
   border-radius: 10px;
+}
+
+.blog-list-heading {
+  text-align: center;
+  font-size: 4em;
+  font-weight: normal;
+  font-family: var(--font1);
+  color: #fae3d1;
+  text-shadow: 3px 2px 0px #61878c;
 }
 
 .blog-list {

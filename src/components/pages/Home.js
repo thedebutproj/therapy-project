@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import {
   home_FullBGWithText,
@@ -23,11 +24,13 @@ const Home = () => {
           <div className="home-slide-left pure-u-1-2">
             <h1 className="dir-h1">THE DIRECTORY</h1>
             <p className="dir-p">
-              Find the right therapist, counsellor, or psychologists for you.
-              Visit our directory of verified mental health professionals and
+              Find the right therapist, counsellor, or psychologist for
+              yourself. Visit our catalogue of mental health professionals and
               use our filters to create your shortlist!
             </p>
-            <button className="dir-btn">VISIT</button>
+            <button className="dir-btn">
+              <Link to="/directory">VISIT</Link>
+            </button>
           </div>
           <div className="home-slide-right pure-u-1-2 home-slide-right-directory">
             <img src={home_directory_MainIllustration} className="pure-img" />
@@ -43,12 +46,13 @@ const Home = () => {
           <div className="home-slide-left pure-u-1-2">
             <h1 className="blog-h1">FEATURED BLOG</h1>
             <p className="blog-p">
-              For IIT Roorkee only
-              <br></br>
-              Don't know if therapy is for you? Try it out for free. Reach out
-              to our partner donors and blah blah blah.
+              Go through our curation of articles pertaining to availing mental
+              healthcare, making the most of your experience with your chose
+              professional, and more.
             </p>
-            <button className="blog-btn">VISIT</button>
+            <button className="blog-btn">
+              <Link to="/blog">VISIT</Link>
+            </button>
           </div>
           <div className="home-slide-right pure-u-1-2 home-slide-right-blog">
             <img src={home_blog_MainIllustration} className="pure-img" />
@@ -65,12 +69,13 @@ const Home = () => {
           <div className="home-slide-left  pure-u-1-2">
             <h1 className="donor-h1">DONOR/DONEE</h1>
             <p className="donor-p">
-              For IIT Roorkee only
-              <br></br>
-              Don't know if therapy is for you? Try it out for free. Reach out
-              to our partner donors and blah blah blah.
+              Find out more about how you can help us (or seek help from us) via
+              our mission to help students/young-professionals avail mental
+              healthcare.
             </p>
-            <button className="donor-btn">VISIT</button>
+            <button className="donor-btn">
+              <Link to="/donor">VISIT</Link>
+            </button>
           </div>
           <div className="home-slide-right pure-u-1-2 home-slide-right-donor">
             <img src={home_donor_MainIllustration} className="pure-img" />

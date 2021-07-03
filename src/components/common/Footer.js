@@ -1,40 +1,62 @@
+import {
+  footer_facebook,
+  footer_instagram,
+  footer_linkedIn,
+} from "../../assets";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer>
       <div className="footer-left">
-        <li>
-          {" "}
-          <strong>Links</strong>{" "}
-        </li>
-        <li> Work With Us </li>
-        <li> For Mental Health Professionals </li>
-        <li> Helplines </li>
+        <ul>
+          <li> Work With Us </li>
+          <li>
+            {" "}
+            <a href="https://forms.gle/mqz9vPZVs1Sx5Cv89">
+              For Mental Health Professionals
+            </a>{" "}
+          </li>
+          <li>
+            {" "}
+            <a href="https://www.thelivelovelaughfoundation.org/find-help/helplines">
+              Helplines
+            </a>{" "}
+          </li>
+        </ul>
       </div>
       <div className="footer-right">
         <ul>
-          <li>
-            {" "}
-            <strong>Contact Us</strong>{" "}
-          </li>
-          <li>9876543210</li>
-          <li>ask@thedebutproj.in</li>
+          <li>Copyright © 2021 The Debut Project. </li>
+          <li>All rights reserved.</li>
 
           <li className="footer-social-media-icons footer-facebook">
-            <ion-icon name="logo-facebook">
+            {/* <ion-icon name="logo-facebook">
               <a href="#"></a>
-            </ion-icon>
+            </ion-icon> */}
+
+            <a href="#">
+              {" "}
+              <img src={footer_facebook} />
+            </a>
           </li>
           <li className="footer-social-media-icons footer-instagram">
-            <ion-icon name="logo-instagram">
+            {/* <ion-icon name="logo-instagram">
               <a href="#"></a>
-            </ion-icon>
+            </ion-icon> */}
+            <a href="#">
+              {" "}
+              <img src={footer_instagram} />
+            </a>
           </li>
           <li className="footer-social-media-icons footer-linkedin">
-            <ion-icon name="logo-linkedin">
+            {/* <ion-icon name="logo-linkedin">
               <a href="#"></a>
-            </ion-icon>
+            </ion-icon> */}
+            <a href="#">
+              {" "}
+              <img src={footer_linkedIn} />
+            </a>
           </li>
         </ul>
       </div>
