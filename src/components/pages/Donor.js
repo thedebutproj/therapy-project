@@ -9,7 +9,7 @@ const Donor = () => {
       <div className="donor-main-container">
         <div id="donor-benefits">
           <div className="donor-benefits-heading">
-            <p>BENEFITS</p>
+            <p> Assist <sup>BETA</sup></p>
           </div>
           <div className="donor-benefits-content">
             <img src={donor_BenefitsDetails} alt="" />
@@ -31,11 +31,13 @@ const Donor = () => {
               reach out to us via the form at the bottom of this page.
             </p>
             <p>
+              <i>
               While we are launching this humble philanthropic initiative for
               students and graduates of IIT Roorkee only, we look forward to
               expanding the scope this idea soon. Hence, we also welcome our
               visitors to discuss and consider contributing to this cause, and
               hence widen the scope of prospective beneficiary.
+              </i>
             </p>
           </div>
         </div>
@@ -73,7 +75,7 @@ const Donor = () => {
         <div id="donor-register-form">
           <div className="donor-register-form-left">
             <div className="donor-register-form-heading">
-              <h1>Register your interest below!</h1>
+              <h1>Register your Interest Below</h1>
             </div>
             <div className="donor-register-form-fill">
               <form action="" method="post">
@@ -85,9 +87,18 @@ const Donor = () => {
                   <option value="" disabled selected>
                     I would like to..(Pledge, Receive, Donate)
                   </option>
-                  <option value="Pledge">Pledge</option>
-                  <option value="Receive">Receive</option>
-                  <option value="Donate">Donate</option>
+                  <option value="Pledge">
+                  <div></div>
+                    Pledge
+                    </option>
+                  <option value="Receive">
+                    <div></div>
+                    Receive
+                    </option>
+                  <option value="Donate">
+                    <div></div> 
+                    Donate
+                    </option>
                 </select>
                 <textarea
                   name=""
