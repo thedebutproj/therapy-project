@@ -763,3 +763,27 @@
     border: 2px solid var(--color2);
     transition: 0.3s;
 }
+
+.tapes {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+}
+
+#qualification-tape {
+    top: -40px;
+    width: 110%;
+    left: -20px;
+}
+
+#background-tape {
+    width: 97%;
+    top: -20px;
+    left: 10px;
+}
+
+#typical-session-tape {
+    top: 20px;
+}

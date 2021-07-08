@@ -33,6 +33,10 @@ import {
   profile_Section_W_ON,
   profile_Section_F_OFF,
   profile_Section_F_ON,
+  profile_Section_PricingTape,
+  profile_Section_SessionTape,
+  profile_Section_Tape,
+  profile_Section_AddInfoTape,
 } from "../../assets";
 
 const Profile = () => {
@@ -50,6 +54,7 @@ const Profile = () => {
     workingTime: "",
     notesOnAvailability: "",
     medium: "",
+    calender: "",
     typicalSessionCost: "",
     notesOnFinancialAssistance: "",
     qualifications: "",
@@ -143,6 +148,14 @@ const Profile = () => {
       if (!rowData["Website"]) {
         document.getElementById("profile-website-logo").style.display = "none";
       }
+      if(!rowData["Contact - Phone Number"])
+      {
+        document.getElementById("user-phone-number").style.display="none";
+      }
+      if(!rowData["Contact - Email ID"])
+      {
+        document.getElementById("user-email-address").style.display="none";
+      }
       if(!rowData["Sunday"])
       {
           document.getElementsByClassName("week_days")[1].style.display="none"; 
@@ -185,6 +198,10 @@ const Profile = () => {
       }else{
         document.getElementsByClassName("week_days")[12].style.display="none"; 
       }
+      // if(!rowData["Scheduling - Calendar Icon"])
+      // {
+      //   document.getElementsByClassName("calender-icon-info")[0].style.display="none";
+      // }
       
 
       setUser({
@@ -200,6 +217,7 @@ const Profile = () => {
         workingTime: rowData["Hours of Availability"],
         notesOnAvailability: rowData["Notes on Availability"],
         medium: rowData["Medium"],
+        calender: rowData["Scheduling - Calendar Icon"],
         typicalSessionCost: rowData["Typical Session Cost"],
         notesOnFinancialAssistance: rowData["Notes on Financial Assistance"],
         qualifications: rowData["Qualifications"],
@@ -362,6 +380,7 @@ const Profile = () => {
             <div className="profile-body-one-left">
               {/* contact */}
               <div id="profile-contact-main">
+                <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
                 <img
                   id="contact-back-img"
                   src={profile_Section_ContactPostit}
@@ -370,8 +389,8 @@ const Profile = () => {
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
                   <div className="profile-contact-details">
-                    <p>Phone- {user.contact}</p>
-                    <p>Email- {user.email}</p>
+                    <p id="user-phone-number">Phone- {user.contact}</p>
+                    <p id="user-email-address">Email- {user.email}</p>
                   </div>
                 </div>
                 <div className="profile-location" id="profileLocation">
@@ -385,6 +404,7 @@ const Profile = () => {
               </div>
               {/* office hours */}
               <div id="profile-time-main">
+                <img id="time-tape" class="tapes" src={profile_Section_Tape} alt="" />
                 <img
                   id="time-back-img"
                   src={profile_Section_SchedulePostit}
@@ -422,13 +442,16 @@ const Profile = () => {
                   <h1>SCHEDULING-</h1>
                   <p>Phone, Whatsapp, Email</p>
                   <div className="profile-schedule-calender">
-                    <img src={profile_Section_ScheduleIcon} alt="" />
+                    <a class="calender-icon-info" href={user.calender}>
+                    <img  src={profile_Section_ScheduleIcon} alt="" />
+                    </a>
                   </div>
                 </div>
               </div>
 
               {/* typical session cost */}
               <div id="profile-typical-session-fees-main">
+                <img id="typical-session-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
                 <img
                   id="typical-session-back-img"
                   src={profile_Section_PricingPostit}
@@ -476,6 +499,7 @@ const Profile = () => {
             <div className="profile-body-one-right">
               {/* qualific */}
               <div id="profile-details-main">
+              <img id="qualification-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
                 <img
                   id="profile-details-back-img"
                   src={profile_Section_BackgroundPostit}
@@ -491,7 +515,7 @@ const Profile = () => {
                 </div>
                 <div className="profile-experience">
                   <h1>EXPERIENCE-</h1>
-                  <p>{user.experience}</p>
+                  <p>{user.experience} Years</p>
                 </div>
                 <div className="profile-languages">
                   <h1>LANGUAGES-</h1>
@@ -502,6 +526,7 @@ const Profile = () => {
               {/* first session */}
 
               <div id="profile-session-main">
+              <img id="first-session-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
                 <img
                   id="first-session-back-img"
                   src={profile_Section_SessionPostit}
@@ -520,6 +545,7 @@ const Profile = () => {
           </div>
           <div className="profile-body-two">
             <div id="profile-background-main">
+            <img id="background-tape" class="tapes" src={profile_Section_AddInfoTape} alt="" />
               <img
                 id="profile-background-back-img"
                 src={profile_Section_AddInfoPostit}
