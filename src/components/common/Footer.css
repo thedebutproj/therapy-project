@@ -8,6 +8,17 @@ footer {
   padding: 1rem 4rem;
 }
 
+.footer-left li {
+  font-size: 18px;
+  padding-bottom: 0.5rem;
+  list-style: none;
+}
+
+.footer-left li a {
+  text-decoration: none;
+  color: white;
+}
+
 .footer-right ul {
   font-size: 18px;
   list-style: none;
@@ -15,12 +26,6 @@ footer {
 
 .footer-right li {
   padding-bottom: 0.5rem;
-}
-
-.footer-left li {
-  font-size: 18px;
-  padding-bottom: 0.5rem;
-  list-style: none;
 }
 
 .footer-social-media-icons {

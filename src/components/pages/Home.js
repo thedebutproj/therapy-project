@@ -19,7 +19,7 @@ const Home = () => {
     [
       "home-directory",
       <>
-        <img src={home_directory_LHSGraphic} className="figure1" />
+        {/* <img src={home_directory_LHSGraphic} className="figure1" /> */}
         <div className="home-slide-content pure-g">
           <div className="home-slide-left pure-u-1-2">
             <h1 className="dir-h1">THE DIRECTORY</h1>
@@ -67,7 +67,9 @@ const Home = () => {
         <img src={home_donor_LHSPuzzle} className="figure1" />
         <div className="home-slide-content home-slide-content-donor pure-g">
           <div className="home-slide-left  pure-u-1-2">
-            <h1 className="donor-h1">DONOR/DONEE</h1>
+            <h1 className="donor-h1">
+              ASSIST <sup>BETA</sup>
+            </h1>
             <p className="donor-p">
               Find out more about how you can help us (or seek help from us) via
               our mission to help students/young-professionals avail mental

@@ -9,12 +9,12 @@
   /* Height is specified so as user goes through slideshow, height of slides don't change */
   height: 90vh;
 }
-
+/* 
 .home-directory .figure1 {
   position: absolute;
   height: 50%;
   top: 25%;
-}
+} */
 
 .home-donor .figure1 {
   position: absolute;

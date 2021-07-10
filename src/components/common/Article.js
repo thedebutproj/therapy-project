@@ -9,6 +9,8 @@ import "./Article.css";
 
 const Article = () => {
   const { id } = useParams();
+
+  // Need this because we need to use innerHTML
   const contentContainer = useRef();
   const [article, setArticle] = useState();
 
@@ -48,7 +50,10 @@ const Article = () => {
           )}
         </>
       )}
-      <div className="article-content" ref={contentContainer}></div>
+      <div
+        className="article-content textToHtml-container"
+        ref={contentContainer}
+      ></div>
     </div>
   );
 };

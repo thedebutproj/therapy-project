@@ -1,7 +1,14 @@
 import "./App.css";
 import Article from "./components/common/Article";
 import { Navbar, Footer, Profile } from "./components/common";
-import { Home, ContactUs, Directory, Blog, Donor } from "./components/pages";
+import {
+  Home,
+  ContactUs,
+  Directory,
+  Blog,
+  Donor,
+  TermsandPrivacy,
+} from "./components/pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -31,6 +38,9 @@ function App() {
             </Route>
             <Route exact path="/donor">
               <Donor />
+            </Route>
+            <Route exact path="/termsandprivacy">
+              <TermsandPrivacy />
             </Route>
           </Switch>
         </div>

@@ -20,13 +20,13 @@
   text-shadow: 2px 2px 0px white;
 }
 
-.article-content {
+.textToHtml-container {
   /* So text lines cover whole div horizontally */
   text-align: justify;
   font-size: 1.5em;
 }
 
-.article-content h1 {
+.textToHtml-container h1 {
   font-size: 1em;
   font-weight: normal;
 }
