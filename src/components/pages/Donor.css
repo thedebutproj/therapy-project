@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .donor-main-container {
     margin: auto;
     padding-left: 5vw;
@@ -146,7 +150,7 @@
     margin-bottom: 5px;
 }
 
-.donor-register-form-fill form {
+#main-form {
     display: flex;
     flex-direction: column;
     max-width: 45vw;
@@ -165,30 +169,64 @@
     margin: 10px;
 }
 
+#form-div {
+    display: flex;
+    flex-direction: column;
+}
+
 #choice {
     border: 2px solid var(--color4);
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 22px;
     padding: 15px;
     padding-left: 18px;
     outline-width: 0;
     margin: 10px;
+    /* text-align: center; */
+    background-color: white;
 }
 
-#choice option {
+#choice p {
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+#choice label {
     color: #61878c;
-    font-size: 20px;
+    font-size: 22px;
 }
 
-#choice option div {
-    display: none;
-    border: 2px solid #e96571;
-    border-radius: 100%;
-    height: 20px;
-    width: 20px;
-    /* margin-top: 4px; */
-    /* margin-left: 20px; */
-    /* margin-right: 4px; */
+#choice input {
+    width: 0;
+    height: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid var(--color2);
+    -webkit-appearance: none;
+    /* outline: none; */
+    cursor: pointer;
+}
+
+#choice input:checked {
+    background-color: var(--color2);
+}
+
+input#receive {
+    height: 16px;
+    width: 16px;
+}
+
+input#pledge {
+    height: 16px;
+    width: 16px;
+}
+
+input#donate {
+    height: 16px;
+    width: 16px;
 }
 
 .donor-register-form-fill textarea {
@@ -227,7 +265,7 @@
     height: 70vh;
     width: 45vw;
     /* border: 2px solid red; */
-    margin-top: 32vh;
+    margin-top: 60vh;
     margin-left: 6vw;
     position: relative;
 }

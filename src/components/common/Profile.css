@@ -24,7 +24,6 @@
     display: flex;
     justify-content: space-evenly;
     height: 20vh;
-    /* position: sticky; */
     top: 83px;
     width: 100vw;
     z-index: 3;
@@ -59,12 +58,6 @@
 }
 
 .profile-user-main {
-    /* background-image: url(../../assets/profile/profile_YellowNameBlob.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 31vw;
-    margin-left: 30px; */
-    /* border: 2px solid red; */
     position: relative;
     z-index: 2;
 }
@@ -136,7 +129,7 @@
     border-radius: 16px;
     height: 270px;
     background-color: white;
-    z-index: 2;
+    z-index: 3;
 }
 
 .jump-to-two {
@@ -192,20 +185,10 @@
 }
 
 #profile-contact-main {
-    /* background-image: url(../../assets/profile/profile_Section_ContactPostit.png); */
-    /* position: relative; */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* width: 29vw; */
-    /* height: 38vh; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     position: relative;
     text-align: center;
     flex-direction: column;
-    /* border: 2px solid red; */
-    margin-left: 30px;
+    background-color: #f79a90;
     padding-bottom: 20px;
     color: var(--color5);
     z-index: 2;
@@ -226,7 +209,7 @@
 
 .profile-contact h1 {
     margin: 0px;
-    padding-top: 80px;
+    padding-top: 40px;
     text-decoration: underline;
     font-weight: 500;
 }
@@ -261,17 +244,9 @@
 }
 
 #profile-time-main {
-    /* background-image: url(../../assets/profile/profile_Section_SchedulePostit.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 38vw;
-    height: 89vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
     text-align: center;
     flex-direction: column;
-    /* border: 2px solid red; */
+    background-color: #85a7cd;
     margin-top: 30px;
     margin-left: -135px;
     padding-bottom: 20px;
@@ -295,7 +270,7 @@
 
 .profile-office-hours h1 {
     margin: 0px;
-    padding-top: 80px;
+    padding-top: 40px;
     text-decoration: underline;
     font-weight: 500;
     margin-bottom: 5px;
@@ -374,20 +349,10 @@
 }
 
 #profile-typical-session-fees-main {
-    /* background-image: url(../../assets/profile/profile_Section_PricingPostit.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 30vw;
-    height: 36vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
     text-align: center;
-    /* flex-direction: column; */
-    /* border: 2px solid red; */
-    /* margin-left: 4px; */
+    background-color: #8bbeaa;
     width: 29.5vw;
-    margin-top: 20px;
+    margin-top: 5vh;
     color: var(--color5);
     position: relative;
     z-index: 1;
@@ -405,7 +370,7 @@
 }
 
 .profile-typical-session-fees {
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .profile-typical-session-fees h1 {
@@ -436,9 +401,6 @@
 }
 
 .center-line-images-one {
-    /* background-image: url(../../assets/profile/profile_RedLine.png);
-    background-repeat: no-repeat;
-    background-size: cover; */
     border-radius: 100px;
     background-color: var(--color2);
     height: 100%;
@@ -449,51 +411,48 @@
 }
 
 .center-line-images-one img:nth-of-type(1) {
-    height: 80px;
-    width: 125px;
+    height: 64px;
+    width: 100px;
     position: absolute;
     top: 40vh;
-    left: 48vw;
+    left: 48.5vw;
 }
 
 .center-line-images-one img:nth-of-type(2) {
-    height: 80px;
-    width: 125px;
+    height: 64px;
+    width: 100px;
     position: absolute;
     top: 56vh;
-    right: 46.7vw;
+    right: 47.5vw;
     transform: rotate(180deg);
 }
 
 .center-line-images-one img:nth-of-type(3) {
-    height: 80px;
-    width: 125px;
+    height: 64px;
+    width: 100px;
     position: absolute;
     top: 80vh;
-    left: 48vw;
+    left: 48.5vw;
 }
 
 .center-line-images-one img:nth-of-type(4) {
-    height: 80px;
-    width: 125px;
+    height: 64px;
+    width: 100px;
     position: absolute;
     top: 132vh;
-    right: 46.7vw;
+    right: 47.5vw;
     transform: rotate(180deg);
 }
 
 .center-line-images-one img:nth-of-type(5) {
-    height: 80px;
-    width: 125px;
+    height: 64px;
+    width: 100px;
     position: absolute;
     top: 172vh;
-    left: 48vw;
+    left: 48.5vw;
 }
 
 .center-line-images-two {
-    /* background-image: url(../../assets/profile/profile_RedLine.png); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
     display: none;
     background-color: var(--color2);
     height: 90vh;
@@ -502,24 +461,14 @@
 }
 
 #profile-details-main {
-    /* background-image: url(../../assets/profile/profile_Section_BackgroundPostit.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 35vw;
-    height: 65vh; */
     margin-top: 130px;
     margin-left: 105px;
     text-align: center;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-direction: column; */
-    /* border: 2px solid red; */
+    background-color: #8bbeaa;
     color: var(--color5);
     padding-bottom: 20px;
     z-index: 2;
     position: relative;
-    /* padding-top: 20px; */
 }
 
 #profile-details-back-img {
@@ -533,8 +482,7 @@
 
 .profile-qualification h1 {
     margin: 0px;
-    margin-top: 40px;
-    padding-top: 80px;
+    padding-top: 40px;
     text-decoration: underline;
     font-weight: 500;
     margin-bottom: 5px;
@@ -590,21 +538,12 @@
 }
 
 #profile-session-main {
-    /* background-image: url(../../assets/profile/profile_Section_SessionPostit.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 35vw;
-    height: 65vh; */
     padding: 0px 40px;
     margin-top: 8vh;
     margin-left: 105px;
     padding-bottom: 20px;
     text-align: center;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-direction: column; */
-    /* border: 2px solid red; */
+    background-color: #f79a90;
     position: relative;
     color: var(--color5);
     z-index: 2;
@@ -621,7 +560,7 @@
 
 .profile-first-session h1 {
     margin: 0px;
-    padding-top: 80px;
+    padding-top: 40px;
     text-decoration: underline;
     font-weight: 500;
     margin-top: 48px;
@@ -651,43 +590,23 @@
 }
 
 #profile-background-main {
-    /* background-image: url(../../assets/profile/profile_Section_AddInfoPostit.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 75vw;
-    height: 70vh; */
     margin-top: -4.5vh;
     text-align: center;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+    background-color: #85a7cd;
     color: var(--color5);
     padding-bottom: 20px;
-    padding-top: 80px;
+    padding-top: 40px;
     margin-bottom: 80px;
     position: relative;
     z-index: 2;
-    /* border: 2px solid red; */
-}
-
-#profile-background-back-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
 }
 
 .profile-affiliations h1 {
     display: block;
     margin: 0px;
-    /* padding-top: 40px; */
     text-decoration: underline;
     font-weight: 500;
     margin-bottom: 5px;
-    /* margin-top: 60px; */
 }
 
 .profile-affiliations p {
@@ -772,18 +691,38 @@
     height: 130px;
 }
 
+#contact-tape {
+    top: -30px;
+    width: 115%;
+    left: -7%;
+}
+
+#time-tape {
+    top: -6%;
+    width: 110%;
+    left: -5%;
+}
+
 #qualification-tape {
     top: -40px;
     width: 110%;
     left: -20px;
 }
 
-#background-tape {
-    width: 97%;
-    top: -20px;
-    left: 10px;
+#typical-session-tape {
+    top: -6%;
+    width: 110%;
+    left: -5%;
 }
 
-#typical-session-tape {
-    top: 20px;
+#background-tape {
+    width: 108%;
+    top: -8%;
+    left: -4%;
+}
+
+#first-session-tape {
+    top: -8%;
+    width: 112%;
+    left: -6%;
 }

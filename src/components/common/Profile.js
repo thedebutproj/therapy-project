@@ -198,10 +198,10 @@ const Profile = () => {
       }else{
         document.getElementsByClassName("week_days")[12].style.display="none"; 
       }
-      // if(!rowData["Scheduling - Calendar Icon"])
-      // {
-      //   document.getElementsByClassName("calender-icon-info")[0].style.display="none";
-      // }
+      if(!rowData["Scheduling - Calendar Icon"])
+      {
+        document.getElementsByClassName("calender-icon-info")[0].style.display="none";
+      }
       
 
       setUser({
@@ -381,11 +381,11 @@ const Profile = () => {
               {/* contact */}
               <div id="profile-contact-main">
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
-                <img
+                {/* <img
                   id="contact-back-img"
                   src={profile_Section_ContactPostit}
                   alt=""
-                />
+                /> */}
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
                   <div className="profile-contact-details">
@@ -405,11 +405,11 @@ const Profile = () => {
               {/* office hours */}
               <div id="profile-time-main">
                 <img id="time-tape" class="tapes" src={profile_Section_Tape} alt="" />
-                <img
+                {/* <img
                   id="time-back-img"
                   src={profile_Section_SchedulePostit}
                   alt=""
-                />
+                /> */}
                 <div className="profile-office-hours">
                   <h1>OFFICE HOURS-</h1>
                   <p>{user.workingTime}</p>
@@ -452,11 +452,11 @@ const Profile = () => {
               {/* typical session cost */}
               <div id="profile-typical-session-fees-main">
                 <img id="typical-session-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
-                <img
+                {/* <img
                   id="typical-session-back-img"
                   src={profile_Section_PricingPostit}
                   alt=""
-                />
+                /> */}
                 <div className="profile-typical-session-fees">
                   <h1>TYPICAL SESSION COST-</h1>
                   <h1>{user.typicalSessionCost}</h1>
@@ -500,11 +500,11 @@ const Profile = () => {
               {/* qualific */}
               <div id="profile-details-main">
               <img id="qualification-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
-                <img
+                {/* <img
                   id="profile-details-back-img"
                   src={profile_Section_BackgroundPostit}
                   alt=""
-                />
+                /> */}
                 <div className="profile-qualification">
                   <h1>QUALIFICATIONS-</h1>
                   <p>{user.qualifications}</p>
@@ -527,11 +527,11 @@ const Profile = () => {
 
               <div id="profile-session-main">
               <img id="first-session-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
-                <img
+                {/* <img
                   id="first-session-back-img"
                   src={profile_Section_SessionPostit}
                   alt=""
-                />
+                /> */}
                 <div className="profile-first-session">
                   <h1>YOUR FIRST SESSION-</h1>
                   <p>{user.yourFirstSession}</p>
@@ -546,11 +546,6 @@ const Profile = () => {
           <div className="profile-body-two">
             <div id="profile-background-main">
             <img id="background-tape" class="tapes" src={profile_Section_AddInfoTape} alt="" />
-              <img
-                id="profile-background-back-img"
-                src={profile_Section_AddInfoPostit}
-                alt=""
-              />
               <div className="profile-affiliations" id="profileAffiliations">
                 <h1>AFFILIATIONS-</h1>
                 <p>{user.affiliations}</p>
