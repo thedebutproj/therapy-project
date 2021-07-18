@@ -38,6 +38,9 @@ body {
 .donor-benefits-content {
     position: relative;
     z-index: 2;
+    background-color: rgb(255, 239, 220);
+    /* padding-top: 100px; */
+    margin-top: 40px;
 }
 
 .donor-benefits-content p {
@@ -60,15 +63,15 @@ body {
 
 .donor-benefits-content img {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
+    top: -5%;
+    left: -2.5%;
+    height: 150px;
+    width: 105%;
     z-index: -1;
 }
 
 .donor-benefits-content p:nth-of-type(1) {
-    margin-top: 160px;
+    margin-top: 120px;
 }
 
 .donor-benefits-content p:nth-of-type(3) {
@@ -276,4 +279,100 @@ input#donate {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .donor-benefits-heading {
+        display: none;
+    }
+    .donor-benefits-content {
+        margin-top: 80px;
+    }
+    .donor-benefits-content img {
+        top: -3%;
+        height: 90px;
+    }
+    .donor-benefits-content p {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .donor-benefits-content p:nth-of-type(1) {
+        margin-top: 40px;
+    }
+    .donor-benefits-content p:nth-of-type(3) {
+        font-size: 18px;
+    }
+    .what-can-you-do-heading p {
+        font-size: 45px;
+    }
+    .what-can-you-do-content {
+        flex-direction: column;
+    }
+    .what-can-you-do-content h1 {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+    .what-can-you-do-content p {
+        font-size: 28px;
+        max-width: 56vw;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .what-can-you-do-content p:nth-of-type(3) {
+        margin-bottom: 80px;
+    }
+    .donor-content-line {
+        display: none;
+    }
+    .donor-content-line-2 {
+        background-color: #ffc98c;
+        height: 6px;
+        width: 80vw;
+        margin: auto;
+        border-radius: 10px;
+    }
+    .donor-register-form-right {
+        display: none;
+    }
+    .donor-register-form-left {
+        width: 90vw;
+    }
+    .donor-register-form-heading h1 {
+        font-size: 45px;
+    }
+    #donor-register-form {
+        flex-direction: column;
+    }
+    #main-form {
+        max-width: 80vw;
+    }
+    .donor-register-form-fill input {
+        font-size: 14px;
+    }
+    #choice p {
+        font-size: 18px;
+    }
+    #choice label {
+        font-size: 18px;
+    }
+    input#receive {
+        height: 12px;
+        width: 12px;
+    }
+    input#pledge {
+        height: 12px;
+        width: 12px;
+    }
+    input#donate {
+        height: 12px;
+        width: 12px;
+    }
+    .donor-register-form-fill textarea {
+        font-size: 14px;
+        height: 100px;
+    }
+    .donor-register-form-fill button {
+        font-size: 14px;
+    }
 }

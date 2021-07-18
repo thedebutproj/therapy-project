@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Donor.css";
 
-import { donor_BenefitsDetails, donor_MainIllustration } from "../../assets";
+import { benefitsdetailsTAPE, 
+        donor_MainIllustration,
+        profile_Section_SessionTape,
+      } from "../../assets";
 
 const Donor = () => {
   return (
@@ -12,7 +15,8 @@ const Donor = () => {
             <p> Assist<sup>BETA</sup></p>
           </div>
           <div className="donor-benefits-content">
-            <img src={donor_BenefitsDetails} alt="" />
+            {/* <img src={donor_BenefitsDetails} alt="" /> */}
+            <img id="assist-tape" src={benefitsdetailsTAPE} alt="" />
             <p>
               For most, the decision to seek professional help for their mental
               wellbeing is a daunting task. While there are many factors at
@@ -54,6 +58,8 @@ const Donor = () => {
               </p>
             </div>
             <div className="donor-content-line"></div>
+            <div className="donor-content-line-2"></div>
+
             <div>
               <h1>Receive</h1>
               <p>
@@ -62,6 +68,8 @@ const Donor = () => {
               </p>
             </div>
             <div className="donor-content-line"></div>
+            <div className="donor-content-line-2"></div>
+
             <div>
               <h1>Donate</h1>
               <p>
