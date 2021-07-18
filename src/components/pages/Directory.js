@@ -241,7 +241,7 @@ const Directory = () => {
       <div className="directory-left">
         <img src={directory_RedLine} className="directory-redLine" />
         <div className="directory-heading">
-          <h1>THE DIRECTORY</h1>
+          <h1>DIRECTORY</h1>
         </div>
 
         <ul>

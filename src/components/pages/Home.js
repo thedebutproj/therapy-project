@@ -22,7 +22,7 @@ const Home = () => {
         {/* <img src={home_directory_LHSGraphic} className="figure1" /> */}
         <div className="home-slide-content pure-g">
           <div className="home-slide-left pure-u-1-2">
-            <h1 className="dir-h1">THE DIRECTORY</h1>
+            <h1 className="dir-h1">DIRECTORY</h1>
             <p className="dir-p">
               Find the right therapist, counsellor, or psychologist for
               yourself. Visit our catalogue of mental health professionals and
@@ -44,7 +44,7 @@ const Home = () => {
       <>
         <div className="home-slide-content pure-g">
           <div className="home-slide-left pure-u-1-2">
-            <h1 className="blog-h1">FEATURED BLOG</h1>
+            <h1 className="blog-h1">BLOG</h1>
             <p className="blog-p">
               Go through our curation of articles pertaining to availing mental
               healthcare, making the most of your experience with your chose

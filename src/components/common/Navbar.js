@@ -47,7 +47,7 @@ const Navbar = () => {
         </li>
         <li className="nav-items">
           {" "}
-          <Link to="/directory">Find Therapist</Link>{" "}
+          <Link to="/directory">Directory</Link>{" "}
         </li>
         <li className="nav-items">
           {" "}
