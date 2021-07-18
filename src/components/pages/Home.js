@@ -24,9 +24,10 @@ const Home = () => {
           <div className="home-slide-left pure-u-1-2">
             <h1 className="dir-h1">DIRECTORY</h1>
             <p className="dir-p">
-              Find the right therapist, counsellor, or psychologist for
+             <b> Find the right therapist, counsellor, or psychologist for
               yourself. Visit our catalogue of mental health professionals and
               use our filters to create your shortlist!
+              </b>
             </p>
             <button className="dir-btn">
               <Link to="/directory">VISIT</Link>
@@ -46,9 +47,11 @@ const Home = () => {
           <div className="home-slide-left pure-u-1-2">
             <h1 className="blog-h1">BLOG</h1>
             <p className="blog-p">
+              <b>
               Go through our curation of articles pertaining to availing mental
               healthcare, making the most of your experience with your chose
               professional, and more.
+              </b>
             </p>
             <button className="blog-btn">
               <Link to="/blog">VISIT</Link>
@@ -68,12 +71,14 @@ const Home = () => {
         <div className="home-slide-content home-slide-content-donor pure-g">
           <div className="home-slide-left  pure-u-1-2">
             <h1 className="donor-h1">
-              ASSIST <sup>BETA</sup>
+              ASSIST<sup>BETA</sup>
             </h1>
             <p className="donor-p">
+              <b>
               Find out more about how you can help us (or seek help from us) via
               our mission to help students/young-professionals avail mental
               healthcare.
+              </b>
             </p>
             <button className="donor-btn">
               <Link to="/donor">VISIT</Link>

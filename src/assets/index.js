@@ -70,6 +70,7 @@ import blog_CLOUD2 from "./blog/blog_CLOUD2.png";
 // Donor imports
 import donor_BenefitsDetails from "./donor/donor_BenefitsDetails.png";
 import donor_MainIllustration from "./donor/donor_MainIllustration.png";
+import benefitsdetailsTAPE from "./donor/benefitsdetailsTAPE.png";
 
 // Function for importing all the files in the Therapist Images in the directory folder
 function importAll(r) {
@@ -118,6 +119,7 @@ export {
     blog_CLOUD2,
     donor_BenefitsDetails,
     donor_MainIllustration,
+    benefitsdetailsTAPE,
     profile_Section_ContactPostit,
     profile_Section_SchedulePostit,
     profile_Section_PricingPostit,
@@ -142,4 +144,5 @@ export {
     profile_Section_SessionTape,
     profile_Section_Tape,
     profile_Section_AddInfoTape,
+
 };

@@ -56,7 +56,7 @@ const Navbar = () => {
         <li className="nav-items">
           {" "}
           <Link to="/donor">
-            Assist <sup style={{ fontSize: "x-small" }}>BETA</sup>
+            Assist<sup style={{ fontSize: "x-small" }}>BETA</sup>
           </Link>{" "}
         </li>
         <li className="nav-items">
