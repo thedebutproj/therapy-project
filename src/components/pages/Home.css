@@ -1,7 +1,19 @@
+.home-art {
+  position: relative;
+}
+
 .home-art img {
-  height: 90vh;
   width: 100%;
   display: block;
+}
+
+.home-art .home-art-text {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  font-family: var(--font2);
+  font-size: 2em;
+  color: var(--color6);
 }
 
 .home-slideshow-container {

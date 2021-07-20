@@ -8,6 +8,7 @@ import {
   home_blog_MainIllustration,
   home_donor_MainIllustration,
   home_donor_LHSPuzzle,
+  homepage_FullBG,
 } from "../../assets";
 
 // import "./Home.css";
@@ -24,9 +25,11 @@ const Home = () => {
           <div className="home-slide-left pure-u-1-2">
             <h1 className="dir-h1">DIRECTORY</h1>
             <p className="dir-p">
-             <b> Find the right therapist, counsellor, or psychologist for
-              yourself. Visit our catalogue of mental health professionals and
-              use our filters to create your shortlist!
+              <b>
+                {" "}
+                Find the right therapist, counsellor, or psychologist for
+                yourself. Visit our catalogue of mental health professionals and
+                use our filters to create your shortlist!
               </b>
             </p>
             <button className="dir-btn">
@@ -48,9 +51,9 @@ const Home = () => {
             <h1 className="blog-h1">BLOG</h1>
             <p className="blog-p">
               <b>
-              Go through our curation of articles pertaining to availing mental
-              healthcare, making the most of your experience with your chose
-              professional, and more.
+                Go through our curation of articles pertaining to availing
+                mental healthcare, making the most of your experience with your
+                chose professional, and more.
               </b>
             </p>
             <button className="blog-btn">
@@ -75,9 +78,9 @@ const Home = () => {
             </h1>
             <p className="donor-p">
               <b>
-              Find out more about how you can help us (or seek help from us) via
-              our mission to help students/young-professionals avail mental
-              healthcare.
+                Find out more about how you can help us (or seek help from us)
+                via our mission to help students/young-professionals avail
+                mental healthcare.
               </b>
             </p>
             <button className="donor-btn">
@@ -116,7 +119,14 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-art">
-        <img src={home_FullBGWithText} alt="Art" />
+        <img src={homepage_FullBG} alt="Art" className="pur-img" />
+        <div className="home-art-text">
+          eliminating the uncertainties from
+          <br />
+          your visit to a mental health
+          <br />
+          professional
+        </div>
       </div>
 
       <div
