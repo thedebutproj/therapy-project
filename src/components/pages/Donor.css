@@ -112,7 +112,7 @@ body {
 
 .what-can-you-do-content p {
     text-align: center;
-    max-width: 21vw;
+    max-width: 24vw;
     font-size: 28px;
     line-height: 35px;
     color: var(--color4);
@@ -190,14 +190,14 @@ body {
 }
 
 #choice p {
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 0px;
     margin-bottom: 8px;
 }
 
 #choice label {
     color: #61878c;
-    font-size: 22px;
+    font-size: 18pxx;
 }
 
 #choice input {
@@ -214,7 +214,7 @@ body {
 }
 
 #choice input:checked {
-    background-color: var(--color2);
+    background: radial-gradient(var(--color2) 50%, white 51%);
 }
 
 input#receive {
@@ -349,24 +349,28 @@ input#donate {
     }
     .donor-register-form-fill input {
         font-size: 14px;
+        /* padding: 10px; */
     }
     #choice p {
-        font-size: 18px;
+        font-size: 14px;
     }
     #choice label {
-        font-size: 18px;
+        font-size: 14px;
+    }
+    #choice input {
+        padding: 8px;
     }
     input#receive {
-        height: 12px;
-        width: 12px;
+        height: 10px;
+        width: 10px;
     }
     input#pledge {
-        height: 12px;
-        width: 12px;
+        height: 10px;
+        width: 10px;
     }
     input#donate {
-        height: 12px;
-        width: 12px;
+        height: 10px;
+        width: 10px;
     }
     .donor-register-form-fill textarea {
         font-size: 14px;
@@ -374,5 +378,6 @@ input#donate {
     }
     .donor-register-form-fill button {
         font-size: 14px;
+        padding: 12px;
     }
 }
