@@ -16,7 +16,7 @@
 
 .profile-main-container {
     background-color: bisque;
-    height: 300vh;
+    /* width: 100vw; */
     z-index: -3;
 }
 
@@ -25,7 +25,7 @@
     justify-content: space-evenly;
     height: 20vh;
     top: 83px;
-    width: 100vw;
+    width: auto;
     z-index: 3;
     background-color: bisque;
 }
@@ -101,9 +101,10 @@
     background-color: #e96571;
     border: none;
     border-radius: 60px;
-    padding-top: 4px;
+    padding: 4px 20px;
+    /* padding-top: 4px;
     padding-bottom: 4px;
-    padding-left: 20px;
+    padding-left: 20px; */
     width: 280px;
     margin: auto;
     margin-top: 20px;
@@ -194,15 +195,6 @@
     z-index: 2;
 }
 
-#contact-back-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -2;
-}
-
 .profile-contact {
     margin-top: 10px;
 }
@@ -253,15 +245,6 @@
     color: var(--color5);
     position: relative;
     z-index: 2;
-}
-
-#time-back-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
 }
 
 .profile-office-hours {
@@ -358,15 +341,6 @@
     z-index: 1;
     padding-bottom: 20px;
     padding: 10px 10px;
-}
-
-#typical-session-back-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
 }
 
 .profile-typical-session-fees {
@@ -471,15 +445,6 @@
     position: relative;
 }
 
-#profile-details-back-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-}
-
 .profile-qualification h1 {
     margin: 0px;
     padding-top: 40px;
@@ -549,15 +514,6 @@
     z-index: 2;
 }
 
-#first-session-back-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-}
-
 .profile-first-session h1 {
     margin: 0px;
     padding-top: 40px;
@@ -569,7 +525,7 @@
 
 .profile-first-session p {
     font-size: 28px;
-    margin: 0px 0px;
+    margin: 0px auto;
     max-width: 400px;
     margin-bottom: 20px;
     text-align: center;
@@ -725,4 +681,324 @@
     top: -8%;
     width: 112%;
     left: -6%;
+}
+
+@media only screen and (max-width:1200px) {
+    .profile-header-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .profile-to-directory {
+        display: none;
+    }
+    .profile-user-main {
+        width: 360px;
+        margin: auto;
+        height: 16vh;
+    }
+    .profile-name {
+        font-size: 30px;
+    }
+    .profile-icons img {
+        height: 31px;
+        width: 31px;
+        margin: 2px 2px;
+    }
+    .jump-to {
+        font-size: 24px;
+        padding: 3px 16px;
+        width: 250px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    .jump-to-two {
+        font-size: 24px;
+        padding: 3px 20px;
+        width: 250px;
+    }
+    .jump-to-container {
+        margin: 16px auto;
+        height: 210px;
+    }
+    .jump-to-container a {
+        font-size: 24px;
+    }
+    .jump-to-container a div {
+        height: 16px;
+        width: 16px;
+        margin-top: 5px;
+        margin-left: 16px;
+        margin-right: 3px;
+    }
+    .profile-body-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-body-one {
+        flex-direction: column;
+    }
+    #profile-contact-main {
+        margin: 10px auto;
+        width: 50vw;
+    }
+    #contact-tape {
+        top: -20px;
+        height: 40%;
+    }
+    .profile-contact h1 {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+    .profile-contact-details {
+        margin-top: 3px;
+    }
+    .profile-contact p {
+        font-size: 22px;
+    }
+    .profile-location {
+        margin-top: 14px;
+    }
+    .profile-location h1 {
+        font-size: 28px;
+    }
+    .profile-location p {
+        font-size: 22px;
+        margin-top: 3px;
+    }
+    .profile-location img {
+        height: 24px;
+    }
+    #profile-time-main {
+        margin: 20px auto;
+        padding-bottom: 16px;
+        width: 65vw;
+    }
+    #time-tape {
+        height: 22%;
+    }
+    .profile-office-hours {
+        margin-top: 50px;
+    }
+    .profile-office-hours h1 {
+        padding-top: 30px;
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-office-hours p {
+        font-size: 22px;
+    }
+    .profile-working-days {
+        margin-top: 16px;
+    }
+    .profile-days {
+        margin: 6px auto;
+    }
+    .profile-days img {
+        height: 4vh;
+        width: 3vw;
+        margin: 0px 3px;
+    }
+    .profile-working-days h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-working-days p {
+        font-size: 22px;
+        max-width: 300px;
+        margin-bottom: 16px;
+    }
+    .profile-medium h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-medium p {
+        font-size: 22px;
+        max-width: 325px;
+    }
+    .profile-schedule h1 {
+        margin-top: 16px;
+        margin-bottom: 4px;
+        font-size: 28px;
+    }
+    .profile-schedule p {
+        font-size: 22px;
+    }
+    .profile-schedule-calender {
+        margin-top: 8px;
+    }
+    .profile-schedule-calender img {
+        height: 35px;
+        width: 35px;
+    }
+    #profile-typical-session-fees-main {
+        width: 50vw;
+        margin: 5vh auto;
+        margin-top: 8vh;
+        padding: 8px;
+    }
+    #typical-session-tape {
+        height: 24%;
+        width: 115%;
+        left: -7%;
+    }
+    .profile-typical-session-fees {
+        margin-top: 30px;
+    }
+    .profile-typical-session-fees h1 {
+        font-size: 28px;
+        padding-top: 8px;
+        margin-top: 16px;
+    }
+    .profile-typical-session-fees p {
+        font-size: 22px;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        max-width: 320px;
+    }
+    .profile-body-one-middle {
+        display: none;
+    }
+    #profile-details-main {
+        margin: 30px auto;
+        padding-bottom: 16px;
+        width: 55vw;
+    }
+    #qualification-tape {
+        height: 28%;
+        top: -30px;
+        width: 112%;
+        left: -24px;
+    }
+    .profile-qualification h1 {
+        padding-top: 30px;
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-qualification p {
+        font-size: 22px;
+        max-width: 300px;
+        margin-bottom: 16px;
+    }
+    .profile-profession h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-profession p {
+        font-size: 22px;
+        max-width: 300px;
+        margin-bottom: 16px;
+    }
+    .profile-experience h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-experience p {
+        font-size: 22px;
+        max-width: 300px;
+        margin-bottom: 16px;
+    }
+    .profile-languages h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-languages p {
+        font-size: 22px;
+        max-width: 300px;
+        margin-bottom: 16px;
+    }
+    #profile-session-main {
+        padding: 0px 30px;
+        margin: auto;
+        margin-top: 6vh;
+        padding-bottom: 16px;
+        width: 50vw;
+    }
+    #first-session-tape {
+        height: 40%;
+    }
+    .profile-first-session h1 {
+        padding-top: 30px;
+        margin-top: 36px;
+        margin-bottom: 4px;
+        font-size: 28px;
+    }
+    .profile-first-session p {
+        font-size: 22px;
+        max-width: 300px;
+        margin-bottom: 16px;
+    }
+    .profile-session-length h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-session-length p {
+        font-size: 22px;
+        margin-bottom: 16px;
+        max-width: 300px;
+    }
+    #profile-background-main {
+        margin-top: 50px;
+        padding-bottom: 16px;
+        padding-top: 20px;
+        margin-bottom: 40px;
+    }
+    #background-tape {
+        height: 100px;
+        top: -30px;
+    }
+    .profile-affiliations h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-affiliations p {
+        font-size: 22px;
+        max-width: 45vw;
+        margin-bottom: 16px;
+    }
+    .profile-target-demography h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-target-demography p {
+        font-size: 22px;
+        max-width: 45vw;
+        margin-bottom: 16px;
+    }
+    .profile-evaluations h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-evaluations p {
+        font-size: 22px;
+        max-width: 45vw;
+        margin-bottom: 16px;
+    }
+    .profile-area-of-experience h1 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+    .profile-area-of-experience p {
+        font-size: 22px;
+        max-width: 45vw;
+        margin-bottom: 16px;
+    }
+    #myBtn {
+        bottom: 16px;
+        right: 24px;
+        padding: 6px;
+        font-size: 36px;
+        font-weight: 500;
+    }
+    #myBtn:hover {
+        padding: 6px;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .profile-user-main {
+        width: 300px;
+    }
+    .profile-days img {
+        width: 4vw;
+    }
 }

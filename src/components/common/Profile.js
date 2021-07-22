@@ -119,6 +119,57 @@ const Profile = () => {
       // console.log(rowData["Affiliations"]);
       // console.log(affiliationElement);
 
+
+      setUser({
+        ...user,
+        name: rowData["Full Name"],
+        instagram: "https://instagram.com/" + rowData["Instagram"].slice(1),
+        linkedin: rowData["LinkedIn"],
+        website: "https://" + rowData["Website"],
+        twitter: "http://twitter.com/" + rowData["Twitter"].slice(1),
+        contact: rowData["Contact - Phone Number"],
+        email: rowData["Contact - Email ID"],
+        location: rowData["Location"],
+        workingTime: rowData["Hours of Availability"],
+        notesOnAvailability: rowData["Notes on Availability"],
+        medium: rowData["Medium"],
+        calender: rowData["Scheduling - Calendar Icon"],
+        typicalSessionCost: rowData["Typical Session Cost"],
+        notesOnFinancialAssistance: rowData["Notes on Financial Assistance"],
+        qualifications: rowData["Qualifications"],
+        typeOfProfessional: rowData["Type of Professional"],
+        experience: rowData["Experience"],
+        languages: rowData["Languages"],
+        yourFirstSession: rowData["Your First Session"],
+        typicalSessionLength: rowData["Typical Session Length"],
+        affiliations: rowData["Affiliations"],
+        targetDemographic: rowData["Target Demographic"],
+        evaluationsAdministered: rowData["Evaluations Administered"],
+        areaOfExpertise: rowData["Areas of Expertise"],
+      });
+      setTimeout(() => {
+        var contactoffsety=contactElement.offsetTop+40;
+        document.getElementsByClassName("center-line-images-one-img")[0].style.top=contactoffsety+"px";
+  
+        var timeoffsety=timeElement.offsetTop+40;
+        document.getElementsByClassName("center-line-images-one-img")[2].style.top=timeoffsety+"px";
+  
+        var typicalsessionoffsety=typicalSessionElement.offsetTop+60;
+        document.getElementsByClassName("center-line-images-one-img")[4].style.top=typicalsessionoffsety+"px";
+  
+        var detailsoffsety=detailsElement.offsetTop+40;
+        document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
+  
+        var sessionoffsety=sessionElement.offsetTop+40;
+        document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
+  
+        var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
+        document.getElementsByClassName("profile-body-one-middle")[0].style.height=centerlineoffsetheight+"px";
+  
+        var bottomoffsetheight=backgroundElement.offsetTop+backgroundElement.offsetHeight-100;
+        document.getElementById("mainContainer").style.height=bottomoffsetheight+"px";
+
+        
       if (!rowData["Location"]) {
         locationElement.style.display = "none";
       }
@@ -203,55 +254,6 @@ const Profile = () => {
         document.getElementsByClassName("calender-icon-info")[0].style.display="none";
       }
       
-
-      setUser({
-        ...user,
-        name: rowData["Full Name"],
-        instagram: "https://instagram.com/" + rowData["Instagram"].slice(1),
-        linkedin: rowData["LinkedIn"],
-        website: "https://" + rowData["Website"],
-        twitter: "http://twitter.com/" + rowData["Twitter"].slice(1),
-        contact: rowData["Contact - Phone Number"],
-        email: rowData["Contact - Email ID"],
-        location: rowData["Location"],
-        workingTime: rowData["Hours of Availability"],
-        notesOnAvailability: rowData["Notes on Availability"],
-        medium: rowData["Medium"],
-        calender: rowData["Scheduling - Calendar Icon"],
-        typicalSessionCost: rowData["Typical Session Cost"],
-        notesOnFinancialAssistance: rowData["Notes on Financial Assistance"],
-        qualifications: rowData["Qualifications"],
-        typeOfProfessional: rowData["Type of Professional"],
-        experience: rowData["Experience"],
-        languages: rowData["Languages"],
-        yourFirstSession: rowData["Your First Session"],
-        typicalSessionLength: rowData["Typical Session Length"],
-        affiliations: rowData["Affiliations"],
-        targetDemographic: rowData["Target Demographic"],
-        evaluationsAdministered: rowData["Evaluations Administered"],
-        areaOfExpertise: rowData["Areas of Expertise"],
-      });
-      setTimeout(() => {
-        var contactoffsety=contactElement.offsetTop+40;
-        document.getElementsByClassName("center-line-images-one-img")[0].style.top=contactoffsety+"px";
-  
-        var timeoffsety=timeElement.offsetTop+40;
-        document.getElementsByClassName("center-line-images-one-img")[2].style.top=timeoffsety+"px";
-  
-        var typicalsessionoffsety=typicalSessionElement.offsetTop+60;
-        document.getElementsByClassName("center-line-images-one-img")[4].style.top=typicalsessionoffsety+"px";
-  
-        var detailsoffsety=detailsElement.offsetTop+40;
-        document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
-  
-        var sessionoffsety=sessionElement.offsetTop+40;
-        document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
-  
-        var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
-        document.getElementsByClassName("profile-body-one-middle")[0].style.height=centerlineoffsetheight+"px";
-  
-        var bottomoffsetheight=backgroundElement.offsetTop+backgroundElement.offsetHeight-100;
-        document.getElementById("mainContainer").style.height=bottomoffsetheight+"px";
       }, 100);
     });
 
@@ -381,11 +383,6 @@ const Profile = () => {
               {/* contact */}
               <div id="profile-contact-main">
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
-                {/* <img
-                  id="contact-back-img"
-                  src={profile_Section_ContactPostit}
-                  alt=""
-                /> */}
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
                   <div className="profile-contact-details">
@@ -405,11 +402,6 @@ const Profile = () => {
               {/* office hours */}
               <div id="profile-time-main">
                 <img id="time-tape" class="tapes" src={profile_Section_Tape} alt="" />
-                {/* <img
-                  id="time-back-img"
-                  src={profile_Section_SchedulePostit}
-                  alt=""
-                /> */}
                 <div className="profile-office-hours">
                   <h1>OFFICE HOURS-</h1>
                   <p>{user.workingTime}</p>
@@ -452,11 +444,6 @@ const Profile = () => {
               {/* typical session cost */}
               <div id="profile-typical-session-fees-main">
                 <img id="typical-session-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
-                {/* <img
-                  id="typical-session-back-img"
-                  src={profile_Section_PricingPostit}
-                  alt=""
-                /> */}
                 <div className="profile-typical-session-fees">
                   <h1>TYPICAL SESSION COST-</h1>
                   <h1>{user.typicalSessionCost}</h1>
@@ -481,8 +468,6 @@ const Profile = () => {
                   src={profile_SquigglyPointer}
                   alt=""
                 />
-                {/* </div> */}
-                {/* <div className="center-line-images-two"> */}
                 <img
                   className="center-line-images-one-img"
                   src={profile_SquigglyPointer}
@@ -500,11 +485,6 @@ const Profile = () => {
               {/* qualific */}
               <div id="profile-details-main">
               <img id="qualification-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
-                {/* <img
-                  id="profile-details-back-img"
-                  src={profile_Section_BackgroundPostit}
-                  alt=""
-                /> */}
                 <div className="profile-qualification">
                   <h1>QUALIFICATIONS-</h1>
                   <p>{user.qualifications}</p>
@@ -527,11 +507,6 @@ const Profile = () => {
 
               <div id="profile-session-main">
               <img id="first-session-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
-                {/* <img
-                  id="first-session-back-img"
-                  src={profile_Section_SessionPostit}
-                  alt=""
-                /> */}
                 <div className="profile-first-session">
                   <h1>YOUR FIRST SESSION-</h1>
                   <p>{user.yourFirstSession}</p>
@@ -543,6 +518,7 @@ const Profile = () => {
               </div>
             </div>
           </div>
+          
           <div className="profile-body-two">
             <div id="profile-background-main">
             <img id="background-tape" class="tapes" src={profile_Section_AddInfoTape} alt="" />
