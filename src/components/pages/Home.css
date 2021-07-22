@@ -19,18 +19,12 @@
 .home-slideshow-container {
   position: relative;
   /* Height is specified so as user goes through slideshow, height of slides don't change */
-  height: 90vh;
+  /* height: 90vh; */
 }
-/* 
-.home-directory .figure1 {
-  position: absolute;
-  height: 50%;
-  top: 25%;
-} */
 
 .home-donor .figure1 {
   position: absolute;
-  height: 75%;
+  height: 50%;
   top: 10%;
   left: 5%;
 }
@@ -53,13 +47,13 @@
 }
 
 /* Special class for donor slide because the image should be on bottom  */
-.home-slide-content-donor {
+/* .home-slide-content-donor {
   padding-top: 10vh !important;
-}
+} */
 
 .home-slide-left button {
   font-size: 1.5em;
-  margin-top: 4em;
+  margin-top: 2em;
   padding: 0.2em 1em;
   border-radius: 20px;
   border: 2px solid var(--color2);
@@ -177,16 +171,61 @@
 }
 
 .home-slide-right-blog {
-  /* To compensate for the 2rem padding we gave at home-slide-content and image can stick at top */
-  margin-top: -3rem;
+  align-self: flex-start;
+}
+
+.home-slide-right-blog img {
+  /* Because the top padding is of 3em */
+  transform: translateY(-3em);
+  -webkit-transform: translateY(-3em);
 }
 
 .home-slide-right-donor {
-  margin-bottom: -3rem;
+  align-self: flex-end;
+}
+
+.home-slide-right-donor img {
+  /* Because the bottom padding is of 3em */
+  transform: translateY(3em);
+  -webkit-transform: translateY(3em);
 }
 
 .home-slide-right img {
-  display: block;
-  height: 80vh;
+  display: flex;
   margin: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .pure-u-0 {
+    display: none;
+  }
+
+  .home-slideshow-container {
+    height: auto;
+  }
+
+  .home-donor .figure1 {
+    top: 2%;
+    left: 15%;
+  }
+
+  .home-slide-left > h1 {
+    font-size: 3em;
+  }
+
+  .home-slide-left > p {
+    font-size: 1.3em;
+  }
+
+  .home-slide-left button {
+    margin-top: 2em;
+  }
+
+  .home-carousel-dots-container {
+    display: none;
+  }
+
+  .home-slide-content-donor {
+    padding-top: 3em !important;
+  }
 }

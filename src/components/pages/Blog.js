@@ -33,7 +33,10 @@ const Blog = () => {
             <div className="pure-g">
               <div className="pure-u-1 pure-u-md-1-2">
                 <div className="blog-img-container">
-                  <img className="pure-img  blog-img " src={homeDirectory} />
+                  <img
+                    className="pure-img  blog-img "
+                    src={blogData[0]["Image"]}
+                  />
                 </div>
               </div>
               <div className="pure-u-1 pure-u-md-1-2 pure-img">
@@ -57,7 +60,7 @@ const Blog = () => {
               return (
                 <div className="pure-u-1 pure-u-md-1-3" key={row._rowNumber}>
                   <div className="blog-box">
-                    <img className="blog-img pure-img" src={homeDirectory} />
+                    <img className="blog-img pure-img" src={row["Image"]} />
                     <h3 className="b-h3">{row["Heading"]}</h3>
                     <p className="b-p">{row["Description"]}</p>
                     <Link to={`/blog/${row._rowNumber}`}>

@@ -22,7 +22,7 @@ const Home = () => {
       <>
         {/* <img src={home_directory_LHSGraphic} className="figure1" /> */}
         <div className="home-slide-content pure-g">
-          <div className="home-slide-left pure-u-1-2">
+          <div className="home-slide-left pure-u-1 pure-u-md-1-2">
             <h1 className="dir-h1">DIRECTORY</h1>
             <p className="dir-p">
               <b>
@@ -36,7 +36,7 @@ const Home = () => {
               <Link to="/directory">VISIT</Link>
             </button>
           </div>
-          <div className="home-slide-right pure-u-1-2 home-slide-right-directory">
+          <div className="home-slide-right pure-u-0 pure-u-md-1-2 home-slide-right-directory">
             <img src={home_directory_MainIllustration} className="pure-img" />
           </div>
         </div>
@@ -47,7 +47,7 @@ const Home = () => {
       "home-blog",
       <>
         <div className="home-slide-content pure-g">
-          <div className="home-slide-left pure-u-1-2">
+          <div className="home-slide-left pure-u-1 pure-u-md-1-2">
             <h1 className="blog-h1">BLOG</h1>
             <p className="blog-p">
               <b>
@@ -60,7 +60,7 @@ const Home = () => {
               <Link to="/blog">VISIT</Link>
             </button>
           </div>
-          <div className="home-slide-right pure-u-1-2 home-slide-right-blog">
+          <div className="home-slide-right pure-u-0 pure-u-md-1-2 home-slide-right-blog">
             <img src={home_blog_MainIllustration} className="pure-img" />
           </div>
         </div>
@@ -72,7 +72,7 @@ const Home = () => {
       <>
         <img src={home_donor_LHSPuzzle} className="figure1" />
         <div className="home-slide-content home-slide-content-donor pure-g">
-          <div className="home-slide-left  pure-u-1-2">
+          <div className="home-slide-left pure-u-1 pure-u-md-1-2">
             <h1 className="donor-h1">
               ASSIST<sup>BETA</sup>
             </h1>
@@ -87,7 +87,7 @@ const Home = () => {
               <Link to="/donor">VISIT</Link>
             </button>
           </div>
-          <div className="home-slide-right pure-u-1-2 home-slide-right-donor">
+          <div className="home-slide-right pure-u-0 pure-u-md-1-2 home-slide-right-donor">
             <img src={home_donor_MainIllustration} className="pure-img" />
           </div>
         </div>
@@ -110,7 +110,7 @@ const Home = () => {
 
   useEffect(() => {
     // For automatic slide increment
-    const interval = setInterval(incrementSlide, 10000);
+    const interval = setInterval(incrementSlide, 1000000);
 
     // It ensures that as soon as component is unmounted interval is cleared
     return () => clearInterval(interval);
