@@ -16,7 +16,7 @@
 
 .profile-main-container {
     background-color: bisque;
-    height: 300vh;
+    /* width: 100vw; */
     z-index: -3;
 }
 
@@ -25,7 +25,7 @@
     justify-content: space-evenly;
     height: 20vh;
     top: 83px;
-    width: 100vw;
+    width: auto;
     z-index: 3;
     background-color: bisque;
 }
@@ -101,9 +101,10 @@
     background-color: #e96571;
     border: none;
     border-radius: 60px;
-    padding-top: 4px;
+    padding: 4px 20px;
+    /* padding-top: 4px;
     padding-bottom: 4px;
-    padding-left: 20px;
+    padding-left: 20px; */
     width: 280px;
     margin: auto;
     margin-top: 20px;
@@ -725,4 +726,46 @@
     top: -8%;
     width: 112%;
     left: -6%;
+}
+
+@media only screen and (max-width:1200px) {
+    .profile-header-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .profile-to-directory {
+        display: none;
+    }
+    .profile-user-main {
+        width: 360px;
+        margin: auto;
+        height: 16vh;
+    }
+    .profile-name {
+        font-size: 30px;
+    }
+    .profile-icons img {
+        height: 31px;
+        width: 31px;
+        margin: 2px 2px;
+    }
+    .jump-to {
+        font-size: 24px;
+        padding: 3px 16px;
+        width: 250px;
+        margin-top: 18px;
+    }
+    .jump-to-container {
+        margin: 20px auto;
+        font-size: 24px;
+        padding: 3px 16px;
+        width: 250px;
+        margin-top: 18px;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .profile-user-main {
+        width: 300px;
+    }
 }
