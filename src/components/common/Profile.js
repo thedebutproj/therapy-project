@@ -383,11 +383,6 @@ const Profile = () => {
               {/* contact */}
               <div id="profile-contact-main">
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
-                {/* <img
-                  id="contact-back-img"
-                  src={profile_Section_ContactPostit}
-                  alt=""
-                /> */}
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
                   <div className="profile-contact-details">
@@ -407,11 +402,6 @@ const Profile = () => {
               {/* office hours */}
               <div id="profile-time-main">
                 <img id="time-tape" class="tapes" src={profile_Section_Tape} alt="" />
-                {/* <img
-                  id="time-back-img"
-                  src={profile_Section_SchedulePostit}
-                  alt=""
-                /> */}
                 <div className="profile-office-hours">
                   <h1>OFFICE HOURS-</h1>
                   <p>{user.workingTime}</p>
@@ -454,11 +444,6 @@ const Profile = () => {
               {/* typical session cost */}
               <div id="profile-typical-session-fees-main">
                 <img id="typical-session-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
-                {/* <img
-                  id="typical-session-back-img"
-                  src={profile_Section_PricingPostit}
-                  alt=""
-                /> */}
                 <div className="profile-typical-session-fees">
                   <h1>TYPICAL SESSION COST-</h1>
                   <h1>{user.typicalSessionCost}</h1>
@@ -483,8 +468,6 @@ const Profile = () => {
                   src={profile_SquigglyPointer}
                   alt=""
                 />
-                {/* </div> */}
-                {/* <div className="center-line-images-two"> */}
                 <img
                   className="center-line-images-one-img"
                   src={profile_SquigglyPointer}
@@ -502,11 +485,6 @@ const Profile = () => {
               {/* qualific */}
               <div id="profile-details-main">
               <img id="qualification-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
-                {/* <img
-                  id="profile-details-back-img"
-                  src={profile_Section_BackgroundPostit}
-                  alt=""
-                /> */}
                 <div className="profile-qualification">
                   <h1>QUALIFICATIONS-</h1>
                   <p>{user.qualifications}</p>
@@ -529,11 +507,6 @@ const Profile = () => {
 
               <div id="profile-session-main">
               <img id="first-session-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
-                {/* <img
-                  id="first-session-back-img"
-                  src={profile_Section_SessionPostit}
-                  alt=""
-                /> */}
                 <div className="profile-first-session">
                   <h1>YOUR FIRST SESSION-</h1>
                   <p>{user.yourFirstSession}</p>
@@ -545,6 +518,7 @@ const Profile = () => {
               </div>
             </div>
           </div>
+          
           <div className="profile-body-two">
             <div id="profile-background-main">
             <img id="background-tape" class="tapes" src={profile_Section_AddInfoTape} alt="" />
