@@ -856,6 +856,16 @@
         max-width: 320px;
     }
     .profile-body-one-middle {
+        position: absolute;
+        left: 49vw;
+        top: 40vh;
+        /* height: 120%; */
+    }
+    .center-line-images-one {
+        margin: auto;
+        height: 180%;
+    }
+    .profile-body-one-middle img {
         display: none;
     }
     #profile-details-main {
