@@ -17,6 +17,7 @@ import contactUs_LinesGraphic from "./contactUs/contactUs_LinesGraphic.png";
 import contactUs_PostIt from "./contactUs/contactUs_PostIt.png";
 
 // Home imports
+import homepage_FullBG from "./home/homepage_FullBG.png";
 import home_FullBGWithText from "./home/home_FullBGWithText.png";
 import home_directory_MainIllustration from "./home/directory/directory_MainIllustration.png";
 import home_directory_LHSGraphic from "./home/directory/directory_LHSGraphic.png";
@@ -74,75 +75,75 @@ import benefitsdetailsTAPE from "./donor/benefitsdetailsTAPE.png";
 
 // Function for importing all the files in the Therapist Images in the directory folder
 function importAll(r) {
-    let images = [];
-    r.keys().map((item, index) => {
-        images.push(r(item));
-    });
-    return images;
+  let images = [];
+  r.keys().map((item, index) => {
+    images.push(r(item));
+  });
+  return images;
 }
 
 const therapistImages = importAll(
-    require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
+  require.context("./directory/Therapist_Images", false, /\.(png|jpe?g|svg)$/)
 );
 
 export {
-    siteLogo,
-    homeBlog,
-    homeDonor,
-    homeDirectory,
-    contactUS,
-    contactUs_LHSPatch,
-    contactUs_PostIt,
-    contactUs_LinesGraphic,
-    home_FullBGWithText,
-    home_directory_MainIllustration,
-    home_directory_LHSGraphic,
-    home_blog_MainIllustration,
-    home_donor_MainIllustration,
-    home_donor_LHSPuzzle,
-    directory_LHSPatch,
-    directory_RHSPatch,
-    directory_Spiral,
-    directory_RedLine,
-    therapistImages,
-    directory_SearchIcon,
-    profile_LogoInstagram,
-    profile_LogoLinkedin,
-    profile_LogoTwitter,
-    profile_LogoWebsite,
-    profile_Section_ScheduleDaysOFF,
-    profile_Section_ScheduleIcon,
-    profile_Section_ContactLocation,
-    profile_SquigglyPointer,
-    profile_JumpToArrow,
-    blog_CLOUD1,
-    blog_CLOUD2,
-    donor_BenefitsDetails,
-    donor_MainIllustration,
-    benefitsdetailsTAPE,
-    profile_Section_ContactPostit,
-    profile_Section_SchedulePostit,
-    profile_Section_PricingPostit,
-    profile_Section_BackgroundPostit,
-    profile_Section_SessionPostit,
-    profile_Section_AddInfoPostit,
-    profile_YellowNameBlob,
-    profile_Section_S_OFF,
-    profile_Section_S_ON,
-    profile_Section_M_OFF,
-    profile_Section_M_ON,
-    profile_Section_T_OFF,
-    profile_Section_T_ON,
-    profile_Section_W_OFF,
-    profile_Section_W_ON,
-    profile_Section_F_OFF,
-    profile_Section_F_ON,
-    footer_facebook,
-    footer_instagram,
-    footer_linkedIn,
-    profile_Section_PricingTape,
-    profile_Section_SessionTape,
-    profile_Section_Tape,
-    profile_Section_AddInfoTape,
-
+  siteLogo,
+  homeBlog,
+  homeDonor,
+  homeDirectory,
+  contactUS,
+  contactUs_LHSPatch,
+  contactUs_PostIt,
+  contactUs_LinesGraphic,
+  homepage_FullBG,
+  home_FullBGWithText,
+  home_directory_MainIllustration,
+  home_directory_LHSGraphic,
+  home_blog_MainIllustration,
+  home_donor_MainIllustration,
+  home_donor_LHSPuzzle,
+  directory_LHSPatch,
+  directory_RHSPatch,
+  directory_Spiral,
+  directory_RedLine,
+  therapistImages,
+  directory_SearchIcon,
+  profile_LogoInstagram,
+  profile_LogoLinkedin,
+  profile_LogoTwitter,
+  profile_LogoWebsite,
+  profile_Section_ScheduleDaysOFF,
+  profile_Section_ScheduleIcon,
+  profile_Section_ContactLocation,
+  profile_SquigglyPointer,
+  profile_JumpToArrow,
+  blog_CLOUD1,
+  blog_CLOUD2,
+  donor_BenefitsDetails,
+  donor_MainIllustration,
+  benefitsdetailsTAPE,
+  profile_Section_ContactPostit,
+  profile_Section_SchedulePostit,
+  profile_Section_PricingPostit,
+  profile_Section_BackgroundPostit,
+  profile_Section_SessionPostit,
+  profile_Section_AddInfoPostit,
+  profile_YellowNameBlob,
+  profile_Section_S_OFF,
+  profile_Section_S_ON,
+  profile_Section_M_OFF,
+  profile_Section_M_ON,
+  profile_Section_T_OFF,
+  profile_Section_T_ON,
+  profile_Section_W_OFF,
+  profile_Section_W_ON,
+  profile_Section_F_OFF,
+  profile_Section_F_ON,
+  footer_facebook,
+  footer_instagram,
+  footer_linkedIn,
+  profile_Section_PricingTape,
+  profile_Section_SessionTape,
+  profile_Section_Tape,
+  profile_Section_AddInfoTape,
 };

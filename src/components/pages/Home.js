@@ -8,6 +8,7 @@ import {
   home_blog_MainIllustration,
   home_donor_MainIllustration,
   home_donor_LHSPuzzle,
+  homepage_FullBG,
 } from "../../assets";
 
 // import "./Home.css";
@@ -21,19 +22,21 @@ const Home = () => {
       <>
         {/* <img src={home_directory_LHSGraphic} className="figure1" /> */}
         <div className="home-slide-content pure-g">
-          <div className="home-slide-left pure-u-1-2">
+          <div className="home-slide-left pure-u-1 pure-u-md-1-2">
             <h1 className="dir-h1">DIRECTORY</h1>
             <p className="dir-p">
-             <b> Find the right therapist, counsellor, or psychologist for
-              yourself. Visit our catalogue of mental health professionals and
-              use our filters to create your shortlist!
+              <b>
+                {" "}
+                Find the right therapist, counsellor, or psychologist for
+                yourself. Visit our catalogue of mental health professionals and
+                use our filters to create your shortlist!
               </b>
             </p>
             <button className="dir-btn">
               <Link to="/directory">VISIT</Link>
             </button>
           </div>
-          <div className="home-slide-right pure-u-1-2 home-slide-right-directory">
+          <div className="home-slide-right pure-u-0 pure-u-md-1-2 home-slide-right-directory">
             <img src={home_directory_MainIllustration} className="pure-img" />
           </div>
         </div>
@@ -44,20 +47,20 @@ const Home = () => {
       "home-blog",
       <>
         <div className="home-slide-content pure-g">
-          <div className="home-slide-left pure-u-1-2">
+          <div className="home-slide-left pure-u-1 pure-u-md-1-2">
             <h1 className="blog-h1">BLOG</h1>
             <p className="blog-p">
               <b>
-              Go through our curation of articles pertaining to availing mental
-              healthcare, making the most of your experience with your chose
-              professional, and more.
+                Go through our curation of articles pertaining to availing
+                mental healthcare, making the most of your experience with your
+                chose professional, and more.
               </b>
             </p>
             <button className="blog-btn">
               <Link to="/blog">VISIT</Link>
             </button>
           </div>
-          <div className="home-slide-right pure-u-1-2 home-slide-right-blog">
+          <div className="home-slide-right pure-u-0 pure-u-md-1-2 home-slide-right-blog">
             <img src={home_blog_MainIllustration} className="pure-img" />
           </div>
         </div>
@@ -69,22 +72,22 @@ const Home = () => {
       <>
         <img src={home_donor_LHSPuzzle} className="figure1" />
         <div className="home-slide-content home-slide-content-donor pure-g">
-          <div className="home-slide-left  pure-u-1-2">
+          <div className="home-slide-left pure-u-1 pure-u-md-1-2">
             <h1 className="donor-h1">
               ASSIST<sup>BETA</sup>
             </h1>
             <p className="donor-p">
               <b>
-              Find out more about how you can help us (or seek help from us) via
-              our mission to help students/young-professionals avail mental
-              healthcare.
+                Find out more about how you can help us (or seek help from us)
+                via our mission to help students/young-professionals avail
+                mental healthcare.
               </b>
             </p>
             <button className="donor-btn">
               <Link to="/donor">VISIT</Link>
             </button>
           </div>
-          <div className="home-slide-right pure-u-1-2 home-slide-right-donor">
+          <div className="home-slide-right pure-u-0 pure-u-md-1-2 home-slide-right-donor">
             <img src={home_donor_MainIllustration} className="pure-img" />
           </div>
         </div>
@@ -107,7 +110,7 @@ const Home = () => {
 
   useEffect(() => {
     // For automatic slide increment
-    const interval = setInterval(incrementSlide, 10000);
+    const interval = setInterval(incrementSlide, 1000000);
 
     // It ensures that as soon as component is unmounted interval is cleared
     return () => clearInterval(interval);
@@ -116,7 +119,14 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-art">
-        <img src={home_FullBGWithText} alt="Art" />
+        <img src={homepage_FullBG} alt="Art" className="pur-img" />
+        <div className="home-art-text">
+          eliminating the uncertainties from
+          <br />
+          your visit to a mental health
+          <br />
+          professional
+        </div>
       </div>
 
       <div

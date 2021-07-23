@@ -4,6 +4,7 @@ import { siteLogo } from "../../assets";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const navbarLogo = useRef();
   const navbar = useRef();
   const navListLogo = useRef();
 
@@ -11,24 +12,21 @@ const Navbar = () => {
     let sticky = navbar.current.offsetTop;
 
     document.addEventListener("scroll", (event) => {
-      // console.log(navbar);
-
-      // const logoTop = document.getElementsByClassName("navbar-logo")[0];
       if (window.pageYOffset >= sticky) {
         navbar.current.classList.add("sticky");
-        // logoTop.style.display = "none";
         navListLogo.current.style.display = "block";
+        // navbarLogo.current.style.display = "none";
       } else {
-        // logoTop.style.display = "block";
         navbar.current.classList.remove("sticky");
         navListLogo.current.style.display = "none";
+        // navbarLogo.current.style.display = "block";
       }
     });
   }, []);
 
   return (
     <>
-      <div className="navbar-logo">
+      <div className="navbar-logo" ref={navbarLogo}>
         <Link to="/">
           <img src={siteLogo}></img>
         </Link>
