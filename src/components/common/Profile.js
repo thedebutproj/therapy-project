@@ -52,6 +52,7 @@ const Profile = () => {
     email: "",
     location: "",
     workingTime: "",
+    scheduling: "",
     notesOnAvailability: "",
     medium: "",
     calender: "",
@@ -132,6 +133,7 @@ const Profile = () => {
         location: rowData["Location"],
         workingTime: rowData["Hours of Availability"],
         notesOnAvailability: rowData["Notes on Availability"],
+        scheduling: rowData["Scheduling"],
         medium: rowData["Medium"],
         calender: rowData["Scheduling - Calendar Icon"],
         typicalSessionCost: rowData["Typical Session Cost"],
@@ -160,7 +162,7 @@ const Profile = () => {
         var detailsoffsety=detailsElement.offsetTop+40;
         document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
   
-        var sessionoffsety=sessionElement.offsetTop+40;
+        var sessionoffsety=sessionElement.offsetTop+20;
         document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
   
         var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
@@ -432,7 +434,7 @@ const Profile = () => {
                 </div>
                 <div className="profile-schedule">
                   <h1>SCHEDULING-</h1>
-                  <p>Phone, Whatsapp, Email</p>
+                  <p>{user.Scheduling}</p>
                   <div className="profile-schedule-calender">
                     <a class="calender-icon-info" href={user.calender}>
                     <img  src={profile_Section_ScheduleIcon} alt="" />

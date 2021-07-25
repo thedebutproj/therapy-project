@@ -385,16 +385,16 @@
 }
 
 .center-line-images-one img:nth-of-type(1) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 40vh;
     left: 48.5vw;
 }
 
 .center-line-images-one img:nth-of-type(2) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 56vh;
     right: 47.5vw;
@@ -402,16 +402,16 @@
 }
 
 .center-line-images-one img:nth-of-type(3) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 80vh;
     left: 48.5vw;
 }
 
 .center-line-images-one img:nth-of-type(4) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 132vh;
     right: 47.5vw;
@@ -419,8 +419,8 @@
 }
 
 .center-line-images-one img:nth-of-type(5) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 172vh;
     left: 48.5vw;
@@ -683,6 +683,60 @@
     left: -6%;
 }
 
+@media only screen and (max-width:1600px) {
+    .center-line-images-one img:nth-of-type(1) {
+        left: 49.5vw;
+    }
+    .center-line-images-one img:nth-of-type(2) {
+        right: 47vw;
+    }
+    .center-line-images-one img:nth-of-type(3) {
+        left: 49.5vw;
+    }
+    .center-line-images-one img:nth-of-type(4) {
+        right: 47vw;
+    }
+    .center-line-images-one img:nth-of-type(5) {
+        left: 49.5vw;
+    }
+}
+
+@media only screen and (max-width:1400px) {
+    .center-line-images-one img:nth-of-type(1) {
+        left: 50vw;
+    }
+    .center-line-images-one img:nth-of-type(2) {
+        right: 46vw;
+    }
+    .center-line-images-one img:nth-of-type(3) {
+        left: 50vw;
+    }
+    .center-line-images-one img:nth-of-type(4) {
+        right: 46vw;
+    }
+    .center-line-images-one img:nth-of-type(5) {
+        left: 50vw;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .center-line-images-one img:nth-of-type(1) {
+        left: 50.5vw;
+    }
+    .center-line-images-one img:nth-of-type(2) {
+        right: 45vw;
+    }
+    .center-line-images-one img:nth-of-type(3) {
+        left: 50.5vw;
+    }
+    .center-line-images-one img:nth-of-type(4) {
+        right: 45vw;
+    }
+    .center-line-images-one img:nth-of-type(5) {
+        left: 50.5vw;
+    }
+}
+
 @media only screen and (max-width:1200px) {
     .profile-header-container {
         flex-direction: column;
@@ -859,7 +913,6 @@
         position: absolute;
         left: 49vw;
         top: 40vh;
-        /* height: 120%; */
     }
     .center-line-images-one {
         margin: auto;
