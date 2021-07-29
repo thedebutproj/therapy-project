@@ -524,6 +524,7 @@ const Profile = () => {
           <div className="profile-body-two">
             <div id="profile-background-main">
             <img id="background-tape" class="tapes" src={profile_Section_AddInfoTape} alt="" />
+            <img id="background-tape-2" class="tapes" src={profile_Section_AddInfoTape} alt="" />
               <div className="profile-affiliations" id="profileAffiliations">
                 <h1>AFFILIATIONS-</h1>
                 <p>{user.affiliations}</p>
