@@ -276,8 +276,8 @@
 }
 
 .profile-days img {
-    height: 5vh;
-    width: 3vw;
+    height: 30px;
+    width: 30px;
     margin: 0px 4px;
 }
 
@@ -385,16 +385,16 @@
 }
 
 .center-line-images-one img:nth-of-type(1) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 40vh;
     left: 48.5vw;
 }
 
 .center-line-images-one img:nth-of-type(2) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 56vh;
     right: 47.5vw;
@@ -402,16 +402,16 @@
 }
 
 .center-line-images-one img:nth-of-type(3) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 80vh;
     left: 48.5vw;
 }
 
 .center-line-images-one img:nth-of-type(4) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 132vh;
     right: 47.5vw;
@@ -419,8 +419,8 @@
 }
 
 .center-line-images-one img:nth-of-type(5) {
-    height: 64px;
-    width: 100px;
+    height: 56px;
+    width: 88px;
     position: absolute;
     top: 172vh;
     left: 48.5vw;
@@ -683,6 +683,64 @@
     left: -6%;
 }
 
+#background-tape-2 {
+    display: none;
+}
+
+@media only screen and (max-width:1600px) {
+    .center-line-images-one img:nth-of-type(1) {
+        left: 49.5vw;
+    }
+    .center-line-images-one img:nth-of-type(2) {
+        right: 47vw;
+    }
+    .center-line-images-one img:nth-of-type(3) {
+        left: 49.5vw;
+    }
+    .center-line-images-one img:nth-of-type(4) {
+        right: 47vw;
+    }
+    .center-line-images-one img:nth-of-type(5) {
+        left: 49.5vw;
+    }
+}
+
+@media only screen and (max-width:1400px) {
+    .center-line-images-one img:nth-of-type(1) {
+        left: 50vw;
+    }
+    .center-line-images-one img:nth-of-type(2) {
+        right: 46vw;
+    }
+    .center-line-images-one img:nth-of-type(3) {
+        left: 50vw;
+    }
+    .center-line-images-one img:nth-of-type(4) {
+        right: 46vw;
+    }
+    .center-line-images-one img:nth-of-type(5) {
+        left: 50vw;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .center-line-images-one img:nth-of-type(1) {
+        left: 50.5vw;
+    }
+    .center-line-images-one img:nth-of-type(2) {
+        right: 45vw;
+    }
+    .center-line-images-one img:nth-of-type(3) {
+        left: 50.5vw;
+    }
+    .center-line-images-one img:nth-of-type(4) {
+        right: 45vw;
+    }
+    .center-line-images-one img:nth-of-type(5) {
+        left: 50.5vw;
+    }
+}
+
 @media only screen and (max-width:1200px) {
     .profile-header-container {
         flex-direction: column;
@@ -741,10 +799,6 @@
         margin: 10px auto;
         width: 50vw;
     }
-    #contact-tape {
-        top: -20px;
-        height: 40%;
-    }
     .profile-contact h1 {
         padding-top: 30px;
         font-size: 30px;
@@ -773,9 +827,6 @@
         padding-bottom: 16px;
         width: 65vw;
     }
-    #time-tape {
-        height: 22%;
-    }
     .profile-office-hours {
         margin-top: 50px;
     }
@@ -794,8 +845,8 @@
         margin: 6px auto;
     }
     .profile-days img {
-        height: 4vh;
-        width: 3vw;
+        height: 28px;
+        width: 28px;
         margin: 0px 3px;
     }
     .profile-working-days h1 {
@@ -836,11 +887,6 @@
         margin-top: 8vh;
         padding: 8px;
     }
-    #typical-session-tape {
-        height: 24%;
-        width: 115%;
-        left: -7%;
-    }
     .profile-typical-session-fees {
         margin-top: 30px;
     }
@@ -856,18 +902,21 @@
         max-width: 320px;
     }
     .profile-body-one-middle {
+        position: absolute;
+        left: 49vw;
+        top: 40vh;
+    }
+    .center-line-images-one {
+        margin: auto;
+        height: 180%;
+    }
+    .profile-body-one-middle img {
         display: none;
     }
     #profile-details-main {
         margin: 30px auto;
         padding-bottom: 16px;
         width: 55vw;
-    }
-    #qualification-tape {
-        height: 28%;
-        top: -30px;
-        width: 112%;
-        left: -24px;
     }
     .profile-qualification h1 {
         padding-top: 30px;
@@ -913,9 +962,6 @@
         padding-bottom: 16px;
         width: 50vw;
     }
-    #first-session-tape {
-        height: 40%;
-    }
     .profile-first-session h1 {
         padding-top: 30px;
         margin-top: 36px;
@@ -941,10 +987,6 @@
         padding-bottom: 16px;
         padding-top: 20px;
         margin-bottom: 40px;
-    }
-    #background-tape {
-        height: 100px;
-        top: -30px;
     }
     .profile-affiliations h1 {
         font-size: 28px;
@@ -992,6 +1034,38 @@
     #myBtn:hover {
         padding: 6px;
     }
+    #contact-tape {
+        top: -20px;
+        height: 45%;
+    }
+    #time-tape {
+        height: 28%;
+    }
+    #typical-session-tape {
+        height: 26%;
+        width: 115%;
+        left: -7%;
+    }
+    #qualification-tape {
+        height: 30%;
+        top: -30px;
+        width: 112%;
+        left: -6%;
+    }
+    #first-session-tape {
+        top: -15%;
+        height: 50%;
+    }
+    #background-tape {
+        display: none;
+    }
+    #background-tape-2 {
+        display: block;
+        top: -6%;
+        width: 106%;
+        left: -2.6%;
+        height: 100px;
+    }
 }
 
 @media only screen and (max-width:700px) {
@@ -999,6 +1073,68 @@
         width: 300px;
     }
     .profile-days img {
-        width: 4vw;
+        width: 24px;
+        height: 24px;
+    }
+    #contact-tape {
+        height: 40%;
+    }
+    #time-tape {
+        height: 22%;
+    }
+    #typical-session-tape {
+        height: 22%;
+    }
+    #qualification-tape {
+        height: 26%;
+    }
+    #first-session-tape {
+        top: -10%;
+        height: 37%;
+    }
+    #background-tape-2 {
+        height: 80px;
+        top: -4%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #contact-tape {
+        height: 35%;
+    }
+    #time-tape {
+        height: 20%;
+    }
+    #typical-session-tape {
+        height: 20%;
+    }
+    #qualification-tape {
+        height: 24%;
+    }
+    #background-tape-2 {
+        top: -1%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .profile-days img {
+        width: 23px;
+        height: 23px;
+    }
+    #contact-tape {
+        height: 30%;
+    }
+    #time-tape {
+        top: -4%;
+        height: 16%;
+    }
+    #typical-session-tape {
+        height: 16%;
+    }
+    #qualification-tape {
+        height: 20%;
+    }
+    #first-session-tape {
+        height: 32%;
     }
 }

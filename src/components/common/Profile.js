@@ -52,6 +52,7 @@ const Profile = () => {
     email: "",
     location: "",
     workingTime: "",
+    scheduling: "",
     notesOnAvailability: "",
     medium: "",
     calender: "",
@@ -113,12 +114,6 @@ const Profile = () => {
       "profile-background-main"
     );
     fetchSheetRow(0, id).then((rowData) => {
-     
-      // const centerLineElement=document.getElementsByClassName("profile-body-one-middle");
-
-      // console.log(rowData["Affiliations"]);
-      // console.log(affiliationElement);
-
 
       setUser({
         ...user,
@@ -132,6 +127,7 @@ const Profile = () => {
         location: rowData["Location"],
         workingTime: rowData["Hours of Availability"],
         notesOnAvailability: rowData["Notes on Availability"],
+        scheduling: rowData["Scheduling"],
         medium: rowData["Medium"],
         calender: rowData["Scheduling - Calendar Icon"],
         typicalSessionCost: rowData["Typical Session Cost"],
@@ -150,7 +146,7 @@ const Profile = () => {
       setTimeout(() => {
         var contactoffsety=contactElement.offsetTop+40;
         document.getElementsByClassName("center-line-images-one-img")[0].style.top=contactoffsety+"px";
-  
+
         var timeoffsety=timeElement.offsetTop+40;
         document.getElementsByClassName("center-line-images-one-img")[2].style.top=timeoffsety+"px";
   
@@ -160,7 +156,7 @@ const Profile = () => {
         var detailsoffsety=detailsElement.offsetTop+40;
         document.getElementsByClassName("center-line-images-one-img")[1].style.top=detailsoffsety+"px";
   
-        var sessionoffsety=sessionElement.offsetTop+40;
+        var sessionoffsety=sessionElement.offsetTop+20;
         document.getElementsByClassName("center-line-images-one-img")[3].style.top=sessionoffsety+"px";
   
         var centerlineoffsetheight=Math.max(typicalSessionElement.offsetTop+typicalSessionElement.offsetHeight,sessionElement.offsetTop+sessionElement.offsetHeight)-200;
@@ -260,6 +256,43 @@ const Profile = () => {
     
   }, []);
 
+  
+  const tocontact = () => {
+    const contactElement = document.getElementById("profile-contact-main");
+    var poscontact=contactElement.offsetTop-70;
+    window.scrollTo(0, poscontact);
+  };
+  
+  const totime = () => {
+    const contactElement = document.getElementById("profile-time-main");
+    var poscontact=contactElement.offsetTop-70;
+    window.scrollTo(0, poscontact);
+  };
+
+  const todetails = () => {
+    const contactElement = document.getElementById("profile-details-main");
+    var poscontact=contactElement.offsetTop-70;
+    window.scrollTo(0, poscontact);
+  };
+
+  const tosession = () => {
+    const contactElement = document.getElementById("profile-session-main");
+    var poscontact=contactElement.offsetTop-70;
+    window.scrollTo(0, poscontact);
+  };
+
+  const tofees = () => {
+    const contactElement = document.getElementById("profile-typical-session-fees-main");
+    var poscontact=contactElement.offsetTop-70;
+    window.scrollTo(0, poscontact);
+  };
+
+  const tobackground = () => {
+    const contactElement = document.getElementById("profile-background-main");
+    var poscontact=contactElement.offsetTop-70;
+    window.scrollTo(0, poscontact);
+  };
+  
   const handleDropdown = () => {
     const element = document.getElementById("dropdownID");
     const buttonElement = document.getElementById("jump-to-ID");
@@ -347,27 +380,30 @@ const Profile = () => {
                 ></ion-icon>
               </button>
               <div>
-                <a href="#profile-contact-main">
+                {/* <button onClick={tocontact}> */}
+                <a onClick={tocontact}>
                   <div></div>
                   <p>Contact</p>
                 </a>
-                <a href="#profile-details-main">
+                {/* </button> */}
+                
+                <a onClick={todetails}>
                   <div></div>
                   <p>Background</p>
                 </a>
-                <a href="#profile-time-main">
+                <a onClick={totime}>
                   <div></div>
                   <p>Schedule</p>
                 </a>
-                <a href="#profile-session-main">
+                <a onClick={tosession}>
                   <div></div>
                   <p>Sessions</p>
                 </a>
-                <a href="#profile-typical-session-fees-main">
+                <a onClick={tofees}>
                   <div></div>
                   <p>Pricing</p>
                 </a>
-                <a href="#profile-background-main">
+                <a onClick={tobackground}>
                   <div></div>
                   <p>Additional Info</p>
                 </a>
@@ -432,7 +468,7 @@ const Profile = () => {
                 </div>
                 <div className="profile-schedule">
                   <h1>SCHEDULING-</h1>
-                  <p>Phone, Whatsapp, Email</p>
+                  <p>{user.Scheduling}</p>
                   <div className="profile-schedule-calender">
                     <a class="calender-icon-info" href={user.calender}>
                     <img  src={profile_Section_ScheduleIcon} alt="" />
@@ -522,6 +558,7 @@ const Profile = () => {
           <div className="profile-body-two">
             <div id="profile-background-main">
             <img id="background-tape" class="tapes" src={profile_Section_AddInfoTape} alt="" />
+            <img id="background-tape-2" class="tapes" src={profile_Section_AddInfoTape} alt="" />
               <div className="profile-affiliations" id="profileAffiliations">
                 <h1>AFFILIATIONS-</h1>
                 <p>{user.affiliations}</p>
