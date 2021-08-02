@@ -17,7 +17,7 @@ const Blog = () => {
   return (
     <div className="blog-container">
       {blogData == undefined ? (
-        <h1 className="loading">...Loading</h1>
+        <h1 className="loading">Loading...</h1>
       ) : (
         <>
           {/* <div className="blog-lhsPatch">

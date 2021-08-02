@@ -1,3 +1,7 @@
+.navbar-container {
+  position: relative;
+}
+
 .navbar-logo {
   height: 10vh;
   background-color: var(--color5);
@@ -64,14 +68,75 @@ nav li a {
   margin-top: 10vh;
 }
 
-/* nav li a:hover {
-  background-color: rgb(177, 167, 167);
-  transition: 0.2s ease;
-  color: black;
-} */
+.navbar-menu-container {
+  display: none;
+  position: absolute;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  top: 1vh;
+  right: 0;
+  z-index: 100;
+  background-color: var(--color5);
+  border-bottom-left-radius: 15px;
+}
 
-@media only screen and (max-width: 640px) {
+.navbar-menu-icon-container {
+  display: block;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.navbar-menu-list {
+  display: none;
+  width: 50vw;
+  list-style: none;
+  color: var(--color6);
+}
+
+.navbar-menu-list li {
+  margin-bottom: 1rem;
+}
+
+.navbar-menu-list li a {
+  color: var(--color6);
+  font-family: var(--font2);
+  text-decoration: none;
+}
+
+.navbar-menu-icon-bar1,
+.navbar-menu-icon-bar2,
+.navbar-menu-icon-bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: var(--color2);
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.navbar-menu-icon-change .navbar-menu-icon-bar1 {
+  -webkit-transform: rotate(45deg) translateY(12px);
+  transform: rotate(45deg) translateY(13px);
+}
+
+/* Fade out the second bar */
+.navbar-menu-icon-change .navbar-menu-icon-bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.navbar-menu-icon-change .navbar-menu-icon-bar3 {
+  -webkit-transform: rotate(-45deg) translateY(-12px);
+  transform: rotate(-45deg) translateY(-13px);
+}
+
+@media only screen and (max-width: 48em) {
   nav {
     display: none;
+  }
+  .navbar-menu-container {
+    display: block;
   }
 }

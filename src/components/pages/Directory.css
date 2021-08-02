@@ -7,6 +7,10 @@
   /* height: 90vh; */
 }
 
+.directory-small-screen-heading {
+  display: none;
+}
+
 .directory-container .lhsPatch {
   position: absolute;
   z-index: 1;
@@ -144,7 +148,7 @@
 
 /* ">" is used so this css only apply to direct child*/
 
-.directory-right > ul {
+.directory-filter-container > ul {
   list-style: none;
   margin-top: 30px;
   padding-left: 5.5rem;
@@ -156,20 +160,42 @@
   padding-left: 5.5rem;
 }
 
-.directory-input-field input {
+.directory-input-search-container {
+  height: 100%;
+}
+
+.directory-input-search-container > input {
+  height: 100%;
+  text-indent: 0.5em;
   border: 2px solid var(--color2);
   border-radius: 10px;
   margin-right: 10px;
 }
 
-.directory-input-field input:focus {
+.directory-input-search-container > input:focus {
   outline: none;
   border: 2px solid var(--color2);
+}
+
+.directory-input-search-container > img {
+  display: none;
+}
+
+.directory-input-field-container > hr {
+  display: none;
+}
+
+.directory-input-field-container > ul {
+  display: none;
 }
 
 .directory-input-field img {
   width: 32px;
   cursor: pointer;
+}
+
+.directory-input-field > ion-icon {
+  display: none;
 }
 
 .directory-filter-heading {
@@ -289,4 +315,156 @@
   background-color: white;
   border: 0.1rem solid var(--color2);
   border-radius: 10%;
+}
+
+@media only screen and (max-width: 48em) {
+  .directory-container {
+    flex-direction: column;
+  }
+
+  .directory-small-screen-heading {
+    display: block;
+    z-index: 1;
+    color: var(--color2);
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px black;
+  }
+
+  .directory-heading {
+    display: none;
+  }
+
+  .directory-left {
+    order: 2;
+  }
+
+  .directory-left ul {
+    margin-top: 2rem;
+  }
+
+  .directory-left .directory-redLine {
+    left: 20%;
+    height: 75vh;
+  }
+
+  .directory-right {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .directory-container .lhsPatch {
+    width: 60%;
+    height: auto;
+  }
+
+  .directory-container .rhsPatch {
+    width: 60%;
+    height: auto;
+    /* bottom: 90vh; */
+    top: 0;
+    transform: rotateX(180deg);
+  }
+
+  .directory-search-heading .directory-right-spiral {
+    display: none;
+  }
+
+  .directory-search-heading p {
+    margin-top: 0;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .directory-input-field {
+    padding: 0 1.5rem;
+    justify-content: space-between;
+  }
+
+  .directory-input-field-container {
+    width: 70vw;
+    position: relative;
+    background-color: white;
+    border: 0.2rem solid var(--color2);
+    border-radius: 20px;
+  }
+
+  .directory-input-search-container {
+    display: flex;
+    height: auto;
+  }
+
+  .directory-input-search-container > input {
+    /* flex: 1; */
+    font-size: 1.3em;
+    width: 100%;
+    height: 2.2rem;
+    border: none;
+    border-radius: 20px;
+    /* background-image: url("../../assets/directory/directory_SearchIcon.png"); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    margin-right: 0;
+  }
+
+  .directory-input-search-container > input:focus {
+    border: none;
+  }
+
+  .directory-input-search-container > img {
+    display: block;
+  }
+
+  .directory-input-field-container > hr {
+    display: none;
+    margin: 0 0.5rem;
+    border: 2px solid var(--color2);
+  }
+
+  .directory-input-field-container > ul {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0;
+  }
+
+  .directory-filter-open {
+    color: white;
+    border: none;
+    border-radius: 0;
+    background-color: var(--color2);
+  }
+
+  .directory-filter-open ion-icon {
+    color: white;
+  }
+
+  .directory-input-field > img {
+    display: none;
+  }
+
+  .directory-input-field > ion-icon {
+    display: block;
+    font-size: 32px;
+    color: white;
+    background-color: var(--color2);
+    border-radius: 10px;
+    padding: 2px;
+  }
+
+  .directory-filter-container > ul {
+    display: none;
+  }
+
+  .directory-checkbox-control {
+    background-color: var(--color2);
+    border: 2px solid white;
+  }
+
+  .directory-checkbox-input input:checked + .directory-checkbox-control {
+    background: radial-gradient(white 50%, var(--color2) 51%);
+  }
 }
