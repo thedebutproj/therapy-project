@@ -35,7 +35,7 @@ const Footer = () => {
               <a href="#"></a>
             </ion-icon> */}
 
-            <a href="#">
+            <a href="https://www.facebook.com/thedebutproj/">
               {" "}
               <img src={footer_facebook} />
             </a>
@@ -44,7 +44,7 @@ const Footer = () => {
             {/* <ion-icon name="logo-instagram">
               <a href="#"></a>
             </ion-icon> */}
-            <a href="#">
+            <a href="https://www.instagram.com/thedebutproj/">
               {" "}
               <img src={footer_instagram} />
             </a>
@@ -53,7 +53,7 @@ const Footer = () => {
             {/* <ion-icon name="logo-linkedin">
               <a href="#"></a>
             </ion-icon> */}
-            <a href="#">
+            <a href="https://www.linkedin.com/company/thedebutproject">
               {" "}
               <img src={footer_linkedIn} />
             </a>

@@ -83,9 +83,6 @@ body {
     flex-direction: column;
 }
 
-
-/* asocgejkcowv */
-
 .what-can-you-do-heading p {
     text-align: center;
     color: white;
@@ -282,11 +279,11 @@ input#donate {
 }
 
 @media only screen and (max-width: 900px) {
-    .donor-benefits-heading {
-        display: none;
+    .donor-benefits-heading p {
+        font-size: 56px;
     }
     .donor-benefits-content {
-        margin-top: 80px;
+        margin-top: 20px;
     }
     .donor-benefits-content img {
         top: -3%;
