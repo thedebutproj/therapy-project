@@ -118,6 +118,7 @@
 }
 
 .contactus-right .figure3_lines {
+    display: none;
     position: absolute;
     width: 20%;
     height: 20%;
@@ -131,6 +132,7 @@
     position: relative;
     z-index: 10;
     padding: 5rem;
+    padding-bottom: 2rem;
 }
 
 
@@ -146,6 +148,7 @@
 
 .contactus-right-text h2 {
     margin-top: 0px;
+    text-align: center;
     text-decoration: underline;
     font-size: 30px;
     font-weight: 500;
@@ -160,6 +163,10 @@
     line-height: 2.2;
     font-size: 18px;
     font-weight: bold;
+}
+
+.contactus-right-text li:nth-of-type(3) {
+    font-weight: normal;
 }
 
 .contactus-right-text li a {

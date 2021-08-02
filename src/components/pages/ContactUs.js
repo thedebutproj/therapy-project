@@ -28,11 +28,9 @@ function ContactUs() {
         <img src={contactUs_LHSPatch}></img>
       </div>
       <div className="contactus-text">
-        <h1 className="contactus-heading">Contact Us</h1>
+        <h1 className="contactus-heading">CONTACT US</h1>
         <p>
-          Do you have an idea or social enterprise you think we need to know
-          about? Got any questions regarding our work or process? Are you
-          interested in working or interning with us? Get in touch.
+        The Debut Project is geared towards potential first-time professional help seekers looking to manage their mental health. If you are interested to know more about us, would like to share any feedback, or even work with us on our mission, please drop a message via the form below! 
         </p>
 
         <div className="contactus-form-container">
@@ -77,24 +75,35 @@ function ContactUs() {
             <img src={contactUs_LinesGraphic} className="figure3_lines"></img>
 
             <div className="contactus-right-text">
-              <h2>Please contact us for more information</h2>
+              <h2>You can also reach out to us 
+                <br />
+                via the following means -</h2>
               <ul>
                 <li>
-                  Email: <a href="#">thedebut@gmail.com</a>{" "}
+                  Email: <a href="#">thedebutproj@gmail.com</a>{" "}
                 </li>
                 <li>
-                  Phone: <a href="#">+91 98 7654 3210</a>{" "}
+                  Phone: <a href="#">+91 7218583843</a>{" "}
                 </li>
-                <li>
+                {/* <li>
                   Fax: <a href="#"> +91 98 7654 3210</a>
-                </li>
+                </li> */}
                 <li>
-                  Address:{" "}
-                  <a href="#">
+                We request 24 to 48 hours to get back to you. 
+                <br />
+                <br />
+                <a href="#">
+
+                
+                - Please note that this is not an emergency mental health service, and we advise you to click on the "Helplines" link at the foot of this webpage if you require immediate assistance.
+                <br />
+                - If you are a mental health professional looking to be listed on our website, please click on the "For Mental Health Professionals" option at the foot of the webpage.{" "}
+                  {/* <a href="#">
                     {" "}
                     Block A, 4th Floor, Phoenix Primea (Red Brick Building),
                     Plot No - 40 & 41, Financial District, Beside IRDA,
                     Gachibowli, Hyderabad – 500032, Telangana, India.
+                  </a> */}
                   </a>
                 </li>
               </ul>

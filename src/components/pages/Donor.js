@@ -12,7 +12,7 @@ const Donor = () => {
       <div className="donor-main-container">
         <div id="donor-benefits">
           <div className="donor-benefits-heading">
-            <p> Assist<sup>BETA</sup></p>
+            <p> ASSIST<sup>BETA</sup></p>
           </div>
           <div className="donor-benefits-content">
             {/* <img src={donor_BenefitsDetails} alt="" /> */}
@@ -83,7 +83,7 @@ const Donor = () => {
         <div id="donor-register-form">
           <div className="donor-register-form-left">
             <div className="donor-register-form-heading">
-              <h1>Register your Interest Below</h1>
+              <h1>Register Your Interest Below</h1>
             </div>
             <div className="donor-register-form-fill">
               <form id="main-form" action="" method="post">
