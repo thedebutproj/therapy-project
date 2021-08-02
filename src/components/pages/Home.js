@@ -110,7 +110,7 @@ const Home = () => {
 
   useEffect(() => {
     // For automatic slide increment
-    const interval = setInterval(incrementSlide, 1000000);
+    const interval = setInterval(incrementSlide, 5000);
 
     // It ensures that as soon as component is unmounted interval is cleared
     return () => clearInterval(interval);
@@ -119,7 +119,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-art">
-        <img src={homepage_FullBG} alt="Art" className="pur-img" />
+        <img src={homepage_FullBG} alt="Art" className="pure-img" />
         <div className="home-art-text">
           eliminating the uncertainties from
           <br />

@@ -64,7 +64,7 @@ nav li a {
   background-color: var(--color7);
 }
 
-.sticky + div {
+.nav-sticky + div {
   margin-top: 10vh;
 }
 
@@ -75,7 +75,7 @@ nav li a {
   padding-right: 1rem;
   top: 1vh;
   right: 0;
-  z-index: 100;
+  z-index: 101;
   background-color: var(--color5);
   border-bottom-left-radius: 15px;
 }
@@ -135,7 +135,17 @@ nav li a {
 @media only screen and (max-width: 48em) {
   nav {
     display: none;
+    justify-content: flex-start;
   }
+
+  nav li:first-child {
+    margin-left: 1rem;
+  }
+
+  nav li:not(:first-child) {
+    display: none;
+  }
+
   .navbar-menu-container {
     display: block;
   }

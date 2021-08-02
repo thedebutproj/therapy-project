@@ -8,6 +8,8 @@ const Navbar = () => {
   const navbar = useRef();
   const navListLogo = useRef();
 
+  const navbarContainer = useRef();
+
   const navbarMenu = useRef();
   const navbarMenuIcon = useRef();
   const navbarMenuList = useRef();
@@ -33,17 +35,39 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    let sticky = navbar.current.offsetTop;
+    // const sticky = navbar.current.offsetTop;
+    const sticky =
+      navbarLogo.current.offsetTop + navbarLogo.current.offsetHeight;
+
+    window.addEventListener("resize", (e) => {
+      if (window.screen.width <= 768) {
+        navbar.current.style.display = "none";
+      } else {
+        navbar.current.style.display = "flex";
+      }
+    });
 
     document.addEventListener("scroll", (e) => {
       if (window.pageYOffset >= sticky) {
+        navbarContainer.current.classList.add("nav-sticky");
         navbar.current.classList.add("sticky");
-        navListLogo.current.style.display = "block";
-        // navbarLogo.current.style.display = "none";
+
+        if (window.screen.width <= 768) {
+          navbar.current.style.display = "flex";
+          navListLogo.current.style.display = "block";
+          navbarMenu.current.style.backgroundColor = "white";
+          navbarMenu.current.style.position = "fixed";
+        }
       } else {
+        navbarContainer.current.classList.remove("nav-sticky");
         navbar.current.classList.remove("sticky");
         navListLogo.current.style.display = "none";
-        // navbarLogo.current.style.display = "block";
+
+        if (window.screen.width <= 768) {
+          navbar.current.style.display = "none";
+          navbarMenu.current.style.position = "absolute";
+          navbarMenu.current.style.backgroundColor = "var(--color5)";
+        }
       }
     });
 
@@ -58,7 +82,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar-container">
+    <div className="navbar-container" ref={navbarContainer}>
       <div className="navbar-logo" ref={navbarLogo}>
         <Link to="/">
           <img src={siteLogo}></img>
