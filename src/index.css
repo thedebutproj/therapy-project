@@ -46,10 +46,10 @@ code {
 /* For styling the scrollbar in mozilla firefox */
 html {
   scrollbar-color: var(--color2) var(--color5); /*thumb and track color*/
-  scrollbar-width: 20px;
+  scrollbar-width: 12px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 48em) {
   ::-webkit-scrollbar {
     display: none;
   }

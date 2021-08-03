@@ -10,7 +10,10 @@ const Footer = () => {
     <footer>
       <div className="footer-left">
         <ul>
-          <li> Work With Us </li>
+          <li>
+            {" "}
+            <a href="/termsandprivacy">Terms of Use/Privacy Policy</a>{" "}
+          </li>
           <li>
             {" "}
             <a href="https://forms.gle/mqz9vPZVs1Sx5Cv89">

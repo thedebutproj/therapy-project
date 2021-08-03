@@ -119,3 +119,11 @@
   padding: 0;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 48em) {
+  .blog-list::-webkit-scrollbar {
+    display: block;
+    -ms-overflow-style: block; /* IE and Edge */
+    scrollbar-width: 12px; /* Firefox */
+  }
+}

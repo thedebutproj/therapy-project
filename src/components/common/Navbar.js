@@ -51,10 +51,10 @@ const Navbar = () => {
       if (window.pageYOffset >= sticky) {
         navbarContainer.current.classList.add("nav-sticky");
         navbar.current.classList.add("sticky");
+        navListLogo.current.style.display = "block";
 
         if (window.screen.width <= 768) {
           navbar.current.style.display = "flex";
-          navListLogo.current.style.display = "block";
           navbarMenu.current.style.backgroundColor = "white";
           navbarMenu.current.style.position = "fixed";
         }

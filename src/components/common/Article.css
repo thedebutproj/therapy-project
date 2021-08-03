@@ -1,6 +1,6 @@
 .article-container {
   background-color: #b0bfc2;
-  padding: 2rem;
+  padding: 2rem 4rem;
 }
 
 .article-container .loading {
@@ -18,4 +18,9 @@
 
 .article-author {
   text-shadow: 2px 2px 0px white;
+}
+
+.article-content img {
+  height: auto;
+  max-width: 100%;
 }

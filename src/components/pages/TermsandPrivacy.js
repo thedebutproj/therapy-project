@@ -21,9 +21,9 @@ const TermsandPrivacy = () => {
   }, []);
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div style={{ padding: "2rem 4rem" }}>
       {termsContent == undefined ? (
-        <h1 className="loading">...Loading</h1>
+        <h1 className="loading">Loading...</h1>
       ) : (
         <></>
       )}
