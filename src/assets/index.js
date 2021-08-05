@@ -15,6 +15,7 @@ import contactUS from "./contactUs/contactUs.png";
 import contactUs_LHSPatch from "./contactUs/contactUs_LHSPatch.png";
 import contactUs_LinesGraphic from "./contactUs/contactUs_LinesGraphic.png";
 import contactUs_PostIt from "./contactUs/contactUs_PostIt.png";
+import contactUs_Tape from "./contactUs/contactUs_Tape.png";
 
 // Home imports
 import homepage_FullBG from "./home/homepage_FullBG.png";
@@ -95,6 +96,7 @@ export {
   contactUs_LHSPatch,
   contactUs_PostIt,
   contactUs_LinesGraphic,
+  contactUs_Tape,
   homepage_FullBG,
   home_FullBGWithText,
   home_directory_MainIllustration,

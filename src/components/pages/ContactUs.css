@@ -113,6 +113,9 @@
 .contactus-right {
   position: relative;
   width: 50%;
+  padding-top: 2rem;
+  padding-bottom: 0;
+  margin-left: 2rem;
   /* background-image: url(../../assets/contactUs_PostIt.png); */
 }
 
@@ -137,10 +140,18 @@
   transform: rotateX(180deg);
 }
 
+.contactus-right .contactus-tape {
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 0;
+}
+
 .contactus-right-text {
+  background-color: var(--color8);
   position: relative;
   z-index: 10;
-  padding: 5rem;
+  padding: 4rem;
   padding-bottom: 2rem;
 }
 
@@ -216,5 +227,6 @@
   }
   .contactus-right {
     width: 100%;
+    margin-left: 0;
   }
 }

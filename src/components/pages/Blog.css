@@ -81,7 +81,7 @@
 
 .b-h3 {
   font-family: var(--font1);
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #fae3d1;
   text-shadow: 2px 2px 0px #61878c;
 }
@@ -113,7 +113,7 @@
 .b-btn {
   color: #fae3d1;
   font-family: var(--font1);
-  font-size: 1.5em;
+  font-size: 1.2em;
   background: transparent;
   border: 0px solid transparent;
   padding: 0;
@@ -123,6 +123,9 @@
 @media only screen and (max-width: 48em) {
   .blog-list::-webkit-scrollbar {
     display: block;
+  }
+
+  .blog-list {
     -ms-overflow-style: block; /* IE and Edge */
     scrollbar-width: 12px; /* Firefox */
   }

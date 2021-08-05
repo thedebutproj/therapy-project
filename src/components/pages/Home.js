@@ -23,7 +23,7 @@ const Home = () => {
         {/* <img src={home_directory_LHSGraphic} className="figure1" /> */}
         <div className="home-slide-content pure-g">
           <div className="home-slide-left pure-u-1 pure-u-md-1-2">
-            <h1 className="dir-h1">DIRECTORY</h1>
+            <h1 className="dir-h1">THE DIRECTORY</h1>
             <p className="dir-p">
               <b>
                 {" "}
@@ -123,7 +123,7 @@ const Home = () => {
         <div className="home-art-text">
           eliminating the uncertainties from
           <br />
-          your visit to a mental health
+          your first visit to a mental health
           <br />
           professional
         </div>

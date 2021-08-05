@@ -318,6 +318,14 @@
 }
 
 @media only screen and (max-width: 48em) {
+  .directory-left ul::-webkit-scrollbar {
+    display: block;
+  }
+  .directory-left ul {
+    -ms-overflow-style: block; /* IE and Edge */
+    scrollbar-width: 12px; /* Firefox */
+  }
+
   .directory-container {
     flex-direction: column;
   }
@@ -339,6 +347,7 @@
 
   .directory-left {
     order: 2;
+    padding-right: 2rem;
   }
 
   .directory-left ul {
