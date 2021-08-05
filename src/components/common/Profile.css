@@ -16,7 +16,6 @@
 
 .profile-main-container {
     background-color: bisque;
-    /* width: 100vw; */
     z-index: -3;
 }
 
@@ -102,9 +101,6 @@
     border: none;
     border-radius: 60px;
     padding: 4px 20px;
-    /* padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 20px; */
     width: 280px;
     margin: auto;
     margin-top: 20px;
@@ -160,6 +156,7 @@
     color: #61878c;
     font-size: 30px;
     margin: 0px;
+    cursor: pointer;
 }
 
 .jump-to-container a div {
@@ -625,7 +622,6 @@
     background-color: var(--color2);
     color: white;
     cursor: pointer;
-    /* padding: 10px; */
     padding: 0px 15px;
     border-radius: 10px;
     font-size: 50px;
@@ -1035,37 +1031,8 @@
     #myBtn:hover {
         padding: 6px;
     }
-    #contact-tape {
-        top: -20px;
-        height: 45%;
-    }
-    #time-tape {
-        height: 28%;
-    }
-    #typical-session-tape {
-        height: 26%;
-        width: 115%;
-        left: -7%;
-    }
-    #qualification-tape {
-        height: 30%;
-        top: -30px;
-        width: 112%;
-        left: -6%;
-    }
-    #first-session-tape {
-        top: -15%;
-        height: 50%;
-    }
-    #background-tape {
+    .tapes {
         display: none;
-    }
-    #background-tape-2 {
-        display: block;
-        top: -6%;
-        width: 106%;
-        left: -2.6%;
-        height: 100px;
     }
 }
 
@@ -1077,43 +1044,12 @@
         width: 24px;
         height: 24px;
     }
-    #contact-tape {
-        height: 40%;
-    }
-    #time-tape {
-        height: 22%;
-    }
-    #typical-session-tape {
-        height: 22%;
-    }
-    #qualification-tape {
-        height: 26%;
-    }
-    #first-session-tape {
-        top: -10%;
-        height: 37%;
-    }
-    #background-tape-2 {
-        height: 80px;
-        top: -4%;
-    }
 }
 
 @media only screen and (max-width:500px) {
-    #contact-tape {
-        height: 35%;
-    }
-    #time-tape {
-        height: 20%;
-    }
-    #typical-session-tape {
-        height: 20%;
-    }
-    #qualification-tape {
-        height: 24%;
-    }
-    #background-tape-2 {
-        top: -1%;
+    .profile-contact p {
+        text-align: center;
+        font-size: 18px;
     }
 }
 
@@ -1121,21 +1057,5 @@
     .profile-days img {
         width: 23px;
         height: 23px;
-    }
-    #contact-tape {
-        height: 30%;
-    }
-    #time-tape {
-        top: -4%;
-        height: 16%;
-    }
-    #typical-session-tape {
-        height: 16%;
-    }
-    #qualification-tape {
-        height: 20%;
-    }
-    #first-session-tape {
-        height: 32%;
     }
 }

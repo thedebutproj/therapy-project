@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Donor.css";
 
 import { benefitsdetailsTAPE, 
         donor_MainIllustration,
-        profile_Section_SessionTape,
       } from "../../assets";
 
 const Donor = () => {
@@ -15,7 +14,6 @@ const Donor = () => {
             <p> ASSIST<sup>BETA</sup></p>
           </div>
           <div className="donor-benefits-content">
-            {/* <img src={donor_BenefitsDetails} alt="" /> */}
             <img id="assist-tape" src={benefitsdetailsTAPE} alt="" />
             <p>
               For most, the decision to seek professional help for their mental
@@ -90,7 +88,6 @@ const Donor = () => {
                 <input type="text" placeholder="Name" />
                 <input type="email" placeholder="Email" />
                 <input type="text" placeholder="Contact Number" />
-                {/* <input type="text" placeholder="I would like to..(Pledge, Receive, Donate)" /> */}
                   <form id="choice" action="" method="post">
                   <p>I would like to</p>
                   <div id="form-div">

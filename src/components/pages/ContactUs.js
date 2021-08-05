@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./ContactUs.css";
 import {
-  contactUS,
   contactUs_LHSPatch,
   contactUs_PostIt,
   contactUs_LinesGraphic,
@@ -85,9 +84,6 @@ function ContactUs() {
                 <li>
                   Phone: <a href="#">+91 7218583843</a>{" "}
                 </li>
-                {/* <li>
-                  Fax: <a href="#"> +91 98 7654 3210</a>
-                </li> */}
                 <li>
                 We request 24 to 48 hours to get back to you. 
                 <br />
@@ -98,12 +94,6 @@ function ContactUs() {
                 - Please note that this is not an emergency mental health service, and we advise you to click on the "Helplines" link at the foot of this webpage if you require immediate assistance.
                 <br />
                 - If you are a mental health professional looking to be listed on our website, please click on the "For Mental Health Professionals" option at the foot of the webpage.{" "}
-                  {/* <a href="#">
-                    {" "}
-                    Block A, 4th Floor, Phoenix Primea (Red Brick Building),
-                    Plot No - 40 & 41, Financial District, Beside IRDA,
-                    Gachibowli, Hyderabad – 500032, Telangana, India.
-                  </a> */}
                   </a>
                 </li>
               </ul>
