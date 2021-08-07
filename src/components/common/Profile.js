@@ -112,13 +112,14 @@ const Profile = () => {
         areaOfExpertise: rowData["Areas of Expertise"],
       });
       setTimeout(() => {
+
         var contactoffsety = contactElement.offsetTop + 40;
         document.getElementsByClassName("center-line-images-one-img")[0].style.top = contactoffsety + "px";
 
         var timeoffsety = timeElement.offsetTop + 40;
         document.getElementsByClassName("center-line-images-one-img")[2].style.top = timeoffsety + "px";
 
-        var typicalsessionoffsety = typicalSessionElement.offsetTop + 60;
+        var typicalsessionoffsety = typicalSessionElement.offsetTop + 20;
         document.getElementsByClassName("center-line-images-one-img")[4].style.top = typicalsessionoffsety + "px";
 
         var detailsoffsety = detailsElement.offsetTop + 40;
@@ -127,7 +128,7 @@ const Profile = () => {
         var sessionoffsety = sessionElement.offsetTop + 20;
         document.getElementsByClassName("center-line-images-one-img")[3].style.top = sessionoffsety + "px";
 
-        var centerlineoffsetheight = Math.max(typicalSessionElement.offsetTop + typicalSessionElement.offsetHeight, sessionElement.offsetTop + sessionElement.offsetHeight) - 200;
+        var centerlineoffsetheight = Math.max(typicalSessionElement.offsetTop + typicalSessionElement.offsetHeight, sessionElement.offsetTop + sessionElement.offsetHeight) - 225;
         document.getElementsByClassName("profile-body-one-middle")[0].style.height = centerlineoffsetheight + "px";
 
         var bottomoffsetheight = backgroundElement.offsetTop + backgroundElement.offsetHeight - 100;
@@ -168,6 +169,10 @@ const Profile = () => {
         }
         if (!rowData["Contact - Email ID"]) {
           document.getElementById("user-email-address").style.display = "none";
+        }
+        if(!rowData["Scheduling"] && !rowData["Scheduling - Calendar Icon"])
+        {
+          document.getElementsByClassName[0]("profile-schedule").style.display = "none";
         }
         if (!rowData["Sunday"]) {
           document.getElementsByClassName("week_days")[1].style.display = "none";
@@ -413,7 +418,7 @@ const Profile = () => {
                 </div>
                 <div className="profile-schedule">
                   <h1>SCHEDULING-</h1>
-                  <p>{user.Scheduling}</p>
+                  <p>{user.scheduling}</p>
                   <div className="profile-schedule-calender">
                     <a class="calender-icon-info" href={user.calender}>
                       <img src={profile_Section_ScheduleIcon} alt="" />

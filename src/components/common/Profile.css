@@ -74,8 +74,8 @@
     text-align: center;
     font-size: 40px;
     margin: auto 8vw;
-    margin-bottom: 0px;
-    margin-top: 20px;
+    margin-bottom: 0vh;
+    margin-top: 5px;
 }
 
 .profile-icons {
@@ -684,6 +684,24 @@
     display: none;
 }
 
+@media only screen and (min-width:1600px) {
+    .center-line-images-one img:nth-of-type(1) {
+        left: 49vw;
+    }
+    .center-line-images-one img:nth-of-type(2) {
+        right: 47.5vw;
+    }
+    .center-line-images-one img:nth-of-type(3) {
+        left: 49vw;
+    }
+    .center-line-images-one img:nth-of-type(4) {
+        right: 47.5vw;
+    }
+    .center-line-images-one img:nth-of-type(5) {
+        left: 49vw;
+    }
+}
+
 @media only screen and (max-width:1600px) {
     .center-line-images-one img:nth-of-type(1) {
         left: 49.5vw;
@@ -699,6 +717,24 @@
     }
     .center-line-images-one img:nth-of-type(5) {
         left: 49.5vw;
+    }
+}
+
+@media only screen and (max-width:1500px) {
+    .center-line-images-one img:nth-of-type(1) {
+        left: 49.7vw;
+    }
+    .center-line-images-one img:nth-of-type(2) {
+        right: 46.5vw;
+    }
+    .center-line-images-one img:nth-of-type(3) {
+        left: 49.7vw;
+    }
+    .center-line-images-one img:nth-of-type(4) {
+        right: 46.5vw;
+    }
+    .center-line-images-one img:nth-of-type(5) {
+        left: 49.7vw;
     }
 }
 
@@ -753,6 +789,7 @@
     }
     .profile-name {
         font-size: 30px;
+        margin: auto 4vw;
     }
     .profile-icons img {
         height: 31px;
@@ -793,8 +830,9 @@
         flex-direction: column;
     }
     #profile-contact-main {
-        margin: 10px auto;
-        width: 50vw;
+        margin: 30px auto;
+        width: 55vw;
+        margin-bottom: 100px;
     }
     .profile-contact h1 {
         padding-top: 30px;
@@ -820,7 +858,7 @@
         height: 24px;
     }
     #profile-time-main {
-        margin: 20px auto;
+        margin: 80px auto;
         padding-bottom: 16px;
         width: 65vw;
     }
@@ -880,7 +918,7 @@
     }
     #profile-typical-session-fees-main {
         width: 50vw;
-        margin: 5vh auto;
+        margin: 100px auto;
         margin-top: 8vh;
         padding: 8px;
     }
@@ -911,9 +949,10 @@
         display: none;
     }
     #profile-details-main {
-        margin: 30px auto;
+        margin: 100px auto;
         padding-bottom: 16px;
         width: 55vw;
+        margin-top: 0px;
     }
     .profile-qualification h1 {
         padding-top: 30px;
@@ -954,8 +993,7 @@
     }
     #profile-session-main {
         padding: 0px 30px;
-        margin: auto;
-        margin-top: 6vh;
+        margin: 100px auto;
         padding-bottom: 16px;
         width: 50vw;
     }
@@ -980,7 +1018,7 @@
         max-width: 300px;
     }
     #profile-background-main {
-        margin-top: 50px;
+        margin-top: 0px;
         padding-bottom: 16px;
         padding-top: 20px;
         margin-bottom: 40px;
