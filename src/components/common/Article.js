@@ -34,7 +34,7 @@ const Article = () => {
   return (
     <div className="article-container">
       {article == undefined ? (
-        <h1 className="loading">...Loading</h1>
+        <h1 className="loading">Loading...</h1>
       ) : (
         <>
           <h1 className="article-heading">{article["Heading"]}</h1>

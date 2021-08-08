@@ -6,6 +6,7 @@ import {
   home_directory_MainIllustration,
   home_directory_LHSGraphic,
   home_blog_MainIllustration,
+  home_blog_RHSGraphic,
   home_donor_MainIllustration,
   home_donor_LHSPuzzle,
   homepage_FullBG,
@@ -20,7 +21,7 @@ const Home = () => {
     [
       "home-directory",
       <>
-        {/* <img src={home_directory_LHSGraphic} className="figure1" /> */}
+        <img src={home_directory_LHSGraphic} className="figure1" />
         <div className="home-slide-content pure-g">
           <div className="home-slide-left pure-u-1 pure-u-md-1-2">
             <h1 className="dir-h1">THE DIRECTORY</h1>
@@ -46,6 +47,7 @@ const Home = () => {
     [
       "home-blog",
       <>
+        <img src={home_blog_RHSGraphic} className="figure1" />
         <div className="home-slide-content pure-g">
           <div className="home-slide-left pure-u-1 pure-u-md-1-2">
             <h1 className="blog-h1">BLOG</h1>

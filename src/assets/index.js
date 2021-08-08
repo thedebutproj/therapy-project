@@ -23,6 +23,7 @@ import home_FullBGWithText from "./home/home_FullBGWithText.png";
 import home_directory_MainIllustration from "./home/directory/directory_MainIllustration.png";
 import home_directory_LHSGraphic from "./home/directory/directory_LHSGraphic.png";
 import home_blog_MainIllustration from "./home/blog/blog_MainIllustration.png";
+import home_blog_RHSGraphic from "./home/blog/blog_CLOUD2.png";
 import home_donor_MainIllustration from "./home/donor/donor_MainIllustration.png";
 import home_donor_LHSPuzzle from "./home/donor/donor_LHSPuzzle.png";
 
@@ -102,6 +103,7 @@ export {
   home_directory_MainIllustration,
   home_directory_LHSGraphic,
   home_blog_MainIllustration,
+  home_blog_RHSGraphic,
   home_donor_MainIllustration,
   home_donor_LHSPuzzle,
   directory_LHSPatch,

@@ -255,6 +255,26 @@ const Directory = () => {
       setTherapistData(rows);
       setTherapistDataDefault(rows);
     });
+
+    const hr = document
+      .getElementsByClassName("directory-input-field-container")[0]
+      .getElementsByTagName("hr")[0];
+
+    const mobileListIcon = document.getElementsByClassName(
+      "directory-mobile-list-icon"
+    )[0];
+
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        hr.style.display = "none";
+        mobileDirectoryList.current.style.display = "none";
+        mobileListIcon.style.backgroundColor = "var(--color2)";
+        mobileListIcon.style.color = "white";
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -515,7 +535,11 @@ const Directory = () => {
               </ul>
             </div>
             <img src={directory_SearchIcon} onClick={handleFiltersSubmit} />
-            <ion-icon name="filter" onClick={handleMobileList}></ion-icon>
+            <ion-icon
+              name="filter"
+              onClick={handleMobileList}
+              class="directory-mobile-list-icon"
+            ></ion-icon>
           </div>
           <ul>
             <li className="directory-filter">

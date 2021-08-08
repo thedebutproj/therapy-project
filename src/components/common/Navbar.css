@@ -59,6 +59,7 @@ nav li a {
 
 .sticky {
   position: fixed;
+  -webkit-backface-visibility: hidden;
   top: 0;
   z-index: 100;
   background-color: var(--color7);

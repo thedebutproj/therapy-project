@@ -1,18 +1,76 @@
 import React, { useState, useEffect } from "react";
 import "./Donor.css";
 
-import { benefitsdetailsTAPE, 
-        donor_MainIllustration,
-        profile_Section_SessionTape,
-      } from "../../assets";
+import {
+  benefitsdetailsTAPE,
+  donor_MainIllustration,
+  profile_Section_SessionTape,
+} from "../../assets";
+import { writeSheetRow } from "../../api";
 
 const Donor = () => {
+  const SHEET_ID = 2014917133;
+
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    number: "",
+    would_like: "",
+    message: "",
+  });
+
+  const handleFormChange = (e) => {
+    setFormValues((formValues) => ({
+      ...formValues,
+      [e.target.id]: e.target.value,
+    }));
+  };
+
+  const handleRadioChange = (e) => {
+    if (e.target.checked) {
+      setFormValues((formValues) => ({
+        ...formValues,
+        [e.target.name]: e.target.value,
+      }));
+    }
+    console.log(formValues);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const success = await writeSheetRow(SHEET_ID, [
+      formValues.name,
+      formValues.email,
+      formValues.number,
+      formValues.would_like,
+      formValues.message,
+    ]);
+
+    if (success) {
+      window.alert("Form Submission Successful");
+
+      setFormValues({
+        name: "",
+        email: "",
+        number: "",
+        would_like: "",
+        message: "",
+      });
+    } else {
+      window.alert("Form Submission Unsuccessful");
+    }
+  };
+
   return (
     <>
       <div className="donor-main-container">
         <div id="donor-benefits">
           <div className="donor-benefits-heading">
-            <p> ASSIST<sup>BETA</sup></p>
+            <p>
+              {" "}
+              ASSIST<sup>BETA</sup>
+            </p>
           </div>
           <div className="donor-benefits-content">
             {/* <img src={donor_BenefitsDetails} alt="" /> */}
@@ -27,20 +85,20 @@ const Donor = () => {
               former, we're also passionate about trying to tackle the latter.
             </p>
             <p>
-              Via Assist<sup>BETA</sup>, The Debut Project would like to help first-time
-              therapy seekers gain access to the mental healthcare they deserve,
-              by providing ways to obtain monetary aid for their sessions. If
-              you are a student, young-professional, or someone who does not
-              have the resources to pay fully for professional help, please
-              reach out to us via the form at the bottom of this page.
+              Via Assist<sup>BETA</sup>, The Debut Project would like to help
+              first-time therapy seekers gain access to the mental healthcare
+              they deserve, by providing ways to obtain monetary aid for their
+              sessions. If you are a student, young-professional, or someone who
+              does not have the resources to pay fully for professional help,
+              please reach out to us via the form at the bottom of this page.
             </p>
             <p>
               <i>
-              While we are launching this humble philanthropic initiative for
-              students and graduates of IIT Roorkee only, we look forward to
-              expanding the scope this idea soon. Hence, we also welcome our
-              visitors to discuss and consider contributing to this cause, and
-              hence widen the scope of prospective beneficiaries.
+                While we are launching this humble philanthropic initiative for
+                students and graduates of IIT Roorkee only, we look forward to
+                expanding the scope this idea soon. Hence, we also welcome our
+                visitors to discuss and consider contributing to this cause, and
+                hence widen the scope of prospective beneficiaries.
               </i>
             </p>
           </div>
@@ -86,45 +144,97 @@ const Donor = () => {
               <h1>Register Your Interest Below</h1>
             </div>
             <div className="donor-register-form-fill">
-              <form id="main-form" action="" method="post">
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="text" placeholder="Contact Number" />
+              <form id="main-form" onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Name"
+                  value={formValues.name}
+                  onChange={handleFormChange}
+                  required
+                />
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  value={formValues.email}
+                  onChange={handleFormChange}
+                  required
+                />
+                <input
+                  type="text"
+                  id="number"
+                  placeholder="Contact Number"
+                  value={formValues.number}
+                  onChange={handleFormChange}
+                  required
+                />
                 {/* <input type="text" placeholder="I would like to..(Pledge, Receive, Donate)" /> */}
-                  <form id="choice" action="" method="post">
+                <div id="choice">
                   <p>I would like to</p>
                   <div id="form-div">
-
-               <div>
-
-                    <input type="checkbox" id="pledge" name="Choice" value="pledge" />
-                    <label htmlFor="pledge">Pledge</label>
-               </div>
-
-              <div>
-
-                    <input type="checkbox" id="receive" name="Choice" value="receive" />
-                    <label htmlFor="receive">Receive</label>
-              </div>
-              <div>
-                    <input type="checkbox" id="donate" name="Choice" value="donate" />
-                    <label htmlFor="donate">Donate</label>
-              </div>
-              <div>
-                    <input type="checkbox" id="other" name="Choice" value="other" />
-                    <label htmlFor="other">Other</label>
-              </div>
-
+                    <div>
+                      <input
+                        type="radio"
+                        id="pledge"
+                        name="would_like"
+                        value="Pledge"
+                        checked={formValues.would_like === "Pledge"}
+                        onChange={handleRadioChange}
+                        required
+                      />
+                      <label htmlFor="pledge">Pledge</label>
                     </div>
-                  </form>
+
+                    <div>
+                      <input
+                        type="radio"
+                        id="receive"
+                        name="would_like"
+                        value="Receive"
+                        checked={formValues.would_like === "Receive"}
+                        onChange={handleRadioChange}
+                        required
+                      />
+                      <label htmlFor="receive">Receive</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="donate"
+                        name="would_like"
+                        value="Donate"
+                        checked={formValues.would_like === "Donate"}
+                        onChange={handleRadioChange}
+                        required
+                      />
+                      <label htmlFor="donate">Donate</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="other"
+                        name="would_like"
+                        value="Other"
+                        checked={formValues.would_like === "Other"}
+                        onChange={handleRadioChange}
+                        required
+                      />
+                      <label htmlFor="other">Other</label>
+                    </div>
+                  </div>
+                </div>
                 <textarea
                   name=""
-                  id=""
+                  id="message"
                   cols="30"
                   rows="10"
+                  value={formValues.message}
                   placeholder="Message for our team"
+                  onChange={handleFormChange}
+                  required
                 ></textarea>
-                <button>SUBMIT</button>
+                <button type="submit">SUBMIT</button>
               </form>
             </div>
           </div>

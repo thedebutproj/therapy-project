@@ -102,7 +102,7 @@ const Navbar = () => {
         </li>
         <li className="nav-items">
           {" "}
-          <Link to="/directory">The&nbsp;&nbsp;&nbsp;Directory</Link>{" "}
+          <Link to="/directory">The Directory</Link>{" "}
         </li>
         <li className="nav-items">
           {" "}
@@ -142,7 +142,7 @@ const Navbar = () => {
           <li>
             {" "}
             <Link to="/directory" onClick={changeMenuIcon}>
-              The&nbsp;&nbsp;Directory
+              The Directory
             </Link>{" "}
           </li>
           <li>

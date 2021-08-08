@@ -142,8 +142,9 @@
 
 .contactus-right .contactus-tape {
   position: absolute;
+  width: 110%;
   z-index: 50;
-  left: 0;
+  left: -5%;
   top: 0;
 }
 
@@ -191,6 +192,7 @@
 .contactus-right-text li a {
   text-decoration: none;
   cursor: unset;
+  font-size: 1rem;
   font-weight: normal;
   color: var(--color4);
 }

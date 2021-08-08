@@ -37,8 +37,16 @@
   background-color: #fddec7;
 }
 
+.home-directory .figure1 {
+  display: none;
+}
+
 .home-blog {
   background-color: #b0bfc2;
+}
+
+.home-blog .figure1 {
+  display: none;
 }
 
 .home-donor {
@@ -214,6 +222,22 @@
 
   .home-slideshow-container {
     height: auto;
+  }
+
+  .home-directory .figure1 {
+    display: block;
+    position: absolute;
+    height: 50%;
+    left: 0;
+    top: 0;
+  }
+
+  .home-blog .figure1 {
+    display: block;
+    position: absolute;
+    height: 50%;
+    right: 0;
+    bottom: 0;
   }
 
   .home-donor .figure1 {
