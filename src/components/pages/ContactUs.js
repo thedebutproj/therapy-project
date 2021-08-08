@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import "./ContactUs.css";
 import {
-  contactUS,
   contactUs_LHSPatch,
   contactUs_PostIt,
   contactUs_LinesGraphic,

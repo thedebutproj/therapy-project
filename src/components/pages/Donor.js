@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Donor.css";
 
-import {
-  benefitsdetailsTAPE,
-  donor_MainIllustration,
-  profile_Section_SessionTape,
-} from "../../assets";
+import { benefitsdetailsTAPE, donor_MainIllustration } from "../../assets";
 import { writeSheetRow } from "../../api";
 
 const Donor = () => {
@@ -73,7 +69,6 @@ const Donor = () => {
             </p>
           </div>
           <div className="donor-benefits-content">
-            {/* <img src={donor_BenefitsDetails} alt="" /> */}
             <img id="assist-tape" src={benefitsdetailsTAPE} alt="" />
             <p>
               For most, the decision to seek professional help for their mental

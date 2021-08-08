@@ -39,7 +39,6 @@ body {
     position: relative;
     z-index: 2;
     background-color: rgb(255, 239, 220);
-    /* padding-top: 100px; */
     margin-top: 40px;
 }
 
@@ -52,7 +51,6 @@ body {
     font-size: 32px;
     line-height: 44px;
     text-align: center;
-    /* z-index:1; */
 }
 
 .donor-benefits-content p:nth-of-type(3) {
@@ -93,7 +91,6 @@ body {
 }
 
 .what-can-you-do-content {
-    /* border: 2px solid red; */
     background-color: white;
     border-radius: 16px;
     display: flex;
@@ -155,7 +152,6 @@ body {
     flex-direction: column;
     max-width: 45vw;
     justify-content: space-between;
-    /* height: 480px; */
     margin-bottom: 40px;
 }
 
@@ -182,7 +178,6 @@ body {
     padding-left: 18px;
     outline-width: 0;
     margin: 10px;
-    /* text-align: center; */
     background-color: white;
 }
 
@@ -206,7 +201,6 @@ body {
     vertical-align: middle;
     border: 2px solid var(--color2);
     -webkit-appearance: none;
-    /* outline: none; */
     cursor: pointer;
 }
 
@@ -264,7 +258,6 @@ input#donate {
 .donor-register-form-right {
     height: 70vh;
     width: 45vw;
-    /* border: 2px solid red; */
     margin-top: 60vh;
     margin-left: 6vw;
     position: relative;
@@ -346,7 +339,6 @@ input#donate {
     }
     .donor-register-form-fill input {
         font-size: 14px;
-        /* padding: 10px; */
     }
     #choice p {
         font-size: 14px;
