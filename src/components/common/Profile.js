@@ -220,42 +220,67 @@ const Profile = () => {
   }, []);
 
 
+  var wid=window.innerWidth;
   const tocontact = () => {
     const contactElement = document.getElementById("profile-contact-main");
     var poscontact = contactElement.offsetTop - 110;
+    if(wid<1200)
+    {
+      poscontact=poscontact-130;
+    }
     window.scrollTo(0, poscontact);
   };
 
   const totime = () => {
     const contactElement = document.getElementById("profile-time-main");
     var poscontact = contactElement.offsetTop - 110;
+    if(wid<1200)
+    {
+      poscontact=poscontact-130;
+    }
     window.scrollTo(0, poscontact);
   };
 
   const todetails = () => {
     const contactElement = document.getElementById("profile-details-main");
     var poscontact = contactElement.offsetTop - 110;
+    if(wid<1200)
+    {
+      poscontact=poscontact-130;
+    }
     window.scrollTo(0, poscontact);
   };
 
   const tosession = () => {
     const contactElement = document.getElementById("profile-session-main");
     var poscontact = contactElement.offsetTop - 110;
+    if(wid<1200)
+    {
+      poscontact=poscontact-130;
+    }
     window.scrollTo(0, poscontact);
   };
 
   const tofees = () => {
     const contactElement = document.getElementById("profile-typical-session-fees-main");
     var poscontact = contactElement.offsetTop - 110;
+    if(wid<1200)
+    {
+      poscontact=poscontact-130;
+    }
     window.scrollTo(0, poscontact);
   };
 
   const tobackground = () => {
     const contactElement = document.getElementById("profile-background-main");
     var poscontact = contactElement.offsetTop - 110;
+    if(wid<1200)
+    {
+      poscontact=poscontact-130;
+    }
     window.scrollTo(0, poscontact);
   };
-
+  
   const handleDropdown = () => {
     const element = document.getElementById("dropdownID");
     const buttonElement = document.getElementById("jump-to-ID");
