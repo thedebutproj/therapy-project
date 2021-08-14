@@ -55,7 +55,7 @@ const Navbar = () => {
 
         if (window.screen.width <= 768) {
           navbar.current.style.display = "flex";
-          navbarMenu.current.style.backgroundColor = "white";
+          navbarMenu.current.style.backgroundColor = "var(--color7)";
           navbarMenu.current.style.position = "fixed";
         }
       } else {
