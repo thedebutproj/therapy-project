@@ -183,7 +183,7 @@ const Directory = () => {
     const filterName = e.target.getAttribute("data-filter-name");
 
     const element =
-      window.screen.width <= 768
+      window.innerWidth <= 768
         ? document.querySelectorAll("[id=" + filterName + "]")[0]
         : document.querySelectorAll("[id=" + filterName + "]")[1];
 
