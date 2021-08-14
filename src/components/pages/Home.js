@@ -55,7 +55,7 @@ const Home = () => {
               <b>
                 Go through our curation of articles pertaining to availing
                 mental healthcare, making the most of your experience with your
-                chose professional, and more.
+                chosen professional, and more.
               </b>
             </p>
             <button className="blog-btn">
