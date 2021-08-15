@@ -1,8 +1,10 @@
 import { GoogleSpreadsheet } from "google-spreadsheet";
+import path from "path";
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
 
 const fetchSheetRow = async (sheet_index, id) => {
-  const API_KEY = "AIzaSyCXAsyMDl9PSPSD_VXRO0J - JUSiYoeD - io";
-  const SPREADSHEET_ID = "1hMoXkynBu22BWqfFGcfCRQfUkd65HB45lBflNIsfzto";
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 
   const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 
