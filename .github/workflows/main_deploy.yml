@@ -16,15 +16,17 @@ jobs:
           npm run build
         env:
           CI: false
-          REACT_APP_API_KEY : ${{secrets.REACT_APP_API_KEY}}
-          REACT_APP_SPREADSHEET_ID : ${{secrets.REACT_APP_SPREADSHEET_ID}}
-          REACT_APP_CLIENT_EMAIL :  ${{secrets.REACT_APP_CLIENT_EMAI}}
-          REACT_APP_PRIVATE_KEY : ${{secrets.REACT_APP_PRIVATE_KEY}}
+          
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy.
+        env:
+          REACT_APP_API_KEY : ${{secrets.REACT_APP_API_KEY}}
+          REACT_APP_SPREADSHEET_ID : ${{secrets.REACT_APP_SPREADSHEET_ID}}
+          REACT_APP_CLIENT_EMAIL :  ${{secrets.REACT_APP_CLIENT_EMAI}}
+          REACT_APP_PRIVATE_KEY : ${{secrets.REACT_APP_PRIVATE_KEY}}
       
         
