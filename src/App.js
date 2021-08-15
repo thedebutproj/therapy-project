@@ -9,11 +9,16 @@ import {
   Donor,
   TermsandPrivacy,
 } from "./components/pages";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
         <div className="App-content">
           <Navbar />
@@ -46,7 +51,7 @@ function App() {
         </div>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
