@@ -833,7 +833,7 @@
         margin: 30px auto;
         margin-top: 0px;
         width: 55vw;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
     .profile-contact h1 {
         padding-top: 30px;
@@ -859,7 +859,7 @@
         height: 24px;
     }
     #profile-time-main {
-        margin: 60px auto;
+        margin: 40px auto;
         padding-bottom: 16px;
         width: 65vw;
     }
@@ -919,8 +919,7 @@
     }
     #profile-typical-session-fees-main {
         width: 50vw;
-        margin: 60px auto;
-        margin-top: 8vh;
+        margin: 40px auto;
         padding: 8px;
     }
     .profile-typical-session-fees {
@@ -950,7 +949,7 @@
         display: none;
     }
     #profile-details-main {
-        margin: 60px auto;
+        margin: 40px auto;
         padding-bottom: 16px;
         width: 55vw;
         margin-top: 0px;
@@ -994,7 +993,7 @@
     }
     #profile-session-main {
         padding: 0px 30px;
-        margin: 60px auto;
+        margin: 40px auto;
         padding-bottom: 16px;
         width: 50vw;
     }
