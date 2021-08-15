@@ -322,9 +322,24 @@
   .directory-left ul::-webkit-scrollbar {
     display: block;
   }
-  .directory-left ul {
+
+  .directory-dropdown-content::-webkit-scrollbar {
+    display: block;
+  }
+
+  .directory-dropdown-content::-webkit-scrollbar-thumb {
+    background-color: white;
+  }
+
+  .directory-left ul,
+  .directory-dropdown-content {
     -ms-overflow-style: block; /* IE and Edge */
     scrollbar-width: 12px; /* Firefox */
+    scrollbar-color: var(--color2) var(--color5); /*thumb and track color*/
+  }
+
+  .directory-dropdown-content {
+    scrollbar-color: white var(--color5); /*thumb and track color*/
   }
 
   .directory-container {
@@ -385,7 +400,7 @@
   }
 
   .directory-left .directory-redLine {
-    left: 20%;
+    left: 75px;
     height: 75vh;
   }
 
@@ -460,6 +475,7 @@
   .directory-input-field-container > hr {
     display: none;
     margin: 0 0.5rem;
+    background-color: var(--color2);
     border: 2px solid var(--color2);
   }
 
