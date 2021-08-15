@@ -129,6 +129,11 @@ const Profile = () => {
         document.getElementsByClassName("center-line-images-one-img")[3].style.top = sessionoffsety + "px";
 
         var centerlineoffsetheight = Math.max(typicalSessionElement.offsetTop + typicalSessionElement.offsetHeight, sessionElement.offsetTop + sessionElement.offsetHeight) - 225;
+        var ax=window.innerWidth;
+        if(ax<500)
+        {
+          centerlineoffsetheight=centerlineoffsetheight+100;
+        }
         document.getElementsByClassName("profile-body-one-middle")[0].style.height = centerlineoffsetheight + "px";
 
         var bottomoffsetheight = backgroundElement.offsetTop + backgroundElement.offsetHeight - 100;
