@@ -1,0 +1,28 @@
+name: MainDeployCI
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install Packages
+      run: npm install
+    - name: Deploy to GH Pages
+      run: |
+        npm run deploy
+      env:
+        REACT_APP_API_KEY : ${{secrets.REACT_APP_API_KEY}}
+        REACT_APP_SPREADSHEET_ID : ${{secrets.REACT_APP_SPREADSHEET_ID}}
+        REACT_APP_CLIENT_EMAIL :  ${{secrets.REACT_APP_CLIENT_EMAI}}
+        REACT_APP_PRIVATE_KEY : ${{secrets.REACT_APP_PRIVATE_KEY}}
+        
