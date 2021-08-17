@@ -81,6 +81,10 @@ body {
     flex-direction: column;
 }
 
+.donor-content-line-2 {
+    display: none;
+}
+
 .what-can-you-do-heading p {
     text-align: center;
     color: white;
@@ -316,6 +320,7 @@ input#donate {
         display: none;
     }
     .donor-content-line-2 {
+        display: block;
         background-color: #ffc98c;
         height: 6px;
         width: 80vw;
