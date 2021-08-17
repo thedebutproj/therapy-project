@@ -207,7 +207,14 @@
   margin: auto;
 }
 
-@media only screen and (max-width: 47.9em) {
+@media (hover: none) {
+  .home-next:hover,
+  .home-prev:hover {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 48em) {
   .pure-u-0 {
     display: none;
   }
@@ -217,11 +224,12 @@
   }
 
   .home-art .home-art-text {
+    top: 40%;
     font-size: 1.4em;
   }
 
   .home-slideshow-container {
-    height: auto;
+    height: 55vh;
   }
 
   .home-directory .figure1 {
@@ -261,7 +269,11 @@
     display: none;
   }
 
-  .home-slide-content-donor {
-    padding-top: 3em !important;
+  .home-slide-content {
+    position: relative;
+    padding-left: 3em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

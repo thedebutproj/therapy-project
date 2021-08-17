@@ -107,8 +107,6 @@ const Directory = () => {
   };
 
   const handleFiltersSubmit = (e) => {
-    e.preventDefault();
-
     //Deleting all white-space at start and end of string
     const searchData = search.current.trim().toLowerCase();
 
@@ -351,6 +349,9 @@ const Directory = () => {
                 <input
                   type="search"
                   placeholder="eg. Anxiety, Fear"
+                  onKeyPress={(e) =>
+                    e.key === "Enter" ? handleFiltersSubmit() : NaN
+                  }
                   onChange={(e) => (search.current = e.target.value)}
                 />
                 <img src={directory_SearchIcon} onClick={handleFiltersSubmit} />
