@@ -122,6 +122,10 @@ body {
     border-radius: 10px;
 }
 
+.donor-content-line-2 {
+    display: none;
+}
+
 #donor-register-form {
     display: flex;
 }
@@ -316,9 +320,10 @@ input#donate {
         display: none;
     }
     .donor-content-line-2 {
+        display: block;
         background-color: #ffc98c;
         height: 6px;
-        width: 80vw;
+        width: 70vw;
         margin: auto;
         border-radius: 10px;
     }

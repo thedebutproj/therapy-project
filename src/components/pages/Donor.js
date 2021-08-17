@@ -112,7 +112,6 @@ const Donor = () => {
             </div>
             <div className="donor-content-line"></div>
             <div className="donor-content-line-2"></div>
-
             <div>
               <h1>Receive</h1>
               <p>
