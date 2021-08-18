@@ -141,10 +141,21 @@
   transform: rotate(180deg);
 }
 
-.directory-search-heading p {
+.directory-search-heading div {
+  display: flex;
+  align-items: baseline;
+}
+
+.directory-search-heading div p {
   font-weight: normal;
   font-size: 24px;
+  margin-right: 0.5rem;
   margin-bottom: 0px;
+}
+
+.directory-search-heading div a {
+  color: var(--color2);
+  font-size: 1.3em;
 }
 
 /* ">" is used so this css only apply to direct child*/
@@ -425,7 +436,7 @@
     display: none;
   }
 
-  .directory-search-heading p {
+  .directory-search-heading div p {
     margin-top: 0;
     margin-left: 2rem;
     margin-bottom: 1rem;

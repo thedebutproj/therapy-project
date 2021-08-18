@@ -340,7 +340,12 @@ const Directory = () => {
       <div className="directory-right">
         <div className="directory-search-heading">
           <img src={directory_Spiral} className="directory-right-spiral" />
-          <p>Search</p>
+          <div className="">
+            <p>Search</p>
+            <Link to="/">
+              <ion-icon name="information-circle"></ion-icon>
+            </Link>
+          </div>
         </div>
         <div className="directory-filter-container">
           <div className="directory-input-field">
