@@ -30,11 +30,15 @@ exports.handler = async (event, context) => {
 
   try {
     const { sheet_index } = event.queryStringParameters;
+    console.log(sheet_index);
     await doc.useApiKey(API_KEY);
     await doc.loadInfo();
 
+    console.log(API_KEY);
+
     const sheet = doc.sheetsByIndex[sheet_index];
     const rows = await sheet.getRows();
+
     return {
       statusCode: 200,
       body: JSON.stringify({ rows: rows }),
