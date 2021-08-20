@@ -39,13 +39,21 @@ exports.handler = async (event, context) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ rows: rows, API_KEY: API_KEY }),
+      body: JSON.stringify({
+        rows: rows,
+        API_KEY: API_KEY,
+        sheet_index: sheet_index,
+      }),
     };
     // return rows;
   } catch (e) {
     return {
       statusCode: 404,
-      body: JSON.stringify({ error: e, API_KEY: API_KEY }),
+      body: JSON.stringify({
+        error: e,
+        API_KEY: API_KEY,
+        sheet_index: sheet_index,
+      }),
     };
   }
 };
