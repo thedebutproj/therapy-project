@@ -47,5 +47,3 @@ exports.handler = async (event, context) => {
     };
   }
 };
-
-export default fetchSheet;
