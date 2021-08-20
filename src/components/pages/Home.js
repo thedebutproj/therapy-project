@@ -114,8 +114,8 @@ const Home = () => {
     // For automatic slide increment
     const todoId = 0;
     const url = `/.netlify/functions/todo?id=${todoId}`;
-    const todo = await fetch(url).then((res) => console.log(res));
-    // console.log(todo);
+    const todo = await fetch(url).then((res) => res.json());
+    console.log(todo);
 
     const interval = setInterval(incrementSlide, 10000000);
 

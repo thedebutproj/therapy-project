@@ -43,7 +43,7 @@ exports.handler = async (event, context) => {
   } catch (e) {
     return {
       statusCode: 404,
-      body: e.toString(),
+      body: JSON.stringify({ rows: e }),
     };
   }
 };
