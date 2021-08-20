@@ -2,14 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
-  home_FullBGWithText,
   home_directory_MainIllustration,
   home_directory_LHSGraphic,
   home_blog_MainIllustration,
   home_blog_RHSGraphic,
   home_donor_MainIllustration,
   home_donor_LHSPuzzle,
-  homepage_FullBG,
 } from "../../assets";
 
 // import "./Home.css";
@@ -114,8 +112,8 @@ const Home = () => {
     // For automatic slide increment
     const todoId = 0;
     const url = `/.netlify/functions/todo?id=${todoId}`;
-    const todo = await fetch(url).then((res) => res.json());
-    console.log(todo);
+    const todo = await fetch(url).then((res) => console.log(res););
+    // console.log(todo);
 
     const interval = setInterval(incrementSlide, 10000000);
 
