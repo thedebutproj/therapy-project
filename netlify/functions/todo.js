@@ -18,11 +18,11 @@
 //   }
 // };
 
-import { GoogleSpreadsheet } from "google-spreadsheet";
-import path from "path";
-require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+const { GoogleSpreadsheet } = require("google-spreadsheet");
+// import path from "path";
+// require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
 
-exports.handler = async (event, contxet) => {
+exports.handler = async (event, context) => {
   const API_KEY = process.env.REACT_APP_API_KEY;
   const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 
