@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
+  home_FullBGWithText,
   home_directory_MainIllustration,
   home_directory_LHSGraphic,
   home_blog_MainIllustration,
   home_blog_RHSGraphic,
   home_donor_MainIllustration,
   home_donor_LHSPuzzle,
+  homepage_FullBG,
 } from "../../assets";
 
 // import "./Home.css";
