@@ -41,7 +41,6 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({
         rows: rows,
         API_KEY: API_KEY,
-        sheet_index: sheet_index,
       }),
     };
     // return rows;
@@ -51,7 +50,6 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({
         error: e,
         API_KEY: API_KEY,
-        sheet_index: sheet_index,
       }),
     };
   }
