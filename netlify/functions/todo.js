@@ -27,10 +27,9 @@ exports.handler = async (event, context) => {
   const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 
   const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
+  const { sheet_index } = event.queryStringParameters;
 
   try {
-    const { sheet_index } = event.queryStringParameters;
-
     await doc.useApiKey(API_KEY);
     await doc.loadInfo();
 
