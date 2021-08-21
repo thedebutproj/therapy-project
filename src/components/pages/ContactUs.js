@@ -98,6 +98,7 @@ function ContactUs() {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               name="Contact Us"
+              method="post"
               // onSubmit={handleSubmit}
               onSubmit="submit"
             >
