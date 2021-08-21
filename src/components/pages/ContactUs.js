@@ -28,27 +28,37 @@ function ContactUs() {
   };
 
   const handleSubmit = async (e) => {
+    // e.preventDefault();
+
+    // const success = await writeSheetRow(SHEET_ID, [
+    //   formValues.name,
+    //   formValues.email,
+    //   formValues.number,
+    //   formValues.message,
+    // ]);
+
+    // if (success) {
+    //   window.alert("Form Submission Successful");
+
+    //   setFormValues({
+    //     name: "",
+    //     email: "",
+    //     number: "",
+    //     message: "",
+    //   });
+    // } else {
+    //   window.alert("Form Submission Unsuccessful");
+    // }
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "Contact Us", ...formValues }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
     e.preventDefault();
-
-    const success = await writeSheetRow(SHEET_ID, [
-      formValues.name,
-      formValues.email,
-      formValues.number,
-      formValues.message,
-    ]);
-
-    if (success) {
-      window.alert("Form Submission Successful");
-
-      setFormValues({
-        name: "",
-        email: "",
-        number: "",
-        message: "",
-      });
-    } else {
-      window.alert("Form Submission Unsuccessful");
-    }
   };
 
   useEffect(async () => {
@@ -76,7 +86,14 @@ function ContactUs() {
 
         <div className="contactus-form-container">
           <div className="contactus-left">
-            <form onSubmit={handleSubmit}>
+            <form
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              name="Contact Us"
+              onSubmit={handleSubmit}
+            >
+              <input type="hidden" name="form-name" value="Contact Us" />
+
               <input
                 id="name"
                 placeholder="Name"
