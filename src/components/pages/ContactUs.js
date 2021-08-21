@@ -111,8 +111,8 @@ function ContactUs() {
               <input
                 id="name"
                 placeholder="Name"
-                value={formValues.name}
-                onChange={handleChange}
+                // value={formValues.name}
+                // onChange={handleChange}
                 required
               ></input>
               <br></br>
@@ -121,8 +121,8 @@ function ContactUs() {
                 id="email"
                 type="email"
                 placeholder="Email"
-                value={formValues.email}
-                onChange={handleChange}
+                // value={formValues.email}
+                // onChange={handleChange}
                 required
               ></input>
               <br></br>
@@ -130,8 +130,8 @@ function ContactUs() {
               <input
                 id="number"
                 placeholder="Contact Number"
-                value={formValues.number}
-                onChange={handleChange}
+                // value={formValues.number}
+                // onChange={handleChange}
                 required
               ></input>
               <br></br>
@@ -139,8 +139,8 @@ function ContactUs() {
               <textarea
                 id="message"
                 placeholder="Message"
-                value={formValues.message}
-                onChange={handleChange}
+                // value={formValues.message}
+                // onChange={handleChange}
                 required
               ></textarea>
 
