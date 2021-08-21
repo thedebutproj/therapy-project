@@ -98,9 +98,14 @@ function ContactUs() {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               name="Contact Us"
-              onSubmit={handleSubmit}
+              // onSubmit={handleSubmit}
+              onSubmit="submit"
             >
               <input type="hidden" name="form-name" value="Contact Us" />
+
+              <div hidden>
+                <input name="bot-field" />
+              </div>
 
               <input
                 id="name"
