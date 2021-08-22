@@ -15,6 +15,14 @@ const Donor = () => {
     message: "",
   });
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const handleFormChange = (e) => {
     setFormValues((formValues) => ({
       ...formValues,
