@@ -113,8 +113,8 @@ function ContactUs() {
                 name="name"
                 type="text"
                 placeholder="Name"
-                // value={formValues.name}
-                // onChange={handleChange}
+                value={formValues.name}
+                onChange={handleChange}
                 required
               ></input>
               <br></br>
@@ -124,8 +124,8 @@ function ContactUs() {
                 name="email"
                 type="email"
                 placeholder="Email"
-                // value={formValues.email}
-                // onChange={handleChange}
+                value={formValues.email}
+                onChange={handleChange}
                 required
               ></input>
               <br></br>
@@ -134,8 +134,8 @@ function ContactUs() {
                 id="number"
                 name="number"
                 placeholder="Contact Number"
-                // value={formValues.number}
-                // onChange={handleChange}
+                value={formValues.number}
+                onChange={handleChange}
                 required
               ></input>
               <br></br>
@@ -144,12 +144,33 @@ function ContactUs() {
                 id="message"
                 name="message"
                 placeholder="Message"
-                // value={formValues.message}
-                // onChange={handleChange}
+                value={formValues.message}
+                onChange={handleChange}
                 required
               ></textarea>
 
               <button type="submit">SEND MESSAGE</button>
+            </form>
+            <form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
+              <p>
+                <label>
+                  Your Name: <input type="text" name="name" />
+                </label>
+              </p>
+              <p>
+                <label>
+                  Your Email: <input type="email" name="email" />
+                </label>
+              </p>
+              <p>
+                <label>
+                  Message: <textarea name="message"></textarea>
+                </label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
             </form>
           </div>
           <div className="contactus-right">
