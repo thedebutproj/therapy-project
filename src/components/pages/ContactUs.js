@@ -96,9 +96,9 @@ function ContactUs() {
           <div className="contactus-left">
             <form
               name="Contact Us"
-              method="post"
-              // onSubmit={handleSubmit}
-              onSubmit="submit"
+              // method="post"
+              onSubmit={handleSubmit}
+              // onSubmit="submit"
             >
               <input type="hidden" name="form-name" value="Contact Us" />
 

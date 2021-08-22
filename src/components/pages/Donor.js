@@ -33,29 +33,39 @@ const Donor = () => {
   };
 
   const handleSubmit = async (e) => {
+    // e.preventDefault();
+
+    // const success = await writeSheetRow(SHEET_ID, [
+    //   formValues.name,
+    //   formValues.email,
+    //   formValues.number,
+    //   formValues.would_like,
+    //   formValues.message,
+    // ]);
+
+    // if (success) {
+    //   window.alert("Form Submission Successful");
+
+    //   setFormValues({
+    //     name: "",
+    //     email: "",
+    //     number: "",
+    //     would_like: "",
+    //     message: "",
+    //   });
+    // } else {
+    //   window.alert("Form Submission Unsuccessful");
+    // }
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "Donor", ...formValues }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
     e.preventDefault();
-
-    const success = await writeSheetRow(SHEET_ID, [
-      formValues.name,
-      formValues.email,
-      formValues.number,
-      formValues.would_like,
-      formValues.message,
-    ]);
-
-    if (success) {
-      window.alert("Form Submission Successful");
-
-      setFormValues({
-        name: "",
-        email: "",
-        number: "",
-        would_like: "",
-        message: "",
-      });
-    } else {
-      window.alert("Form Submission Unsuccessful");
-    }
   };
 
   return (
@@ -139,10 +149,12 @@ const Donor = () => {
               <h1>Register Your Interest Below</h1>
             </div>
             <div className="donor-register-form-fill">
-              <form id="main-form" onSubmit={handleSubmit}>
+              <form id="main-form" name="Donor" onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="Donor" />
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   placeholder="Name"
                   value={formValues.name}
                   onChange={handleFormChange}
@@ -151,6 +163,7 @@ const Donor = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   placeholder="Email"
                   value={formValues.email}
                   onChange={handleFormChange}
@@ -159,6 +172,7 @@ const Donor = () => {
                 <input
                   type="text"
                   id="number"
+                  name="number"
                   placeholder="Contact Number"
                   value={formValues.number}
                   onChange={handleFormChange}
@@ -220,8 +234,8 @@ const Donor = () => {
                   </div>
                 </div>
                 <textarea
-                  name=""
                   id="message"
+                  name="message"
                   cols="30"
                   rows="10"
                   value={formValues.message}
