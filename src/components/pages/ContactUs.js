@@ -36,46 +36,38 @@ function ContactUs() {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-
-    // const success = await writeSheetRow(SHEET_ID, [
-    //   formValues.name,
-    //   formValues.email,
-    //   formValues.number,
-    //   formValues.message,
-    // ]);
-
-    // if (success) {
-    //   window.alert("Form Submission Successful");
-
-    //   setFormValues({
-    //     name: "",
-    //     email: "",
-    //     number: "",
-    //     message: "",
-    //   });
-    // } else {
-    //   window.alert("Form Submission Unsuccessful");
-    // }
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Contact Us", ...formValues }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
     e.preventDefault();
-  };
 
-  useEffect(async () => {
-    // const SPREADSHEET_ID = "1hMoXkynBu22BWqfFGcfCRQfUkd65HB45lBflNIsfzto";
-    // await doc.loadInfo();
-    // sheet.current = doc.sheetsByIndex[3];
-    // await sheet.addRow(["Test", "Test", "Test", "Test"]);
-    // console.log(sheet.sheetId);
-  }, []);
+    const success = await writeSheetRow(SHEET_ID, [
+      formValues.name,
+      formValues.email,
+      formValues.number,
+      formValues.message,
+    ]);
+
+    if (success) {
+      window.alert("Form Submission Successful");
+
+      setFormValues({
+        name: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+    } else {
+      window.alert("Form Submission Unsuccessful");
+    }
+
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "Contact Us", ...formValues }),
+    // })
+    //   .then(() => alert("Success!"))
+    //   .catch((error) => alert(error));
+
+    // e.preventDefault();
+  };
 
   return (
     <div className="contactus-container">

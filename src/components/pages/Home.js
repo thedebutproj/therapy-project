@@ -112,11 +112,6 @@ const Home = () => {
 
   useEffect(async () => {
     // For automatic slide increment
-    // const todoId = 0;
-    // const url = `/.netlify/functions/todo?sheet_index=${todoId}`;
-    // const todo = await fetch(url).then((res) => res.json());
-    // console.log(todo);
-
     const interval = setInterval(incrementSlide, 10000000);
 
     // It ensures that as soon as component is unmounted interval is cleared

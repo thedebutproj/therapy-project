@@ -41,39 +41,39 @@ const Donor = () => {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-
-    // const success = await writeSheetRow(SHEET_ID, [
-    //   formValues.name,
-    //   formValues.email,
-    //   formValues.number,
-    //   formValues.would_like,
-    //   formValues.message,
-    // ]);
-
-    // if (success) {
-    //   window.alert("Form Submission Successful");
-
-    //   setFormValues({
-    //     name: "",
-    //     email: "",
-    //     number: "",
-    //     would_like: "",
-    //     message: "",
-    //   });
-    // } else {
-    //   window.alert("Form Submission Unsuccessful");
-    // }
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Donor", ...formValues }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
     e.preventDefault();
+
+    const success = await writeSheetRow(SHEET_ID, [
+      formValues.name,
+      formValues.email,
+      formValues.number,
+      formValues.would_like,
+      formValues.message,
+    ]);
+
+    if (success) {
+      window.alert("Form Submission Successful");
+
+      setFormValues({
+        name: "",
+        email: "",
+        number: "",
+        would_like: "",
+        message: "",
+      });
+    } else {
+      window.alert("Form Submission Unsuccessful");
+    }
+
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "Donor", ...formValues }),
+    // })
+    //   .then(() => alert("Success!"))
+    //   .catch((error) => alert(error));
+
+    // e.preventDefault();
   };
 
   return (
