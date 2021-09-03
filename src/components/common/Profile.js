@@ -27,6 +27,7 @@ import {
   profile_Section_SessionTape,
   profile_Section_Tape,
   profile_Section_AddInfoTape,
+  req_info,
 } from "../../assets";
 
 const Profile = () => {
@@ -451,7 +452,7 @@ const Profile = () => {
                   <p>{user.scheduling}</p>
                   <div className="profile-schedule-calender">
                     <a class="calender-icon-info" href={user.calender}>
-                      <img src={profile_Section_ScheduleIcon} alt="" />
+                      <img src={req_info} alt="" />
                     </a>
                   </div>
                 </div>
